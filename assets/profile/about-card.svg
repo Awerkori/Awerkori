@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="846" height="86" viewBox="0 0 846 86" role="img" aria-labelledby="title desc">
-<title id="title">Mais sobre mim</title><desc id="desc">Links, perfil e presença online.</desc>
+<title id="title">Mais sobre mim</title><desc id="desc">Perfil, links e projetos.</desc>
 <defs><linearGradient id="surface" x2="1" y2="1"><stop stop-color="#191522"/><stop offset="1" stop-color="#11151c"/></linearGradient></defs>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#e8e7ed}.muted{fill:#a19baa}.pulse{animation:breathe 16s ease-in-out infinite}@keyframes breathe{0%,100%{opacity:.3}50%{opacity:.85}}@media(prefers-reduced-motion:reduce){.pulse{animation:none}}</style>
 <rect x=".5" y=".5" width="845" height="85" rx="10" fill="url(#surface)" stroke="#3b3048"/>
 <path d="M18 1h120" class="pulse" stroke="#b88bdd" stroke-width="1.5"/>
 <g transform="translate(22 31)" fill="none" stroke="#b096d0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12V3h14v9m-11-3h8M5 6h.1m3 0h.1"/><path d="M20 3h7v7h-7z"/></g>
-<text x="67" y="37" font-size="17" font-weight="600">Mais sobre mim</text><text x="67" y="59" font-size="12" class="muted">Links, perfil e presença online</text>
+<text x="67" y="37" font-size="17" font-weight="600">Mais sobre mim</text><text x="67" y="59" font-size="12" class="muted">Perfil, links e projetos</text>
 <path d="M802 31h12v12m0-12-12 12" fill="none" stroke="#c2a3e4" stroke-width="1.3"/>
 </svg>

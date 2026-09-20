@@ -5,6 +5,8 @@
   <img src="./assets/profile/identity.svg" width="846" alt="Awerkori e Project Nox: identidade e atividade real do GitHub">
 </picture>
 
-<a href="https://zyo.se/awerkori"><img src="./assets/profile/about-card.svg" width="846" alt="Mais sobre mim — links, perfil e presença online"></a>
+<p><sub>ALÉM DO GITHUB</sub></p>
+
+<a href="https://zyo.se/awerkori"><img src="./assets/profile/about-card.svg" width="846" alt="Mais sobre mim — perfil, links e projetos"></a>
 
 <p><sub>NΩΛ · Awerkori × Project Nox</sub></p>
