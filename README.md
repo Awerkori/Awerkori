@@ -1,63 +1,29 @@
-<div align="center">
-  <img src="./assets/branding/nox-header.svg" alt="Project Nox — NΩΛ" width="1200">
-</div>
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/branding/eclipse-mobile.svg">
+  <img src="./assets/branding/eclipse.svg" width="1100" alt="PROJECT NOX · NΩΛ">
+</picture>
 
-<p align="center">
-  <a href="https://github.com/Awerkori?tab=repositories">PROJECTS</a>
-  &nbsp;&nbsp;•&nbsp;&nbsp;
-  <a href="https://github.com/Awerkori/project-nox-manga">WEB</a>
-  &nbsp;&nbsp;•&nbsp;&nbsp;
-  <a href="https://github.com/Awerkori/project-nox-tracker">COMMUNITY</a>
-</p>
+Um projeto independente que reúne ideias, ferramentas e serviços feitos para ganhar vida. Criado e mantido por **Awerkori**.
 
-<div align="center">
-  <img src="./assets/ui/nox-divider.svg" alt="" width="100%">
-  <br>
-  <sub>WEB · READING · TOOLS · COMMUNITY</sub>
-</div>
+<p><a href="https://github.com/Awerkori/project-nox-manga">
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/projects/manga-mobile.svg">
+  <img src="./assets/projects/manga.svg" width="1100" alt="Nox Manga — leitura e publicação. SvelteKit / Supabase.">
+</picture>
+</a></p>
+<p><a href="https://github.com/Awerkori/project-nox-scan-staff">
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/projects/staff-mobile.svg">
+  <img src="./assets/projects/staff.svg" width="1100" alt="Scan Staff — da primeira página à publicação. React / TypeScript.">
+</picture>
+</a></p>
+<p><a href="https://github.com/Awerkori/fonte-extensoes">
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/projects/extensions-mobile.svg">
+  <img src="./assets/projects/extensions.svg" width="1100" alt="Extensões — fontes, integrações e atualizações. Kotlin / Python.">
+</picture>
+</a></p>
 
-<br>
+Tem uma ideia ou encontrou algo para melhorar? [Converse com o Nox →](https://github.com/Awerkori/project-nox-requests/issues)
 
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <a href="https://github.com/Awerkori/project-nox-manga">
-        <img src="./assets/projects/nox-manga.svg" alt="Project Nox Manga" width="100%">
-      </a><br>
-      <a href="https://github.com/Awerkori/project-nox-manga"><strong>Project Nox Manga</strong></a><br>
-      <sub>reading + publishing</sub>
-    </td>
-    <td align="center" width="50%">
-      <a href="https://github.com/Awerkori/fonte-extensoes">
-        <img src="./assets/projects/nox-source.svg" alt="Fonte Extensões" width="100%">
-      </a><br>
-      <a href="https://github.com/Awerkori/fonte-extensoes"><strong>Fonte Extensões</strong></a><br>
-      <sub>source infrastructure</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <a href="https://github.com/Awerkori/project-nox-tracker">
-        <img src="./assets/projects/nox-tracker.svg" alt="Project Nox Tracker" width="100%">
-      </a><br>
-      <a href="https://github.com/Awerkori/project-nox-tracker"><strong>Nox Tracker</strong></a><br>
-      <sub>requests + signal</sub>
-    </td>
-    <td align="center" width="50%">
-      <a href="https://github.com/Awerkori/project-nox-importer">
-        <img src="./assets/projects/nox-importer.svg" alt="Project Nox Importer" width="100%">
-      </a><br>
-      <a href="https://github.com/Awerkori/project-nox-importer"><strong>Nox Importer</strong></a><br>
-      <sub>tools + integration</sub>
-    </td>
-  </tr>
-</table>
-
-<div align="center">
-  <br>
-  <sub>Svelte · TypeScript · Kotlin · Python · PostgreSQL</sub>
-  <br><br>
-  <img src="./assets/branding/nox-mark.svg" alt="NΩΛ" width="54">
-  <br>
-  <sub>NΩΛ / PROJECT NOX</sub>
-</div>
+<img src="./assets/ui/signature.svg" width="1100" alt="NΩΛ · PROJECT NOX">
