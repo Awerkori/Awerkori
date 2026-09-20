@@ -3,6 +3,8 @@
   <img src="./assets/profile/identity.svg" width="846" alt="Awerkori e Project Nox: identidade e atividade real do GitHub">
 </picture>
 
+<p><sub>SOBRE MIM</sub><br>Criando e mantendo o Project Nox.</p>
+
 <p><a href="https://manga.project-nox-awerkori.workers.dev"><img src="./assets/profile/nav-site-manga.svg" width="32%" alt="Site Mangá"></a> <a href="https://github.com/Awerkori/extensoes"><img src="./assets/profile/nav-extensions-manga.svg" width="32%" alt="Extensões Mangá"></a> <a href="https://github.com/Awerkori/anime-extensoes"><img src="./assets/profile/nav-extensions-anime.svg" width="32%" alt="Extensões Anime"></a></p>
 
 <picture>
