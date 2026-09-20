@@ -26,4 +26,7 @@ Um projeto independente que reúne ideias, ferramentas e serviços feitos para g
 
 Tem uma ideia ou encontrou algo para melhorar? [Converse com o Nox →](https://github.com/Awerkori/project-nox-requests/issues)
 
-<img src="./assets/ui/signature.svg" width="1100" alt="NΩΛ · PROJECT NOX">
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/ui/signature-mobile.svg">
+  <img src="./assets/ui/signature.svg" width="1100" alt="NΩΛ · PROJECT NOX">
+</picture>
