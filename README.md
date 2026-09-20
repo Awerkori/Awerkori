@@ -5,4 +5,9 @@
   <img src="./assets/profile/identity.svg" width="846" alt="Awerkori e Project Nox: identidade e atividade real do GitHub">
 </picture>
 
+<p><sub>SOBRE MIM</sub><br>
+Sou Awerkori, criador e mantenedor do Project Nox.<br>
+Web · ferramentas · extensões · automação<br>
+<a href="https://zyo.se/awerkori">Mais sobre mim ↗</a></p>
+
 <p><sub>NΩΛ · Awerkori × Project Nox</sub></p>
