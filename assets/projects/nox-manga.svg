@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 112" role="img" aria-labelledby="title">
+  <title id="title">Project Nox Manga</title>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b0813"/><stop offset="1" stop-color="#241039"/></linearGradient></defs>
+  <rect width="560" height="112" rx="14" fill="url(#g)" stroke="#8b5cf6" stroke-opacity="0.48"/>
+  <path d="M28 30h38v51H28zM66 30l18 10v41L66 81z" fill="none" stroke="#c4b5fd" stroke-width="2"/>
+  <path d="M42 43h15M42 53h15M42 63h10" stroke="#8b5cf6" stroke-width="2"/>
+  <path d="M111 28h1M126 42h1M106 80h1" stroke="#c4b5fd" stroke-width="3" stroke-linecap="round"/>
+  <text x="112" y="48" fill="#c4b5fd" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="3">01 / WEB</text>
+  <text x="112" y="75" fill="#faf5ff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="1">NOX MANGA</text>
+</svg>
