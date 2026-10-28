@@ -1,0 +1,45 @@
+name: Update Live Profile Activity
+
+on:
+  schedule:
+    # Executa a cada 6 horas para manter os dados de contribuição sempre vivos e atualizados
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-activity
+  cancel-in-progress: true
+
+jobs:
+  refresh-activity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate live contribution metrics & SVGs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-activity.mjs
+
+      - name: Commit and push updated activity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/profile/activity.svg assets/profile/activity-mobile.svg assets/profile/activity.json
+          if git diff --staged --quiet; then
+            echo "Nenhuma alteração nos dados de atividade."
+          else
+            git commit -m "chore(activity): refresh live GitHub contribution metrics [skip ci]"
+            git push
+          fi

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="846" height="114" viewBox="0 0 846 114" role="img" aria-labelledby="aboutTitle aboutDesc">
+  <title id="aboutTitle">Mais sobre mim — Conexões e Presença Digital</title>
+  <desc id="aboutDesc">Perfil, ecossistema pessoal e projetos autorais em zyo.se/awerkori.</desc>
+  <defs>
+    <linearGradient id="aboutBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0817"/>
+      <stop offset="50%" stop-color="#140a24"/>
+      <stop offset="100%" stop-color="#080510"/>
+    </linearGradient>
+    <radialGradient id="portalGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0c0817" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldBorderA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    
+  text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .serif-title {
+    font-family: "Cinzel", "Cinzel Decorative", "Times New Roman", Georgia, serif;
+  }
+
+    .badge-about {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 2.2px;
+      fill: #fbbf24;
+    }
+    .about-title {
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 21px;
+      font-weight: 700;
+      fill: #ffffff;
+      letter-spacing: -0.2px;
+    }
+    .about-desc {
+      font-size: 12.5px;
+      fill: #c4b5fd;
+    }
+    .portal-link {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      fill: #fbbf24;
+    }
+    .portal-pulse {
+      animation: portalBreath 6s ease-in-out infinite alternate;
+    }
+    .compass-spin {
+      animation: compassRotate 26s linear infinite;
+      transform-origin: 48px 57px;
+    }
+    @keyframes portalBreath {
+      0% { opacity: 0.4; }
+      100% { opacity: 0.9; }
+    }
+    @keyframes compassRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .portal-pulse, .compass-spin { animation: none !important; }
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="845" height="113" rx="13" fill="url(#aboutBg)" stroke="#3c205c" stroke-width="1"/>
+  <path d="M14 1H160" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Left Celestial Compass Glyph -->
+  <g transform="translate(24, 0)">
+    <circle cx="48" cy="57" r="38" fill="url(#portalGlow)" class="portal-pulse"/>
+    <rect x="22" y="31" width="52" height="52" rx="12" fill="#1b102e" stroke="#502582" stroke-width="1.2"/>
+    
+    <!-- Rotating Compass Ring -->
+    <circle cx="48" cy="57" r="21" fill="none" stroke="#fbbf24" stroke-width="0.9" stroke-dasharray="6 4 2 4" opacity="0.8" class="compass-spin"/>
+
+    <!-- Celestial Core Star -->
+    <g transform="translate(48, 57)">
+      <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#fbbf24"/>
+      <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- Content -->
+  <g transform="translate(122, 25)">
+    <text x="0" y="8" class="badge-about">✦ ALÉM DO GITHUB · PRESENÇA DIGITAL</text>
+    <text x="0" y="34" class="about-title">Mais sobre mim</text>
+    <text x="0" y="56" class="about-desc">Conexões pessoais, ecossistema expandido e trajetória criativa centralizados no Zyo.</text>
+  </g>
+
+  <!-- Right Access Button -->
+  <g transform="translate(818, 57)" text-anchor="end">
+    <rect x="-190" y="-19" width="190" height="38" rx="9" fill="#1a112c" stroke="#502582" stroke-width="1"/>
+    <text x="-32" y="5" class="portal-link">zyo.se/awerkori</text>
+    <path d="M-22 -4l6 6m0 0h-6m6 0v-6" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

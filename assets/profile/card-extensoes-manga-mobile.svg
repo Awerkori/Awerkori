@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="210" viewBox="0 0 420 210" role="img" aria-labelledby="mangaCardMobTitle">
+  <title id="mangaCardMobTitle">Project Nox Extensões · Mangá</title>
+  <defs>
+    <linearGradient id="mangaCardBgM" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e0a19"/>
+      <stop offset="50%" stop-color="#150c26"/>
+      <stop offset="100%" stop-color="#0a0713"/>
+    </linearGradient>
+    <linearGradient id="goldButtonM" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff099"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    
+  text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .serif-title {
+    font-family: "Cinzel", "Cinzel Decorative", "Times New Roman", Georgia, serif;
+  }
+
+    .badge-primary-m {
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      fill: #fbbf24;
+    }
+    .card-title-m {
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 19px;
+      font-weight: 700;
+      fill: #ffffff;
+    }
+    .card-desc-m {
+      font-size: 11px;
+      line-height: 16px;
+      fill: #c4b5fd;
+    }
+    .spec-pill-m {
+      font-size: 9px;
+      font-weight: 600;
+      fill: #e9d5ff;
+    }
+    .btn-text-m {
+      font-size: 11px;
+      font-weight: 700;
+      fill: #090610;
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="419" height="209" rx="12" fill="url(#mangaCardBgM)" stroke="#44216e" stroke-width="1"/>
+  <path d="M12 1H180" stroke="url(#goldButtonM)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Content -->
+  <g transform="translate(18, 22)">
+    <text x="0" y="8" class="badge-primary-m">✦ REPOSITÓRIO OFICIAL · DESTAQUE</text>
+    <text x="0" y="32" class="card-title-m">Project Nox Extensões · Mangá</text>
+    <text x="0" y="54" class="card-desc-m">Extensões compiladas para Mihon, TachiyomiSY e variantes.</text>
+    <text x="0" y="70" class="card-desc-m">Catálogo moderno em Protobuf (index.pb) e foco em PT-BR.</text>
+
+    <!-- Pills -->
+    <g transform="translate(0, 86)">
+      <rect x="0" y="0" width="112" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="12" y="13" class="spec-pill-m">Catálogo index.pb</text>
+
+      <rect x="120" y="0" width="102" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="132" y="13" class="spec-pill-m">Foco em PT-BR</text>
+
+      <rect x="230" y="0" width="118" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="242" y="13" class="spec-pill-m">Mihon / Tachiyomi</text>
+    </g>
+
+    <!-- Button -->
+    <g transform="translate(0, 122)">
+      <rect x="0" y="0" width="384" height="36" rx="8" fill="url(#goldButtonM)"/>
+      <text x="192" y="22" class="btn-text-m" text-anchor="middle">Acessar Repositório Awerkori/extensoes →</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="210" viewBox="0 0 420 210" role="img" aria-labelledby="animeCardMobTitle">
+  <title id="animeCardMobTitle">Project Nox Anime · Extensões</title>
+  <defs>
+    <linearGradient id="animeCardBgM" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e0a19"/>
+      <stop offset="50%" stop-color="#140a24"/>
+      <stop offset="100%" stop-color="#090612"/>
+    </linearGradient>
+    <linearGradient id="goldButtonAM" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff099"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    
+  text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .serif-title {
+    font-family: "Cinzel", "Cinzel Decorative", "Times New Roman", Georgia, serif;
+  }
+
+    .badge-primary-am {
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      fill: #fbbf24;
+    }
+    .card-title-am {
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 19px;
+      font-weight: 700;
+      fill: #ffffff;
+    }
+    .card-desc-am {
+      font-size: 11px;
+      line-height: 16px;
+      fill: #c4b5fd;
+    }
+    .spec-pill-am {
+      font-size: 9px;
+      font-weight: 600;
+      fill: #e9d5ff;
+    }
+    .btn-text-am {
+      font-size: 11px;
+      font-weight: 700;
+      fill: #090610;
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="419" height="209" rx="12" fill="url(#animeCardBgM)" stroke="#44216e" stroke-width="1"/>
+  <path d="M12 1H180" stroke="url(#goldButtonAM)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Content -->
+  <g transform="translate(18, 22)">
+    <text x="0" y="8" class="badge-primary-am">✦ REPOSITÓRIO OFICIAL · DESTAQUE</text>
+    <text x="0" y="32" class="card-title-am">Project Nox Anime · Extensões</text>
+    <text x="0" y="54" class="card-desc-am">Extensões compiladas para o ecossistema Aniyomi e derivados.</text>
+    <text x="0" y="70" class="card-desc-am">Catálogo compilado para streaming contínuo de animes.</text>
+
+    <!-- Pills -->
+    <g transform="translate(0, 86)">
+      <rect x="0" y="0" width="112" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="12" y="13" class="spec-pill-am">Aniyomi &amp; Forks</text>
+
+      <rect x="120" y="0" width="122" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="132" y="13" class="spec-pill-am">Índice Compilado</text>
+
+      <rect x="250" y="0" width="98" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="262" y="13" class="spec-pill-am">Streaming HD</text>
+    </g>
+
+    <!-- Button -->
+    <g transform="translate(0, 122)">
+      <rect x="0" y="0" width="384" height="36" rx="8" fill="url(#goldButtonAM)"/>
+      <text x="192" y="22" class="btn-text-am" text-anchor="middle">Acessar Repositório Awerkori/anime-extensoes →</text>
+    </g>
+  </g>
+</svg>

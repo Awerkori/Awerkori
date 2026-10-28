@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="136" viewBox="0 0 420 136" role="img" aria-labelledby="aboutMobTitle">
+  <title id="aboutMobTitle">Mais sobre mim — zyo.se/awerkori</title>
+  <defs>
+    <linearGradient id="aboutBgM" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0817"/>
+      <stop offset="50%" stop-color="#140a24"/>
+      <stop offset="100%" stop-color="#080510"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    
+  text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .serif-title {
+    font-family: "Cinzel", "Cinzel Decorative", "Times New Roman", Georgia, serif;
+  }
+
+    .badge-about-m {
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      fill: #fbbf24;
+    }
+    .about-title-m {
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+      fill: #ffffff;
+    }
+    .about-desc-m {
+      font-size: 11px;
+      fill: #c4b5fd;
+    }
+    .portal-link-m {
+      font-size: 11px;
+      font-weight: 700;
+      fill: #fbbf24;
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="419" height="135" rx="11" fill="url(#aboutBgM)" stroke="#3c205c" stroke-width="1"/>
+
+  <g transform="translate(18, 22)">
+    <text x="0" y="6" class="badge-about-m">✦ ALÉM DO GITHUB · PRESENÇA DIGITAL</text>
+    <text x="0" y="30" class="about-title-m">Mais sobre mim</text>
+    <text x="0" y="50" class="about-desc-m">Perfil pessoal, ecossistema e projetos em zyo.se/awerkori.</text>
+
+    <g transform="translate(0, 72)">
+      <rect x="0" y="0" width="384" height="32" rx="7" fill="#1b112e" stroke="#502582" stroke-width="0.9"/>
+      <text x="192" y="20" class="portal-link-m" text-anchor="middle">Acessar perfil completo em zyo.se/awerkori ↗</text>
+    </g>
+  </g>
+</svg>
