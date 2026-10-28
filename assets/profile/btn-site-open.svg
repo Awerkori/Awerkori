@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="165" height="36" viewBox="0 0 165 36" role="img" aria-label="Acessar nosso site">
+  <defs>
+    <linearGradient id="btnSiteOpenBtnBg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#21123d"/>
+        <stop offset="50%" stop-color="#2a144e"/>
+        <stop offset="100%" stop-color="#190d2e"/>
+      </linearGradient>
+    <linearGradient id="btnSiteOpenBtnBorder" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.6"/>
+      </linearGradient>
+  </defs>
+  <style>
+    
+  text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+    .btn-lbl {
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      fill: #ffffff;
+    }
+  </style>
+  <rect x="0.5" y="0.5" width="164" height="35" rx="8" fill="url(#btnSiteOpenBtnBg)" stroke="url(#btnSiteOpenBtnBorder)" stroke-width="1"/>
+  <path d="M10 2H155" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Left Icon -->
+  <g transform="translate(12, 9)">
+    <circle cx="9" cy="9" r="7.5" fill="none" stroke="#fbbf24" stroke-width="1.4"/><ellipse cx="9" cy="9" rx="3.5" ry="7.5" fill="none" stroke="#fbbf24" stroke-width="1"/><line x1="1.5" y1="9" x2="16.5" y2="9" stroke="#fbbf24" stroke-width="1"/>
+  </g>
+
+  <!-- Button Label -->
+  <text x="34" y="23" class="btn-lbl">Acessar nosso site</text>
+
+  <!-- Right Chevron -->
+  <g transform="translate(147, 13)">
+    <path d="M0 0l3.5 4.5-3.5 4.5" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

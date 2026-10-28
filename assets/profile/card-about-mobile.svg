@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="130" viewBox="0 0 420 130" role="img" aria-labelledby="aboutMobTitle">
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="126" viewBox="0 0 420 126" role="img" aria-labelledby="aboutMobTitle">
   <title id="aboutMobTitle">Mais sobre mim — zyo.se/awerkori</title>
   <defs>
     <linearGradient id="aboutBgM" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0c0817"/>
-      <stop offset="50%" stop-color="#140a24"/>
-      <stop offset="100%" stop-color="#080510"/>
+      <stop offset="0%" stop-color="#0f091c"/>
+      <stop offset="50%" stop-color="#150d26"/>
+      <stop offset="100%" stop-color="#0a0614"/>
     </linearGradient>
   </defs>
 
@@ -30,23 +30,24 @@
       font-size: 11px;
       fill: #c4b5fd;
     }
-    .portal-link-m {
+    .btn-about-m {
       font-size: 11px;
-      font-weight: 700;
-      fill: #fbbf24;
+      font-weight: 600;
+      fill: #fef08a;
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="129" rx="11" fill="url(#aboutBgM)" stroke="#3c205c" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="125" rx="12" fill="url(#aboutBgM)" stroke="#3e2063" stroke-width="1"/>
+  <path d="M12 1H90" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
 
-  <g transform="translate(18, 18)">
+  <g transform="translate(18, 20)">
     <text x="0" y="6" class="badge-about-m">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
-    <text x="0" y="28" class="about-title-m">Mais sobre mim</text>
-    <text x="0" y="47" class="about-desc-m">Links pessoais, projetos e formas de contato no Zyo.</text>
+    <text x="0" y="27" class="about-title-m">Mais sobre mim</text>
+    <text x="0" y="46" class="about-desc-m">Projetos autorais, perfil e links fora do GitHub.</text>
 
-    <g transform="translate(0, 66)">
-      <rect x="0" y="0" width="384" height="34" rx="7" fill="#1b112e" stroke="#502582" stroke-width="0.9"/>
-      <text x="192" y="22" class="portal-link-m" text-anchor="middle">Acessar perfil pessoal em zyo.se/awerkori ↗</text>
+    <g transform="translate(0, 64)">
+      <rect x="0" y="0" width="160" height="24" rx="6" fill="#1c1130" stroke="#582a8c" stroke-width="0.8"/>
+      <text x="80" y="16" class="btn-about-m" text-anchor="middle">zyo.se/awerkori ↗</text>
     </g>
   </g>
 </svg>

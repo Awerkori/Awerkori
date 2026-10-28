@@ -1,16 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="846" height="114" viewBox="0 0 846 114" role="img" aria-labelledby="aboutTitle aboutDesc">
-  <title id="aboutTitle">Mais sobre mim</title>
-  <desc id="aboutDesc">Meu perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</desc>
+  <title id="aboutTitle">Mais sobre mim — zyo.se/awerkori</title>
+  <desc id="aboutDesc">Perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</desc>
   <defs>
     <linearGradient id="aboutBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0c0817"/>
-      <stop offset="50%" stop-color="#140a24"/>
-      <stop offset="100%" stop-color="#080510"/>
+      <stop offset="0%" stop-color="#0f091c"/>
+      <stop offset="50%" stop-color="#150d26"/>
+      <stop offset="100%" stop-color="#0a0614"/>
     </linearGradient>
-    <radialGradient id="portalGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.35"/>
-      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#0c0817" stop-opacity="0"/>
+    <radialGradient id="aboutGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0f091c" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
@@ -31,58 +30,46 @@
       font-size: 21px;
       font-weight: 700;
       fill: #ffffff;
-      letter-spacing: -0.2px;
     }
     .about-desc {
       font-size: 12.5px;
       fill: #c4b5fd;
     }
-    .portal-link {
+    .btn-about-text {
       font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      fill: #fbbf24;
-    }
-    .portal-pulse {
-      animation: portalBreath 6s ease-in-out infinite alternate;
-    }
-    @keyframes portalBreath {
-      0% { opacity: 0.4; }
-      100% { opacity: 0.9; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .portal-pulse { animation: none !important; }
+      font-weight: 600;
+      fill: #fef08a;
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="845" height="113" rx="13" fill="url(#aboutBg)" stroke="#3c205c" stroke-width="1"/>
-  <path d="M14 1H140" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/>
+  <rect x="0.5" y="0.5" width="845" height="113" rx="14" fill="url(#aboutBg)" stroke="#3e2063" stroke-width="1"/>
+  <path d="M14 1H140" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- Centered Compass Icon Frame -->
-  <g transform="translate(26, 0)">
-    <circle cx="48" cy="57" r="38" fill="url(#portalGlow)" class="portal-pulse"/>
-    <rect x="22" y="31" width="52" height="52" rx="13" fill="#1b102e" stroke="#502582" stroke-width="1.2"/>
-    <g transform="translate(22, 31)">
+  <!-- Icon -->
+  <g transform="translate(26, 17)">
+    <circle cx="40" cy="40" r="36" fill="url(#aboutGlow)"/>
+    <rect x="6" y="6" width="68" height="68" rx="16" fill="#1b112e" stroke="#522785" stroke-width="1.2"/>
+    <g transform="translate(1, 1)">
       
-  <g transform="translate(26, 26)">
-    <circle cx="0" cy="0" r="21" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="7 5"/>
-    <polygon points="0,-14 4,-4 14,0 4,4 0,14 -4,4 -14,0 -4,-4" fill="#fbbf24"/>
-    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
-  </g>
-
+    <!-- Star Compass Glyph -->
+    <circle cx="39" cy="39" r="24" fill="#24133f" stroke="#7c3aed" stroke-width="1.4"/>
+    <path d="M39 20v38M20 39h38" stroke="#fbbf24" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M39 28l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#facc15"/>
+    <circle cx="39" cy="39" r="2" fill="#ffffff"/>
+  
     </g>
   </g>
 
-  <!-- Content -->
-  <g transform="translate(124, 26)">
+  <!-- Text -->
+  <g transform="translate(126, 26)">
     <text x="0" y="8" class="badge-about">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
-    <text x="0" y="34" class="about-title">Mais sobre mim</text>
-    <text x="0" y="56" class="about-desc">Meu perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</text>
+    <text x="0" y="32" class="about-title">Mais sobre mim</text>
+    <text x="0" y="54" class="about-desc">Meu perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</text>
   </g>
 
-  <!-- Right Access Button -->
-  <g transform="translate(818, 57)" text-anchor="end">
-    <rect x="-186" y="-19" width="186" height="38" rx="9" fill="#1a112c" stroke="#502582" stroke-width="1"/>
-    <text x="-28" y="5" class="portal-link">zyo.se/awerkori ↗</text>
+  <!-- Right Pill -->
+  <g transform="translate(640, 39)">
+    <rect x="0" y="0" width="176" height="36" rx="8" fill="#1c1130" stroke="#582a8c" stroke-width="1"/>
+    <text x="76" y="23" class="btn-about-text" text-anchor="middle">zyo.se/awerkori ↗</text>
   </g>
 </svg>

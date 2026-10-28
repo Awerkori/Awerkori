@@ -12,24 +12,34 @@ const officialWebpPath = path.join(profileDir, 'nox-official.webp');
 const officialWebpB64 = (await fs.readFile(officialWebpPath)).toString('base64');
 const officialDataUri = `data:image/webp;base64,${officialWebpB64}`;
 
+function escapeXml(str) {
+  if (typeof str !== 'string') return str;
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 const COMMON_FONTS = `
   text {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
 `;
 
+// ==========================================
+// 1. HERO DESKTOP (846 x 260) — RESTORED APPROVED
+// ==========================================
 function buildHeroDesktop() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="236" viewBox="0 0 846 236" role="img" aria-labelledby="heroTitle heroDesc">
-  <title id="heroTitle">Awerkori · Project Nox</title>
-  <desc id="heroDesc">Identidade oficial do Project Nox com ícone orbital animado e atmosfera cósmica roxa e dourada.</desc>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="260" viewBox="0 0 846 260" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Awerkori · Project Nox — Identidade Oficial</title>
+  <desc id="heroDesc">Identidade visual oficial do Project Nox com icone oficial, animacao orbital e atmosfera cosmica em roxo e dourado.</desc>
 
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#090610"/>
       <stop offset="45%" stop-color="#120a1f"/>
       <stop offset="100%" stop-color="#08050e"/>
     </linearGradient>
 
+    <!-- Cosmic Nebula Radial Glows -->
     <radialGradient id="symbolNebula" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#9333ea" stop-opacity="0.45"/>
       <stop offset="50%" stop-color="#581c87" stop-opacity="0.2"/>
@@ -47,13 +57,7 @@ function buildHeroDesktop() {
       <stop offset="100%" stop-color="#090610" stop-opacity="0"/>
     </radialGradient>
 
-    <linearGradient id="titleCosmic" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#fff8d6"/>
-      <stop offset="30%" stop-color="#facc15"/>
-      <stop offset="65%" stop-color="#e879f9"/>
-      <stop offset="100%" stop-color="#a855f7"/>
-    </linearGradient>
-
+    <!-- Metallic Gold Gradient -->
     <linearGradient id="goldMetal" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fff4b8"/>
       <stop offset="35%" stop-color="#fbbf24"/>
@@ -61,18 +65,29 @@ function buildHeroDesktop() {
       <stop offset="100%" stop-color="#b45309"/>
     </linearGradient>
 
+    <!-- Title Gradient (Gold to Cosmic Violet) -->
+    <linearGradient id="titleCosmic" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff8d6"/>
+      <stop offset="30%" stop-color="#facc15"/>
+      <stop offset="65%" stop-color="#e879f9"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Orbital Ring Gradient -->
     <linearGradient id="orbitStroke" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.8"/>
       <stop offset="50%" stop-color="#a855f7" stop-opacity="0.2"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.8"/>
     </linearGradient>
 
+    <!-- Light Sweep Gradient -->
     <linearGradient id="sweepBeam" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#fef08a" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#fef08a" stop-opacity="0.35"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
 
+    <!-- Glow Filters -->
     <filter id="goldGlow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
@@ -89,8 +104,9 @@ function buildHeroDesktop() {
       </feMerge>
     </filter>
 
+    <!-- Mask for light sweep -->
     <mask id="heroMask">
-      <rect x="0.5" y="0.5" width="845" height="235" rx="14" fill="#ffffff"/>
+      <rect x="0.5" y="0.5" width="845" height="259" rx="14" fill="#ffffff"/>
     </mask>
   </defs>
 
@@ -99,21 +115,27 @@ function buildHeroDesktop() {
     .badge-tracker {
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 2.5px;
+      letter-spacing: 3px;
       fill: #e9d5ff;
     }
     .hero-title {
       font-family: "Cinzel", "Cinzel Decorative", "Times New Roman", Georgia, serif;
-      font-size: 46px;
+      font-size: 44px;
       font-weight: 700;
       letter-spacing: -0.5px;
       fill: url(#titleCosmic);
     }
     .hero-tagline {
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 400;
       fill: #c4b5fd;
       letter-spacing: 0.2px;
+    }
+    .pill-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      fill: #fef08a;
+      letter-spacing: 0.5px;
     }
     .monogram {
       font-family: "Cinzel", Georgia, serif;
@@ -122,27 +144,32 @@ function buildHeroDesktop() {
       fill: #fbbf24;
       font-weight: 600;
     }
+    .meta-edge {
+      font-size: 9.5px;
+      letter-spacing: 1.5px;
+      fill: #8b859e;
+    }
 
-    /* Orbital & Nebula Animations */
+    /* Orbital and Nebula Animations */
     .aurora-pulse {
       animation: nebulaBreathe 8s ease-in-out infinite alternate;
-      transform-origin: 110px 118px;
+      transform-origin: 110px 130px;
     }
     .orbit-cw {
       animation: spinCW 32s linear infinite;
-      transform-origin: 110px 118px;
+      transform-origin: 110px 130px;
     }
     .orbit-ccw {
       animation: spinCCW 24s linear infinite;
-      transform-origin: 110px 118px;
+      transform-origin: 110px 130px;
     }
     .satellite {
       animation: spinCW 18s linear infinite;
-      transform-origin: 110px 118px;
+      transform-origin: 110px 130px;
     }
     .satellite-sub {
       animation: spinCCW 28s linear infinite;
-      transform-origin: 110px 118px;
+      transform-origin: 110px 130px;
     }
     .sweep-move {
       animation: sweepCycle 14s ease-in-out infinite;
@@ -152,6 +179,9 @@ function buildHeroDesktop() {
     }
     .star-twinkle-2 {
       animation: twinkle 5.8s ease-in-out infinite alternate 1.5s;
+    }
+    .star-twinkle-3 {
+      animation: twinkle 6.5s ease-in-out infinite alternate 3s;
     }
 
     @keyframes spinCW {
@@ -178,82 +208,115 @@ function buildHeroDesktop() {
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .aurora-pulse, .orbit-cw, .orbit-ccw, .satellite, .satellite-sub, .sweep-move, .star-twinkle-1, .star-twinkle-2 {
+      .aurora-pulse, .orbit-cw, .orbit-ccw, .satellite, .satellite-sub, .sweep-move, .star-twinkle-1, .star-twinkle-2, .star-twinkle-3 {
         animation: none !important;
       }
     }
   </style>
 
-  <!-- Surface -->
-  <rect x="0.5" y="0.5" width="845" height="235" rx="14" fill="url(#heroBg)" stroke="#382156" stroke-width="1"/>
-  <rect x="1" y="1" width="844" height="234" rx="13" fill="url(#ambientRight)"/>
+  <!-- Canvas Surface -->
+  <rect x="0.5" y="0.5" width="845" height="259" rx="14" fill="url(#heroBg)" stroke="#382156" stroke-width="1"/>
+  <rect x="1" y="1" width="844" height="258" rx="13" fill="url(#ambientRight)"/>
 
   <!-- Celestial Stars -->
   <g class="star-twinkle-1">
-    <circle cx="280" cy="38" r="1.3" fill="#ffffff"/>
-    <circle cx="560" cy="46" r="1" fill="#fef08a"/>
-    <circle cx="750" cy="155" r="1.4" fill="#ffffff"/>
-    <circle cx="390" cy="195" r="1.1" fill="#e9d5ff"/>
+    <circle cx="280" cy="42" r="1.3" fill="#ffffff"/>
+    <circle cx="560" cy="50" r="1" fill="#fef08a"/>
+    <circle cx="750" cy="180" r="1.4" fill="#ffffff"/>
+    <circle cx="390" cy="220" r="1.1" fill="#e9d5ff"/>
   </g>
   <g class="star-twinkle-2">
-    <circle cx="230" cy="185" r="1" fill="#ffffff"/>
-    <circle cx="490" cy="32" r="1.3" fill="#fef08a"/>
-    <circle cx="680" cy="65" r="1" fill="#c084fc"/>
-    <text x="340" y="34" font-size="9" fill="#fbbf24" opacity="0.6">✦</text>
-    <text x="730" y="85" font-size="8" fill="#e879f9" opacity="0.5">✦</text>
+    <circle cx="230" cy="210" r="1" fill="#ffffff"/>
+    <circle cx="490" cy="35" r="1.3" fill="#fef08a"/>
+    <circle cx="680" cy="75" r="1" fill="#c084fc"/>
+    <circle cx="790" cy="130" r="1.2" fill="#ffffff"/>
+  </g>
+  <g class="star-twinkle-3">
+    <text x="340" y="38" font-size="9" fill="#fbbf24" opacity="0.6">✦</text>
+    <text x="730" y="95" font-size="8" fill="#e879f9" opacity="0.5">✦</text>
+    <text x="610" y="225" font-size="9" fill="#fbbf24" opacity="0.6">✦</text>
   </g>
 
-  <!-- Official Icon & Celestial Orbits (Centered vertically at 118) -->
+  <!-- Left: Official Project Nox Symbol and Celestial Orbits -->
   <g id="symbolSection">
-    <circle cx="110" cy="118" r="95" fill="url(#symbolNebula)" class="aurora-pulse"/>
-    <circle cx="110" cy="118" r="65" fill="url(#goldCoreGlow)" class="aurora-pulse"/>
+    <!-- Nebula Auroras -->
+    <circle cx="110" cy="130" r="95" fill="url(#symbolNebula)" class="aurora-pulse"/>
+    <circle cx="110" cy="130" r="65" fill="url(#goldCoreGlow)" class="aurora-pulse"/>
 
     <!-- Outer Orbit Ring -->
-    <circle cx="110" cy="118" r="74" fill="none" stroke="url(#orbitStroke)" stroke-width="1.2" stroke-dasharray="14 10 3 10" class="orbit-cw"/>
+    <circle cx="110" cy="130" r="74" fill="none" stroke="url(#orbitStroke)" stroke-width="1.2" stroke-dasharray="14 10 3 10" class="orbit-cw"/>
     <!-- Inner Orbit Ring -->
-    <circle cx="110" cy="118" r="62" fill="none" stroke="#a855f7" stroke-width="0.8" stroke-dasharray="6 8" opacity="0.6" class="orbit-ccw"/>
+    <circle cx="110" cy="130" r="62" fill="none" stroke="#a855f7" stroke-width="0.8" stroke-dasharray="6 8" opacity="0.6" class="orbit-ccw"/>
 
-    <!-- Orbital Satellites (Planetinhas) -->
+    <!-- Orbital Satellite Node 1 (Golden Planet) -->
     <g class="satellite">
-      <circle cx="110" cy="44" r="3" fill="#fef08a" filter="url(#goldGlow)"/>
-      <circle cx="110" cy="44" r="1.2" fill="#ffffff"/>
+      <circle cx="110" cy="56" r="3.2" fill="#fef08a" filter="url(#goldGlow)"/>
+      <circle cx="110" cy="56" r="1.4" fill="#ffffff"/>
     </g>
+    <!-- Orbital Satellite Node 2 (Violet Planet) -->
     <g class="satellite-sub">
-      <circle cx="110" cy="180" r="2.2" fill="#d946ef" filter="url(#softGlow)"/>
+      <circle cx="110" cy="192" r="2.4" fill="#d946ef" filter="url(#softGlow)"/>
     </g>
 
     <!-- Official Emblem WebP (Golden Omega with Alpha inside) -->
-    <image href="${officialDataUri}" x="52" y="60" width="116" height="116" preserveAspectRatio="xMidYMid meet"/>
+    <image href="${officialDataUri}" x="52" y="72" width="116" height="116" preserveAspectRatio="xMidYMid meet"/>
   </g>
 
-  <!-- Typography & Brand -->
+  <!-- Center and Right: Typography and Brand -->
   <g transform="translate(216, 0)">
-    <g transform="translate(0, 48)">
+    <!-- Top Monogram and Tracker -->
+    <g transform="translate(0, 52)">
       <text x="0" y="0" font-size="9" fill="#fbbf24" filter="url(#softGlow)">✦</text>
       <text x="14" y="-1" class="badge-tracker">AWERKORI</text>
       <text x="122" y="-1" class="badge-tracker" fill="#8b859e">·</text>
       <text x="134" y="-1" class="badge-tracker" fill="#fbbf24">PROJECT NOX</text>
     </g>
 
-    <text x="0" y="104" class="hero-title">Project Nox</text>
-    <text x="0" y="140" class="hero-tagline">Desenvolvimento de extensões, ferramentas e sistemas para o Project Nox.</text>
+    <!-- Main Title -->
+    <text x="0" y="108" class="hero-title">Project Nox</text>
 
-    <!-- Bottom Line -->
-    <line x1="0" y1="180" x2="600" y2="180" stroke="#2a1c40" stroke-width="1"/>
-    <line x1="0" y1="180" x2="140" y2="180" stroke="url(#goldMetal)" stroke-width="1.2"/>
-    <text x="596" y="198" class="monogram" text-anchor="end">✦ NΩΛ ✦</text>
+    <!-- Refined Portuguese Tagline -->
+    <text x="0" y="142" class="hero-tagline">Desenvolvimento de extensões, ferramentas e ecossistema aberto.</text>
+
+    <!-- Refined Feature Badges -->
+    <g transform="translate(0, 168)">
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="140" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
+        <text x="23" y="17" class="pill-label">Mihon e forks</text>
+      </g>
+      <g transform="translate(150, 0)">
+        <rect x="0" y="0" width="145" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
+        <text x="23" y="17" class="pill-label">Aniyomi e forks</text>
+      </g>
+      <g transform="translate(305, 0)">
+        <rect x="0" y="0" width="155" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
+        <text x="23" y="17" class="pill-label">Software aberto</text>
+      </g>
+    </g>
+
+    <!-- Bottom Decorative Horizon Line -->
+    <line x1="0" y1="216" x2="600" y2="216" stroke="#2a1c40" stroke-width="1"/>
+    <line x1="0" y1="216" x2="160" y2="216" stroke="url(#goldMetal)" stroke-width="1.2"/>
+    <text x="0" y="235" class="meta-edge">✦ IDENTIDADE E ENGENHARIA DIGITAL ✦</text>
+    <text x="596" y="235" class="monogram" text-anchor="end">✦ NΩΛ ✦</text>
   </g>
 
   <!-- Masked Light Sweep Beam -->
   <g mask="url(#heroMask)">
-    <rect x="0" y="0" width="160" height="236" fill="url(#sweepBeam)" class="sweep-move"/>
+    <rect x="0" y="0" width="160" height="260" fill="url(#sweepBeam)" class="sweep-move"/>
   </g>
 </svg>
 `;
 }
 
+// ==========================================
+// 2. HERO MOBILE (420 x 330) — RESTORED APPROVED
+// ==========================================
 function buildHeroMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="286" viewBox="0 0 420 286" role="img" aria-labelledby="heroMobTitle">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="330" viewBox="0 0 420 330" role="img" aria-labelledby="heroMobTitle">
   <title id="heroMobTitle">Awerkori · Project Nox</title>
   <defs>
     <linearGradient id="heroBgM" x1="0" y1="0" x2="1" y2="1">
@@ -288,12 +351,12 @@ function buildHeroMobile() {
     .badge-tracker-m {
       font-size: 9.5px;
       font-weight: 700;
-      letter-spacing: 2.2px;
+      letter-spacing: 2.5px;
       fill: #e9d5ff;
     }
     .hero-title-m {
       font-family: "Cinzel", Georgia, serif;
-      font-size: 34px;
+      font-size: 36px;
       font-weight: 700;
       letter-spacing: -0.5px;
       fill: url(#titleCosmicM);
@@ -301,19 +364,19 @@ function buildHeroMobile() {
     .hero-tagline-m {
       font-size: 11.5px;
       fill: #c4b5fd;
-      line-height: 16px;
+    }
+    .pill-label-m {
+      font-size: 9.5px;
+      font-weight: 600;
+      fill: #fef08a;
     }
     .orbit-cw-m {
       animation: spinCW 28s linear infinite;
-      transform-origin: 210px 72px;
-    }
-    .satellite-m {
-      animation: spinCW 16s linear infinite;
-      transform-origin: 210px 72px;
+      transform-origin: 210px 75px;
     }
     .aurora-pulse-m {
       animation: nebulaBreatheM 8s ease-in-out infinite alternate;
-      transform-origin: 210px 72px;
+      transform-origin: 210px 75px;
     }
     @keyframes spinCW {
       from { transform: rotate(0deg); }
@@ -324,53 +387,60 @@ function buildHeroMobile() {
       100% { opacity: 0.85; transform: scale(1.08); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .orbit-cw-m, .satellite-m, .aurora-pulse-m { animation: none !important; }
+      .orbit-cw-m, .aurora-pulse-m { animation: none !important; }
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="285" rx="14" fill="url(#heroBgM)" stroke="#382156" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="329" rx="14" fill="url(#heroBgM)" stroke="#382156" stroke-width="1"/>
 
   <!-- Symbol Top Center -->
   <g id="symbolMobile">
-    <circle cx="210" cy="72" r="66" fill="url(#nebulaM)" class="aurora-pulse-m"/>
-    <circle cx="210" cy="72" r="44" fill="url(#goldGlowM)" class="aurora-pulse-m"/>
-    <circle cx="210" cy="72" r="52" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="12 8 3 8" opacity="0.8" class="orbit-cw-m"/>
-    <g class="satellite-m">
-      <circle cx="210" cy="20" r="2.5" fill="#fef08a"/>
-    </g>
-    <image href="${officialDataUri}" x="169" y="31" width="82" height="82" preserveAspectRatio="xMidYMid meet"/>
+    <circle cx="210" cy="75" r="70" fill="url(#nebulaM)" class="aurora-pulse-m"/>
+    <circle cx="210" cy="75" r="48" fill="url(#goldGlowM)" class="aurora-pulse-m"/>
+    <circle cx="210" cy="75" r="56" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="12 8 3 8" opacity="0.8" class="orbit-cw-m"/>
+    <image href="${officialDataUri}" x="165" y="30" width="90" height="90" preserveAspectRatio="xMidYMid meet"/>
   </g>
 
   <!-- Centered Content -->
-  <g transform="translate(210, 146)" text-anchor="middle">
+  <g transform="translate(210, 150)" text-anchor="middle">
     <text x="0" y="0" class="badge-tracker-m">✦ AWERKORI · PROJECT NOX ✦</text>
-    <text x="0" y="36" class="hero-title-m">Project Nox</text>
-    <text x="0" y="62" class="hero-tagline-m">Extensões, ferramentas e sistemas abertos</text>
-    <text x="0" y="78" class="hero-tagline-m">para leitura e streaming.</text>
+    <text x="0" y="38" class="hero-title-m">Project Nox</text>
+    <text x="0" y="64" class="hero-tagline-m">Extensões, ferramentas e ecossistema aberto</text>
+
+    <!-- Badges Row -->
+    <g transform="translate(-140, 84)">
+      <rect x="0" y="0" width="130" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="65" y="16" class="pill-label-m" text-anchor="middle">Mihon e forks</text>
+
+      <rect x="150" y="0" width="130" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="215" y="16" class="pill-label-m" text-anchor="middle">Aniyomi e forks</text>
+    </g>
 
     <!-- Bottom Line -->
-    <line x1="-140" y1="104" x2="140" y2="104" stroke="#2a1c40" stroke-width="1"/>
-    <line x1="-35" y1="104" x2="35" y2="104" stroke="url(#goldMetalM)" stroke-width="1.2"/>
-    <text x="0" y="123" font-size="10" fill="#fbbf24" letter-spacing="3px">✦ NΩΛ ✦</text>
+    <line x1="-150" y1="135" x2="150" y2="135" stroke="#2a1c40" stroke-width="1"/>
+    <line x1="-35" y1="135" x2="35" y2="135" stroke="url(#goldMetalM)" stroke-width="1.2"/>
+    <text x="0" y="156" font-size="10" fill="#fbbf24" letter-spacing="3px">✦ NΩΛ ✦</text>
   </g>
 </svg>
 `;
 }
 
+// ==========================================
+// 3. UNIFIED PROJECT CARD (DESKTOP: 846 x 132)
+// Clean card without fake decoy buttons or repeating repo URLs
+// ==========================================
 function buildProjectCard({
   id,
   title,
-  label,
-  desc1,
-  desc2,
-  reposText,
+  badgeText,
+  desc,
   iconSvg,
-  buttonText,
+  tagText,
   accentColor = '#fbbf24'
 }) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="142" viewBox="0 0 846 142" role="img" aria-labelledby="${id}Title ${id}Desc">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="132" viewBox="0 0 846 132" role="img" aria-labelledby="${id}Title ${id}Desc">
   <title id="${id}Title">${title}</title>
-  <desc id="${id}Desc">${desc1} ${desc2}</desc>
+  <desc id="${id}Desc">${desc}</desc>
   <defs>
     <linearGradient id="${id}Bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0e0a19"/>
@@ -378,21 +448,14 @@ function buildProjectCard({
       <stop offset="100%" stop-color="#090612"/>
     </linearGradient>
     <radialGradient id="${id}Glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.38"/>
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="#0e0a19" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="${id}Btn" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff099"/>
-      <stop offset="50%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#d97706"/>
+    <linearGradient id="${id}BorderGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="${accentColor}" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#7c3aed" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#3e2063" stop-opacity="0.4"/>
     </linearGradient>
-    <filter id="${id}Filter" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
   <style>
@@ -411,18 +474,15 @@ function buildProjectCard({
       fill: #ffffff;
     }
     .card-desc {
-      font-size: 12.5px;
+      font-size: 13px;
       fill: #c4b5fd;
+      line-height: 19px;
     }
-    .repos-sub {
+    .tag-text {
       font-size: 10.5px;
       font-weight: 600;
-      fill: #e9d5ff;
-    }
-    .btn-text {
-      font-size: 11.5px;
-      font-weight: 700;
-      fill: #090610;
+      letter-spacing: 0.5px;
+      fill: #fef08a;
     }
     .halo-pulse {
       animation: iconBreath 6s ease-in-out infinite alternate;
@@ -436,12 +496,13 @@ function buildProjectCard({
     }
   </style>
 
-  <!-- Surface -->
-  <rect x="0.5" y="0.5" width="845" height="141" rx="14" fill="url(#${id}Bg)" stroke="#3e2063" stroke-width="1"/>
+  <!-- Surface with subtle gradient border -->
+  <rect x="0.5" y="0.5" width="845" height="131" rx="14" fill="url(#${id}Bg)" stroke="url(#${id}BorderGrad)" stroke-width="1"/>
+  <!-- Glowing accent bar -->
   <path d="M14 1H180" stroke="${accentColor}" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- Left Icon Frame (Exact Center at 65, 71) -->
-  <g transform="translate(26, 22)">
+  <!-- Left Icon Frame (Exact Center at 65, 66) -->
+  <g transform="translate(26, 17)">
     <circle cx="49" cy="49" r="44" fill="url(#${id}Glow)" class="halo-pulse"/>
     <rect x="10" y="10" width="78" height="78" rx="16" fill="#1b112e" stroke="#522785" stroke-width="1.2"/>
     <g transform="translate(10, 10)">
@@ -449,35 +510,34 @@ function buildProjectCard({
     </g>
   </g>
 
-  <!-- Central Content -->
-  <g transform="translate(136, 24)">
-    <text x="0" y="8" class="badge-label">✦ ${label}</text>
-    <text x="0" y="34" class="card-title">${title}</text>
-    <text x="0" y="58" class="card-desc">${desc1}</text>
-    <text x="0" y="74" class="card-desc">${desc2}</text>
-    <text x="0" y="98" class="repos-sub">${reposText}</text>
+  // Central Content
+  <g transform="translate(136, 26)">
+    <text x="0" y="8" class="badge-label">✦ ${escapeXml(badgeText)}</text>
+    <text x="0" y="34" class="card-title">${escapeXml(title)}</text>
+    <text x="0" y="60" class="card-desc">${escapeXml(desc)}</text>
   </g>
 
-  <!-- Right CTA Button (Fully Contained) -->
-  <g transform="translate(676, 50)">
-    <rect x="0" y="0" width="146" height="42" rx="10" fill="url(#${id}Btn)" filter="url(#${id}Filter)"/>
-    <text x="64" y="26" class="btn-text" text-anchor="middle">${buttonText}</text>
-    <path d="M122 21l4 0m-2 -3l3 3-3 3" fill="none" stroke="#090610" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right Decorative Tag Badge -->
+  <g transform="translate(680, 47)">
+    <rect x="0" y="0" width="138" height="36" rx="9" fill="#190f2d" stroke="#4c277a" stroke-width="1"/>
+    <text x="69" y="23" class="tag-text" text-anchor="middle">${escapeXml(tagText)}</text>
   </g>
 </svg>
 `;
 }
 
+// ==========================================
+// 4. UNIFIED PROJECT CARD (MOBILE: 420 x 140)
+// ==========================================
 function buildProjectCardMobile({
   id,
   title,
-  label,
+  badgeText,
   desc,
-  reposText,
-  buttonText,
+  tagText,
   accentColor = '#fbbf24'
 }) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="172" viewBox="0 0 420 172" role="img" aria-labelledby="${id}MobTitle">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="140" viewBox="0 0 420 140" role="img" aria-labelledby="${id}MobTitle">
   <title id="${id}MobTitle">${title}</title>
   <defs>
     <linearGradient id="${id}BgM" x1="0" y1="0" x2="1" y2="1">
@@ -485,10 +545,9 @@ function buildProjectCardMobile({
       <stop offset="50%" stop-color="#140c24"/>
       <stop offset="100%" stop-color="#090612"/>
     </linearGradient>
-    <linearGradient id="${id}BtnM" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff099"/>
-      <stop offset="50%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#d97706"/>
+    <linearGradient id="${id}BorderM" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="${accentColor}" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3e2063" stop-opacity="0.4"/>
     </linearGradient>
   </defs>
 
@@ -511,224 +570,174 @@ function buildProjectCardMobile({
       line-height: 15px;
       fill: #c4b5fd;
     }
-    .repos-sub-m {
-      font-size: 9.5px;
-      font-weight: 600;
-      fill: #e9d5ff;
-    }
-    .btn-text-m {
-      font-size: 11px;
-      font-weight: 700;
-      fill: #090610;
-    }
-  </style>
-
-  <rect x="0.5" y="0.5" width="419" height="171" rx="12" fill="url(#${id}BgM)" stroke="#3e2063" stroke-width="1"/>
-  <path d="M12 1H120" stroke="${accentColor}" stroke-width="2" stroke-linecap="round"/>
-
-  <g transform="translate(18, 18)">
-    <text x="0" y="6" class="badge-label-m">✦ ${label}</text>
-    <text x="0" y="27" class="card-title-m">${title}</text>
-    <text x="0" y="46" class="card-desc-m">${desc}</text>
-    <text x="0" y="66" class="repos-sub-m">${reposText}</text>
-
-    <!-- Full-width Mobile CTA Button -->
-    <g transform="translate(0, 84)">
-      <rect x="0" y="0" width="384" height="36" rx="8" fill="url(#${id}BtnM)"/>
-      <text x="192" y="23" class="btn-text-m" text-anchor="middle">${buttonText} →</text>
-    </g>
-  </g>
-</svg>
-`;
-}
-
-// Exactly Centered Glyphs inside a 78x78 container (Center = 39, 39)
-const MANGA_GLYPH = `
-  <g stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(13, 17)">
-    <path d="M4 6c7-3 15-3 22 2 7-5 15-5 22-2v32c-7-3-15-3-22 2-7-5-15-5-22-2Z" fill="#2d174d" fill-opacity="0.8"/>
-    <path d="M26 8v32"/>
-    <line x1="10" y1="16" x2="20" y2="16" stroke="#e9d5ff" stroke-width="1.6"/>
-    <line x1="10" y1="22" x2="20" y2="22" stroke="#e9d5ff" stroke-width="1.6"/>
-    <line x1="32" y1="16" x2="42" y2="16" stroke="#e9d5ff" stroke-width="1.6"/>
-    <line x1="32" y1="22" x2="42" y2="22" stroke="#e9d5ff" stroke-width="1.6"/>
-  </g>
-`;
-
-const ANIME_GLYPH = `
-  <g transform="translate(14, 19)">
-    <rect x="2" y="2" width="46" height="36" rx="8" fill="#2d174d" fill-opacity="0.8" stroke="#fbbf24" stroke-width="2"/>
-    <polygon points="19,13 32,20 19,27" fill="#fbbf24"/>
-    <path d="M38 12a6 6 0 0 1 0 16" fill="none" stroke="#e9d5ff" stroke-width="1.8" stroke-linecap="round"/>
-  </g>
-`;
-
-const TICKETS_GLYPH = `
-  <g transform="translate(15, 18)" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 8a4 4 0 0 1 4-4h32a4 4 0 0 1 4 4v7a5 5 0 0 0 0 10v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-7a5 5 0 0 0 0-10Z" fill="#2d174d" fill-opacity="0.8"/>
-    <line x1="16" y1="4" x2="16" y2="36" stroke="#522785" stroke-dasharray="2 3"/>
-    <polygon points="28,14 30,19 35,19 31,22 33,27 28,24 23,27 25,22 21,19 26,19" fill="#fbbf24" stroke="none"/>
-  </g>
-`;
-
-const SITE_GLYPH = `
-  <g transform="translate(0, 0)" stroke="#c4b5fd" stroke-width="1.8" fill="none">
-    <circle cx="28" cy="28" r="18" stroke="#fbbf24" fill="#2d174d" fill-opacity="0.7"/>
-    <ellipse cx="28" cy="28" rx="8" ry="18"/>
-    <line x1="10" y1="28" x2="46" y2="28"/>
-  </g>
-`;
-
-const ABOUT_GLYPH = `
-  <g transform="translate(26, 26)">
-    <circle cx="0" cy="0" r="21" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="7 5"/>
-    <polygon points="0,-14 4,-4 14,0 4,4 0,14 -4,4 -14,0 -4,-4" fill="#fbbf24"/>
-    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
-  </g>
-`;
-
-function buildCardSiteMangaDesktop() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="106" viewBox="0 0 846 106" role="img" aria-labelledby="siteTitle siteDesc">
-  <title id="siteTitle">Project Nox · Leitor Web</title>
-  <desc id="siteDesc">Leitor online e catálogo público da Project Nox para leitura de mangás diretamente no navegador.</desc>
-  <defs>
-    <linearGradient id="siteBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0b0816"/>
-      <stop offset="100%" stop-color="#110b1d"/>
-    </linearGradient>
-    <radialGradient id="siteGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#0b0816" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="siteBtn" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#231438"/>
-      <stop offset="100%" stop-color="#160c26"/>
-    </linearGradient>
-  </defs>
-
-  <style>
-    ${COMMON_FONTS}
-    .badge-site {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      fill: #a78bfa;
-    }
-    .site-title {
-      font-family: "Cinzel", Georgia, serif;
-      font-size: 19px;
-      font-weight: 700;
-      fill: #f3e8ff;
-    }
-    .site-desc {
-      font-size: 12px;
-      fill: #9d94b0;
-    }
-    .site-sub {
-      font-size: 10px;
-      font-weight: 600;
-      fill: #c4b5fd;
-    }
-    .btn-text-s {
-      font-size: 11px;
-      font-weight: 700;
-      fill: #fbbf24;
-    }
-  </style>
-
-  <rect x="0.5" y="0.5" width="845" height="105" rx="12" fill="url(#siteBg)" stroke="#301c4a" stroke-width="1"/>
-  <path d="M14 1H90" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- Icon Centered -->
-  <g transform="translate(26, 17)">
-    <circle cx="36" cy="36" r="32" fill="url(#siteGlow)"/>
-    <rect x="8" y="8" width="56" height="56" rx="14" fill="#170e28" stroke="#482273" stroke-width="1"/>
-    <g transform="translate(8, 8)">
-      ${SITE_GLYPH}
-    </g>
-  </g>
-
-  <!-- Details -->
-  <g transform="translate(120, 22)">
-    <text x="0" y="8" class="badge-site">✦ LEITOR ONLINE · PROJETO COMPLEMENTAR</text>
-    <text x="0" y="30" class="site-title">Project Nox · Leitor Web</text>
-    <text x="0" y="50" class="site-desc">Plataforma web de leitura e catálogo público mantida em SvelteKit &amp; Cloudflare Workers.</text>
-    <text x="0" y="68" class="site-sub">Acesso direto: manga.project-nox-awerkori.workers.dev · Repositório: Awerkori/project-nox-manga</text>
-  </g>
-
-  <!-- Right Access Button -->
-  <g transform="translate(686, 34)">
-    <rect x="0" y="0" width="136" height="38" rx="8" fill="url(#siteBtn)" stroke="#482273" stroke-width="1"/>
-    <text x="68" y="24" class="btn-text-s" text-anchor="middle">Acessar leitor →</text>
-  </g>
-</svg>
-`;
-}
-
-function buildCardSiteMangaMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="136" viewBox="0 0 420 136" role="img" aria-labelledby="siteMobTitle">
-  <title id="siteMobTitle">Project Nox · Leitor Web</title>
-  <defs>
-    <linearGradient id="siteBgM" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0b0816"/>
-      <stop offset="100%" stop-color="#110b1d"/>
-    </linearGradient>
-  </defs>
-
-  <style>
-    ${COMMON_FONTS}
-    .badge-site-m {
+    .tag-label-m {
       font-size: 8.5px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      fill: #a78bfa;
-    }
-    .site-title-m {
-      font-family: "Cinzel", Georgia, serif;
-      font-size: 17px;
-      font-weight: 700;
-      fill: #f3e8ff;
-    }
-    .site-desc-m {
-      font-size: 11px;
-      fill: #9d94b0;
-    }
-    .btn-text-sm {
-      font-size: 10.5px;
-      font-weight: 700;
-      fill: #fbbf24;
+      font-weight: 600;
+      fill: #fef08a;
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="135" rx="10" fill="url(#siteBgM)" stroke="#301c4a" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="139" rx="12" fill="url(#${id}BgM)" stroke="url(#${id}BorderM)" stroke-width="1"/>
+  <path d="M12 1H100" stroke="${accentColor}" stroke-width="2" stroke-linecap="round"/>
 
-  <g transform="translate(18, 18)">
-    <text x="0" y="6" class="badge-site-m">✦ LEITOR ONLINE · PROJETO COMPLEMENTAR</text>
-    <text x="0" y="27" class="site-title-m">Project Nox · Leitor Web</text>
-    <text x="0" y="46" class="site-desc-m">Leitura contínua e catálogo diretamente no navegador.</text>
-
-    <g transform="translate(0, 66)">
-      <rect x="0" y="0" width="384" height="34" rx="7" fill="#170e28" stroke="#482273" stroke-width="1"/>
-      <text x="192" y="22" class="btn-text-sm" text-anchor="middle">Acessar manga.project-nox-awerkori.workers.dev ↗</text>
+  <g transform="translate(18, 20)">
+    <text x="0" y="6" class="badge-label-m">✦ ${escapeXml(badgeText)}</text>
+    <text x="0" y="28" class="card-title-m">${escapeXml(title)}</text>
+    <text x="0" y="48" class="card-desc-m">${escapeXml(desc)}</text>
+    
+    <g transform="translate(0, 78)">
+      <rect x="0" y="0" width="120" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="60" y="14" class="tag-label-m" text-anchor="middle">${escapeXml(tagText)}</text>
     </g>
   </g>
 </svg>
 `;
 }
 
-function buildCardAboutDesktop() {
+// ==========================================
+// 5. DEDICATED GRAPHIC BUTTON GENERATOR
+// Height: 38px, Width: configurable (165px - 210px)
+// ==========================================
+function buildGraphicButton({
+  id,
+  label,
+  iconSvg,
+  width = 162,
+  isPrimary = false
+}) {
+  const bgGrad = isPrimary
+    ? `<linearGradient id="${id}BtnBg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#21123d"/>
+        <stop offset="50%" stop-color="#2a144e"/>
+        <stop offset="100%" stop-color="#190d2e"/>
+      </linearGradient>`
+    : `<linearGradient id="${id}BtnBg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#140c24"/>
+        <stop offset="50%" stop-color="#1a0f30"/>
+        <stop offset="100%" stop-color="#0e081a"/>
+      </linearGradient>`;
+
+  const borderGrad = isPrimary
+    ? `<linearGradient id="${id}BtnBorder" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.6"/>
+      </linearGradient>`
+    : `<linearGradient id="${id}BtnBorder" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#582a8c" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#321650" stop-opacity="0.5"/>
+      </linearGradient>`;
+
+  const textColor = isPrimary ? '#ffffff' : '#e6edf3';
+  const arrowColor = isPrimary ? '#fbbf24' : '#a78bfa';
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="36" viewBox="0 0 ${width} 36" role="img" aria-label="${escapeXml(label)}">
+  <defs>
+    ${bgGrad}
+    ${borderGrad}
+  </defs>
+  <style>
+    ${COMMON_FONTS}
+    .btn-lbl {
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      fill: ${textColor};
+    }
+  </style>
+  <rect x="0.5" y="0.5" width="${width - 1}" height="35" rx="8" fill="url(#${id}BtnBg)" stroke="url(#${id}BtnBorder)" stroke-width="1"/>
+  <path d="M10 2H${width - 10}" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Left Icon -->
+  <g transform="translate(12, 9)">
+    ${iconSvg}
+  </g>
+
+  <!-- Button Label -->
+  <text x="34" y="23" class="btn-lbl">${escapeXml(label)}</text>
+
+  <!-- Right Chevron -->
+  <g transform="translate(${width - 18}, 13)">
+    <path d="M0 0l3.5 4.5-3.5 4.5" fill="none" stroke="${arrowColor}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
+`;
+}
+
+// ==========================================
+// 6. ICONS SVG SNIPPETS (Normalized 78x78)
+// ==========================================
+const ICONS = {
+  manga: `
+    <!-- Glowing Open Book Glyph -->
+    <path d="M19 23c7-3 15-3 20 2v34c-5-4-13-4-20-2z" fill="#2d174d" stroke="#a855f7" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M59 23c-7-3-15-3-20 2v34c5-4 13-4 20-2z" fill="#2d174d" stroke="#a855f7" stroke-width="1.6" stroke-linejoin="round"/>
+    <line x1="39" y1="25" x2="39" y2="59" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+    <line x1="24" y1="31" x2="34" y2="29" stroke="#e9d5ff" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="24" y1="38" x2="34" y2="36" stroke="#e9d5ff" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="44" y1="29" x2="54" y2="31" stroke="#e9d5ff" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="44" y1="36" x2="54" y2="38" stroke="#e9d5ff" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="39" cy="18" r="2" fill="#fbbf24"/>
+  `,
+  anime: `
+    <!-- Stable Center Anime Play Glyph -->
+    <circle cx="39" cy="39" r="26" fill="none" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="7 5"/>
+    <circle cx="39" cy="39" r="18" fill="#2d174d" stroke="#fbbf24" stroke-width="1.4"/>
+    <path d="M35 30l13 9-13 9z" fill="#fbbf24"/>
+    <circle cx="39" cy="13" r="1.5" fill="#fef08a"/>
+    <circle cx="65" cy="39" r="1.5" fill="#c084fc"/>
+  `,
+  tickets: `
+    <!-- Centered Ticket / Compass Glyph -->
+    <rect x="18" y="25" width="42" height="28" rx="5" fill="#2d174d" stroke="#fbbf24" stroke-width="1.5"/>
+    <line x1="30" y1="25" x2="30" y2="53" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <!-- Center Star -->
+    <path d="M44 34l1.5 3.5 3.5.5-2.5 2.5.5 3.5-3-1.8-3 1.8.5-3.5-2.5-2.5 3.5-.5z" fill="#fbbf24"/>
+    <circle cx="18" cy="39" r="3.5" fill="#1b112e"/>
+    <circle cx="60" cy="39" r="3.5" fill="#1b112e"/>
+  `,
+  site: `
+    <!-- Cosmic Globe / Portal Glyph -->
+    <circle cx="39" cy="39" r="22" fill="#24133f" stroke="#7c3aed" stroke-width="1.4"/>
+    <ellipse cx="39" cy="39" rx="10" ry="22" fill="none" stroke="#a855f7" stroke-width="1.1"/>
+    <line x1="17" y1="39" x2="61" y2="39" stroke="#fbbf24" stroke-width="1.3"/>
+    <ellipse cx="39" cy="39" rx="26" ry="7" fill="none" stroke="#fbbf24" stroke-width="0.9" opacity="0.6" transform="rotate(-20 39 39)"/>
+  `,
+  about: `
+    <!-- Star Compass Glyph -->
+    <circle cx="39" cy="39" r="24" fill="#24133f" stroke="#7c3aed" stroke-width="1.4"/>
+    <path d="M39 20v38M20 39h38" stroke="#fbbf24" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M39 28l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#facc15"/>
+    <circle cx="39" cy="39" r="2" fill="#ffffff"/>
+  `
+};
+
+// ==========================================
+// 7. BUTTON MINI-ICONS (18x18)
+// ==========================================
+const BTN_ICONS = {
+  dist: `<path d="M2 5l7-3 7 3v8l-7 3-7-3z" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 5l7 3 7-3M9 8v8" stroke="#fbbf24" stroke-width="1.3"/>`,
+  source: `<path d="M5 4l-4 5 4 5M13 4l4 5-4 5M10 2l-3 14" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+  ticket: `<rect x="1" y="3" width="16" height="12" rx="2" fill="none" stroke="#fbbf24" stroke-width="1.4"/><line x1="6" y1="3" x2="6" y2="15" stroke="#fbbf24" stroke-width="1" stroke-dasharray="2 2"/><circle cx="11" cy="9" r="1.8" fill="#fbbf24"/>`,
+  tracker: `<path d="M2 15V9M7 15V4M12 15V7M16 15V2" stroke="#a78bfa" stroke-width="1.6" stroke-linecap="round"/>`,
+  site: `<circle cx="9" cy="9" r="7.5" fill="none" stroke="#fbbf24" stroke-width="1.4"/><ellipse cx="9" cy="9" rx="3.5" ry="7.5" fill="none" stroke="#fbbf24" stroke-width="1"/><line x1="1.5" y1="9" x2="16.5" y2="9" stroke="#fbbf24" stroke-width="1"/>`
+};
+
+// ==========================================
+// 8. CARD "MAIS SOBRE MIM" (DESKTOP: 846 x 114)
+// ==========================================
+function buildAboutDesktop() {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="114" viewBox="0 0 846 114" role="img" aria-labelledby="aboutTitle aboutDesc">
-  <title id="aboutTitle">Mais sobre mim</title>
-  <desc id="aboutDesc">Meu perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</desc>
+  <title id="aboutTitle">Mais sobre mim — zyo.se/awerkori</title>
+  <desc id="aboutDesc">Perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</desc>
   <defs>
     <linearGradient id="aboutBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0c0817"/>
-      <stop offset="50%" stop-color="#140a24"/>
-      <stop offset="100%" stop-color="#080510"/>
+      <stop offset="0%" stop-color="#0f091c"/>
+      <stop offset="50%" stop-color="#150d26"/>
+      <stop offset="100%" stop-color="#0a0614"/>
     </linearGradient>
-    <radialGradient id="portalGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.35"/>
-      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#0c0817" stop-opacity="0"/>
+    <radialGradient id="aboutGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0f091c" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
@@ -745,66 +754,54 @@ function buildCardAboutDesktop() {
       font-size: 21px;
       font-weight: 700;
       fill: #ffffff;
-      letter-spacing: -0.2px;
     }
     .about-desc {
       font-size: 12.5px;
       fill: #c4b5fd;
     }
-    .portal-link {
+    .btn-about-text {
       font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      fill: #fbbf24;
-    }
-    .portal-pulse {
-      animation: portalBreath 6s ease-in-out infinite alternate;
-    }
-    @keyframes portalBreath {
-      0% { opacity: 0.4; }
-      100% { opacity: 0.9; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .portal-pulse { animation: none !important; }
+      font-weight: 600;
+      fill: #fef08a;
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="845" height="113" rx="13" fill="url(#aboutBg)" stroke="#3c205c" stroke-width="1"/>
-  <path d="M14 1H140" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/>
+  <rect x="0.5" y="0.5" width="845" height="113" rx="14" fill="url(#aboutBg)" stroke="#3e2063" stroke-width="1"/>
+  <path d="M14 1H140" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- Centered Compass Icon Frame -->
-  <g transform="translate(26, 0)">
-    <circle cx="48" cy="57" r="38" fill="url(#portalGlow)" class="portal-pulse"/>
-    <rect x="22" y="31" width="52" height="52" rx="13" fill="#1b102e" stroke="#502582" stroke-width="1.2"/>
-    <g transform="translate(22, 31)">
-      ${ABOUT_GLYPH}
+  <!-- Icon -->
+  <g transform="translate(26, 17)">
+    <circle cx="40" cy="40" r="36" fill="url(#aboutGlow)"/>
+    <rect x="6" y="6" width="68" height="68" rx="16" fill="#1b112e" stroke="#522785" stroke-width="1.2"/>
+    <g transform="translate(1, 1)">
+      ${ICONS.about}
     </g>
   </g>
 
-  <!-- Content -->
-  <g transform="translate(124, 26)">
+  <!-- Text -->
+  <g transform="translate(126, 26)">
     <text x="0" y="8" class="badge-about">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
-    <text x="0" y="34" class="about-title">Mais sobre mim</text>
-    <text x="0" y="56" class="about-desc">Meu perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</text>
+    <text x="0" y="32" class="about-title">Mais sobre mim</text>
+    <text x="0" y="54" class="about-desc">Meu perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</text>
   </g>
 
-  <!-- Right Access Button -->
-  <g transform="translate(818, 57)" text-anchor="end">
-    <rect x="-186" y="-19" width="186" height="38" rx="9" fill="#1a112c" stroke="#502582" stroke-width="1"/>
-    <text x="-28" y="5" class="portal-link">zyo.se/awerkori ↗</text>
+  <!-- Right Pill -->
+  <g transform="translate(640, 39)">
+    <rect x="0" y="0" width="176" height="36" rx="8" fill="#1c1130" stroke="#582a8c" stroke-width="1"/>
+    <text x="76" y="23" class="btn-about-text" text-anchor="middle">zyo.se/awerkori ↗</text>
   </g>
 </svg>
 `;
 }
 
-function buildCardAboutMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="130" viewBox="0 0 420 130" role="img" aria-labelledby="aboutMobTitle">
+function buildAboutMobile() {
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="126" viewBox="0 0 420 126" role="img" aria-labelledby="aboutMobTitle">
   <title id="aboutMobTitle">Mais sobre mim — zyo.se/awerkori</title>
   <defs>
     <linearGradient id="aboutBgM" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0c0817"/>
-      <stop offset="50%" stop-color="#140a24"/>
-      <stop offset="100%" stop-color="#080510"/>
+      <stop offset="0%" stop-color="#0f091c"/>
+      <stop offset="50%" stop-color="#150d26"/>
+      <stop offset="100%" stop-color="#0a0614"/>
     </linearGradient>
   </defs>
 
@@ -826,162 +823,220 @@ function buildCardAboutMobile() {
       font-size: 11px;
       fill: #c4b5fd;
     }
-    .portal-link-m {
+    .btn-about-m {
       font-size: 11px;
-      font-weight: 700;
-      fill: #fbbf24;
+      font-weight: 600;
+      fill: #fef08a;
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="129" rx="11" fill="url(#aboutBgM)" stroke="#3c205c" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="125" rx="12" fill="url(#aboutBgM)" stroke="#3e2063" stroke-width="1"/>
+  <path d="M12 1H90" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
 
-  <g transform="translate(18, 18)">
+  <g transform="translate(18, 20)">
     <text x="0" y="6" class="badge-about-m">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
-    <text x="0" y="28" class="about-title-m">Mais sobre mim</text>
-    <text x="0" y="47" class="about-desc-m">Links pessoais, projetos e formas de contato no Zyo.</text>
+    <text x="0" y="27" class="about-title-m">Mais sobre mim</text>
+    <text x="0" y="46" class="about-desc-m">Projetos autorais, perfil e links fora do GitHub.</text>
 
-    <g transform="translate(0, 66)">
-      <rect x="0" y="0" width="384" height="34" rx="7" fill="#1b112e" stroke="#502582" stroke-width="0.9"/>
-      <text x="192" y="22" class="portal-link-m" text-anchor="middle">Acessar perfil pessoal em zyo.se/awerkori ↗</text>
+    <g transform="translate(0, 64)">
+      <rect x="0" y="0" width="160" height="24" rx="6" fill="#1c1130" stroke="#582a8c" stroke-width="0.8"/>
+      <text x="80" y="16" class="btn-about-m" text-anchor="middle">zyo.se/awerkori ↗</text>
     </g>
   </g>
 </svg>
 `;
 }
 
+// ==========================================
+// 9. DIVIDER (846 x 16)
+// ==========================================
 function buildDivider() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="30" viewBox="0 0 846 30" role="img" aria-hidden="true">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="16" viewBox="0 0 846 16" role="presentation">
   <defs>
-    <linearGradient id="divLine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#3b1d62" stop-opacity="0"/>
-      <stop offset="35%" stop-color="#7c3aed" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#fbbf24"/>
-      <stop offset="65%" stop-color="#7c3aed" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#3b1d62" stop-opacity="0"/>
+    <linearGradient id="divGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#382156" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#7c3aed" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#fbbf24" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#7c3aed" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#382156" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="divStarGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.8"/>
-      <stop offset="60%" stop-color="#9333ea" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
   </defs>
-  <style>
-    .star-breathe {
-      animation: divPulse 4s ease-in-out infinite alternate;
-      transform-origin: 423px 15px;
-    }
-    @keyframes divPulse {
-      0% { transform: scale(0.85); opacity: 0.7; }
-      100% { transform: scale(1.15); opacity: 1; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .star-breathe { animation: none !important; }
-    }
-  </style>
-  <line x1="28" y1="15" x2="818" y2="15" stroke="url(#divLine)" stroke-width="1.2"/>
-  <circle cx="423" cy="15" r="11" fill="url(#divStarGlow)" class="star-breathe"/>
-  <text x="423" y="19" font-size="10" fill="#fef08a" text-anchor="middle" class="star-breathe">✦</text>
+  <line x1="20" y1="8" x2="826" y2="8" stroke="url(#divGrad)" stroke-width="1"/>
+  <circle cx="423" cy="8" r="2.5" fill="#fef08a"/>
 </svg>
 `;
 }
 
+// ==========================================
+// BUILD ALL ASSETS
+// ==========================================
 async function main() {
-  console.log('[Art] Gerando assets refinados do Project Nox...');
+  console.log('Generating Project Nox refined assets...');
 
-  await fs.mkdir(profileDir, { recursive: true });
-
-  // Hero
-  await fs.writeFile(path.join(profileDir, 'hero.svg'), buildHeroDesktop(), 'utf8');
-  await fs.writeFile(path.join(profileDir, 'hero-mobile.svg'), buildHeroMobile(), 'utf8');
+  // 1. Hero
+  await fs.writeFile(path.join(profileDir, 'hero.svg'), buildHeroDesktop());
+  await fs.writeFile(path.join(profileDir, 'hero-mobile.svg'), buildHeroMobile());
   console.log('  ✓ hero.svg & hero-mobile.svg');
 
-  // Card 1: Project Nox · Mangá
-  const mangaD = buildProjectCard({
+  // 2. Project Nox · Mangá
+  await fs.writeFile(path.join(profileDir, 'card-manga.svg'), buildProjectCard({
     id: 'manga',
     title: 'Project Nox · Mangá',
-    label: 'EXTENSÕES DE MANGÁ · MIHON E FORKS',
-    desc1: 'Extensões compiladas para Mihon e forks, com foco em estabilidade e fontes em português.',
-    desc2: 'Reúne o catálogo moderno de distribuição e o repositório de código-fonte.',
-    reposText: 'Distribuição: Awerkori/extensoes · Código-fonte: Awerkori/fonte-extensoes',
-    iconSvg: MANGA_GLYPH,
-    buttonText: 'Ver Projeto'
-  });
-  const mangaM = buildProjectCardMobile({
+    badgeText: 'EXTENSÕES DE MANGÁ · MIHON E FORKS',
+    desc: 'Extensões compiladas para Mihon e forks, com foco em estabilidade e fontes em português.',
+    tagText: '✦ Mihon e forks',
+    iconSvg: ICONS.manga,
+    accentColor: '#fbbf24'
+  }));
+  await fs.writeFile(path.join(profileDir, 'card-manga-mobile.svg'), buildProjectCardMobile({
     id: 'manga',
     title: 'Project Nox · Mangá',
-    label: 'EXTENSÕES · MIHON E FORKS',
-    desc: 'Extensões compiladas para Mihon e forks, com foco em fontes PT-BR.',
-    reposText: 'Distribuição: Awerkori/extensoes · Fonte: fonte-extensoes',
-    buttonText: 'Acessar Projeto'
-  });
-  await fs.writeFile(path.join(profileDir, 'card-manga.svg'), mangaD, 'utf8');
-  await fs.writeFile(path.join(profileDir, 'card-manga-mobile.svg'), mangaM, 'utf8');
+    badgeText: 'EXTENSÕES DE MANGÁ',
+    desc: 'Extensões compiladas para Mihon e forks em português.',
+    tagText: '✦ Mihon e forks',
+    accentColor: '#fbbf24'
+  }));
   console.log('  ✓ card-manga.svg & mobile');
 
-  // Card 2: Project Nox · Anime
-  const animeD = buildProjectCard({
+  // 3. Project Nox · Anime
+  await fs.writeFile(path.join(profileDir, 'card-anime.svg'), buildProjectCard({
     id: 'anime',
     title: 'Project Nox · Anime',
-    label: 'EXTENSÕES DE ANIME · ANIYOMI E FORKS',
-    desc1: 'Extensões compiladas para Aniyomi e forks, com catálogo pronto para streaming contínuo.',
-    desc2: 'Reúne o repositório oficial de distribuição e o código-fonte das extensões.',
-    reposText: 'Distribuição: Awerkori/anime-extensoes · Código-fonte: Awerkori/anime-fonte-extensoes',
-    iconSvg: ANIME_GLYPH,
-    buttonText: 'Ver Projeto'
-  });
-  const animeM = buildProjectCardMobile({
+    badgeText: 'EXTENSÕES DE ANIME · ANIYOMI E FORKS',
+    desc: 'Extensões compiladas para Aniyomi e forks, com catálogo pronto para streaming contínuo.',
+    tagText: '✦ Aniyomi e forks',
+    iconSvg: ICONS.anime,
+    accentColor: '#fbbf24'
+  }));
+  await fs.writeFile(path.join(profileDir, 'card-anime-mobile.svg'), buildProjectCardMobile({
     id: 'anime',
     title: 'Project Nox · Anime',
-    label: 'EXTENSÕES · ANIYOMI E FORKS',
-    desc: 'Extensões para Aniyomi e forks com catálogo compilado para streaming.',
-    reposText: 'Distribuição: anime-extensoes · Fonte: anime-fonte-extensoes',
-    buttonText: 'Acessar Projeto'
-  });
-  await fs.writeFile(path.join(profileDir, 'card-anime.svg'), animeD, 'utf8');
-  await fs.writeFile(path.join(profileDir, 'card-anime-mobile.svg'), animeM, 'utf8');
+    badgeText: 'EXTENSÕES DE ANIME',
+    desc: 'Extensões compiladas para Aniyomi e forks.',
+    tagText: '✦ Aniyomi e forks',
+    accentColor: '#fbbf24'
+  }));
   console.log('  ✓ card-anime.svg & mobile');
 
-  // Card 3: Project Nox · Tickets
-  const ticketsD = buildProjectCard({
+  // 4. Project Nox · Tickets
+  await fs.writeFile(path.join(profileDir, 'card-tickets.svg'), buildProjectCard({
     id: 'tickets',
     title: 'Project Nox · Tickets',
-    label: 'CENTRAL DE PEDIDOS · TRACKER & TICKETS',
-    desc1: 'Central para sugerir novas extensões, avisar sobre fontes quebradas e relatar mudanças.',
-    desc2: 'Acompanhe a demanda e os pedidos mais votados pela comunidade através do Tracker.',
-    reposText: 'Abertura de Tickets: Awerkori/project-nox-requests · Painel: project-nox-tracker',
-    iconSvg: TICKETS_GLYPH,
-    buttonText: 'Ver Tickets'
-  });
-  const ticketsM = buildProjectCardMobile({
+    badgeText: 'CENTRAL DE ATENDIMENTO E PEDIDOS',
+    desc: 'Reporte problemas em extensões de mangá e anime e envie solicitações.',
+    tagText: '✦ Suporte & Pedidos',
+    iconSvg: ICONS.tickets,
+    accentColor: '#fbbf24'
+  }));
+  await fs.writeFile(path.join(profileDir, 'card-tickets-mobile.svg'), buildProjectCardMobile({
     id: 'tickets',
     title: 'Project Nox · Tickets',
-    label: 'CENTRAL DE PEDIDOS · TRACKER',
-    desc: 'Sugestões, reporte de fontes quebradas e votação comunitária no Tracker.',
-    reposText: 'Pedidos: project-nox-requests · Painel: project-nox-tracker',
-    buttonText: 'Acessar Tickets'
-  });
-  await fs.writeFile(path.join(profileDir, 'card-tickets.svg'), ticketsD, 'utf8');
-  await fs.writeFile(path.join(profileDir, 'card-tickets-mobile.svg'), ticketsM, 'utf8');
+    badgeText: 'CENTRAL DE ATENDIMENTO',
+    desc: 'Reporte problemas e envie solicitações.',
+    tagText: '✦ Suporte & Pedidos',
+    accentColor: '#fbbf24'
+  }));
   console.log('  ✓ card-tickets.svg & mobile');
 
-  // Secondary Project: Leitor Web
-  await fs.writeFile(path.join(profileDir, 'card-site-manga.svg'), buildCardSiteMangaDesktop(), 'utf8');
-  await fs.writeFile(path.join(profileDir, 'card-site-manga-mobile.svg'), buildCardSiteMangaMobile(), 'utf8');
-  console.log('  ✓ card-site-manga.svg & mobile');
+  // 5. Project Nox · Site
+  await fs.writeFile(path.join(profileDir, 'card-site.svg'), buildProjectCard({
+    id: 'site',
+    title: 'Project Nox · Site',
+    badgeText: 'PORTAL OFICIAL · WEB E CATÁLOGO',
+    desc: 'Portal oficial do Project Nox para catálogo e leitura de obras.',
+    tagText: '✦ Site Oficial',
+    iconSvg: ICONS.site,
+    accentColor: '#fbbf24'
+  }));
+  await fs.writeFile(path.join(profileDir, 'card-site-mobile.svg'), buildProjectCardMobile({
+    id: 'site',
+    title: 'Project Nox · Site',
+    badgeText: 'PORTAL OFICIAL',
+    desc: 'Portal oficial do Project Nox para leitura de obras.',
+    tagText: '✦ Site Oficial',
+    accentColor: '#fbbf24'
+  }));
+  console.log('  ✓ card-site.svg & mobile');
 
-  // Mais sobre mim
-  await fs.writeFile(path.join(profileDir, 'card-about.svg'), buildCardAboutDesktop(), 'utf8');
-  await fs.writeFile(path.join(profileDir, 'card-about-mobile.svg'), buildCardAboutMobile(), 'utf8');
+  // 6. Mais sobre mim
+  await fs.writeFile(path.join(profileDir, 'card-about.svg'), buildAboutDesktop());
+  await fs.writeFile(path.join(profileDir, 'card-about-mobile.svg'), buildAboutMobile());
   console.log('  ✓ card-about.svg & mobile');
 
-  // Divider
-  await fs.writeFile(path.join(profileDir, 'divider.svg'), buildDivider(), 'utf8');
+  // 7. Divider
+  await fs.writeFile(path.join(profileDir, 'divider.svg'), buildDivider());
   console.log('  ✓ divider.svg');
 
-  console.log('[Art] Todos os assets foram construídos com sucesso!');
+  // 8. Graphic Buttons
+  // Mangá Buttons
+  await fs.writeFile(path.join(profileDir, 'btn-manga-dist.svg'), buildGraphicButton({
+    id: 'btnMangaDist',
+    label: 'Distribuição',
+    iconSvg: BTN_ICONS.dist,
+    width: 160,
+    isPrimary: true
+  }));
+  await fs.writeFile(path.join(profileDir, 'btn-manga-source.svg'), buildGraphicButton({
+    id: 'btnMangaSrc',
+    label: 'Código-fonte',
+    iconSvg: BTN_ICONS.source,
+    width: 160,
+    isPrimary: false
+  }));
+
+  // Anime Buttons
+  await fs.writeFile(path.join(profileDir, 'btn-anime-dist.svg'), buildGraphicButton({
+    id: 'btnAnimeDist',
+    label: 'Distribuição',
+    iconSvg: BTN_ICONS.dist,
+    width: 160,
+    isPrimary: true
+  }));
+  await fs.writeFile(path.join(profileDir, 'btn-anime-source.svg'), buildGraphicButton({
+    id: 'btnAnimeSrc',
+    label: 'Código-fonte',
+    iconSvg: BTN_ICONS.source,
+    width: 160,
+    isPrimary: false
+  }));
+
+  // Tickets Buttons
+  await fs.writeFile(path.join(profileDir, 'btn-tickets-open.svg'), buildGraphicButton({
+    id: 'btnTicketsOpen',
+    label: 'Abrir ticket',
+    iconSvg: BTN_ICONS.ticket,
+    width: 160,
+    isPrimary: true
+  }));
+  await fs.writeFile(path.join(profileDir, 'btn-tickets-tracker.svg'), buildGraphicButton({
+    id: 'btnTicketsTrk',
+    label: 'Painel Tracker',
+    iconSvg: BTN_ICONS.tracker,
+    width: 160,
+    isPrimary: false
+  }));
+
+  // Site Buttons
+  await fs.writeFile(path.join(profileDir, 'btn-site-open.svg'), buildGraphicButton({
+    id: 'btnSiteOpen',
+    label: 'Acessar nosso site',
+    iconSvg: BTN_ICONS.site,
+    width: 165,
+    isPrimary: true
+  }));
+  await fs.writeFile(path.join(profileDir, 'btn-site-source.svg'), buildGraphicButton({
+    id: 'btnSiteSrc',
+    label: 'Código-fonte',
+    iconSvg: BTN_ICONS.source,
+    width: 155,
+    isPrimary: false
+  }));
+
+  console.log('  ✓ Graphic buttons (8 files)');
+  console.log('All profile SVG assets generated successfully!');
 }
 
 main().catch(err => {
-  console.error('[Art] Erro:', err);
+  console.error(err);
   process.exit(1);
 });
