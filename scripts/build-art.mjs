@@ -12,30 +12,24 @@ const officialWebpPath = path.join(profileDir, 'nox-official.webp');
 const officialWebpB64 = (await fs.readFile(officialWebpPath)).toString('base64');
 const officialDataUri = `data:image/webp;base64,${officialWebpB64}`;
 
-// Common CSS defs & styles
 const COMMON_FONTS = `
   text {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
-  .serif-title {
-    font-family: "Cinzel", "Cinzel Decorative", "Times New Roman", Georgia, serif;
-  }
 `;
 
 function buildHeroDesktop() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="260" viewBox="0 0 846 260" role="img" aria-labelledby="heroTitle heroDesc">
-  <title id="heroTitle">Awerkori · Project Nox — Identidade Oficial</title>
-  <desc id="heroDesc">Identidade visual oficial do Project Nox. Ecossistema cósmico, elegante em roxo e dourado, destacando extensões e arquitetura digital.</desc>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="236" viewBox="0 0 846 236" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Awerkori · Project Nox</title>
+  <desc id="heroDesc">Identidade oficial do Project Nox com ícone orbital animado e atmosfera cósmica roxa e dourada.</desc>
 
   <defs>
-    <!-- Background Gradient -->
     <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#090610"/>
       <stop offset="45%" stop-color="#120a1f"/>
       <stop offset="100%" stop-color="#08050e"/>
     </linearGradient>
 
-    <!-- Cosmic Nebula Radial Glows -->
     <radialGradient id="symbolNebula" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#9333ea" stop-opacity="0.45"/>
       <stop offset="50%" stop-color="#581c87" stop-opacity="0.2"/>
@@ -53,15 +47,6 @@ function buildHeroDesktop() {
       <stop offset="100%" stop-color="#090610" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Metallic Gold Gradient -->
-    <linearGradient id="goldMetal" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff4b8"/>
-      <stop offset="35%" stop-color="#fbbf24"/>
-      <stop offset="70%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#b45309"/>
-    </linearGradient>
-
-    <!-- Title Gradient (Gold to Cosmic Violet) -->
     <linearGradient id="titleCosmic" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#fff8d6"/>
       <stop offset="30%" stop-color="#facc15"/>
@@ -69,21 +54,25 @@ function buildHeroDesktop() {
       <stop offset="100%" stop-color="#a855f7"/>
     </linearGradient>
 
-    <!-- Orbital Ring Gradient -->
+    <linearGradient id="goldMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff4b8"/>
+      <stop offset="35%" stop-color="#fbbf24"/>
+      <stop offset="70%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+
     <linearGradient id="orbitStroke" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.8"/>
       <stop offset="50%" stop-color="#a855f7" stop-opacity="0.2"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.8"/>
     </linearGradient>
 
-    <!-- Light Sweep Gradient -->
     <linearGradient id="sweepBeam" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#fef08a" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#fef08a" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Glow Filters -->
     <filter id="goldGlow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
@@ -100,9 +89,8 @@ function buildHeroDesktop() {
       </feMerge>
     </filter>
 
-    <!-- Mask for light sweep -->
     <mask id="heroMask">
-      <rect x="0.5" y="0.5" width="845" height="259" rx="14" fill="#ffffff"/>
+      <rect x="0.5" y="0.5" width="845" height="235" rx="14" fill="#ffffff"/>
     </mask>
   </defs>
 
@@ -111,27 +99,21 @@ function buildHeroDesktop() {
     .badge-tracker {
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 3px;
+      letter-spacing: 2.5px;
       fill: #e9d5ff;
     }
     .hero-title {
       font-family: "Cinzel", "Cinzel Decorative", "Times New Roman", Georgia, serif;
-      font-size: 44px;
+      font-size: 46px;
       font-weight: 700;
       letter-spacing: -0.5px;
       fill: url(#titleCosmic);
     }
     .hero-tagline {
-      font-size: 13.5px;
+      font-size: 14px;
       font-weight: 400;
       fill: #c4b5fd;
       letter-spacing: 0.2px;
-    }
-    .pill-label {
-      font-size: 10.5px;
-      font-weight: 600;
-      fill: #fef08a;
-      letter-spacing: 0.5px;
     }
     .monogram {
       font-family: "Cinzel", Georgia, serif;
@@ -140,32 +122,27 @@ function buildHeroDesktop() {
       fill: #fbbf24;
       font-weight: 600;
     }
-    .meta-edge {
-      font-size: 9.5px;
-      letter-spacing: 1.5px;
-      fill: #8b859e;
-    }
 
-    /* Animations */
+    /* Orbital & Nebula Animations */
     .aurora-pulse {
       animation: nebulaBreathe 8s ease-in-out infinite alternate;
-      transform-origin: 110px 130px;
+      transform-origin: 110px 118px;
     }
     .orbit-cw {
       animation: spinCW 32s linear infinite;
-      transform-origin: 110px 130px;
+      transform-origin: 110px 118px;
     }
     .orbit-ccw {
       animation: spinCCW 24s linear infinite;
-      transform-origin: 110px 130px;
+      transform-origin: 110px 118px;
     }
     .satellite {
       animation: spinCW 18s linear infinite;
-      transform-origin: 110px 130px;
+      transform-origin: 110px 118px;
     }
     .satellite-sub {
       animation: spinCCW 28s linear infinite;
-      transform-origin: 110px 130px;
+      transform-origin: 110px 118px;
     }
     .sweep-move {
       animation: sweepCycle 14s ease-in-out infinite;
@@ -175,9 +152,6 @@ function buildHeroDesktop() {
     }
     .star-twinkle-2 {
       animation: twinkle 5.8s ease-in-out infinite alternate 1.5s;
-    }
-    .star-twinkle-3 {
-      animation: twinkle 6.5s ease-in-out infinite alternate 3s;
     }
 
     @keyframes spinCW {
@@ -204,118 +178,82 @@ function buildHeroDesktop() {
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .aurora-pulse, .orbit-cw, .orbit-ccw, .satellite, .satellite-sub, .sweep-move, .star-twinkle-1, .star-twinkle-2, .star-twinkle-3 {
+      .aurora-pulse, .orbit-cw, .orbit-ccw, .satellite, .satellite-sub, .sweep-move, .star-twinkle-1, .star-twinkle-2 {
         animation: none !important;
       }
     }
   </style>
 
-  <!-- Canvas Surface -->
-  <rect x="0.5" y="0.5" width="845" height="259" rx="14" fill="url(#heroBg)" stroke="#382156" stroke-width="1"/>
-  
-  <!-- Right ambient glow -->
-  <rect x="1" y="1" width="844" height="258" rx="13" fill="url(#ambientRight)"/>
+  <!-- Surface -->
+  <rect x="0.5" y="0.5" width="845" height="235" rx="14" fill="url(#heroBg)" stroke="#382156" stroke-width="1"/>
+  <rect x="1" y="1" width="844" height="234" rx="13" fill="url(#ambientRight)"/>
 
   <!-- Celestial Stars -->
   <g class="star-twinkle-1">
-    <circle cx="280" cy="42" r="1.3" fill="#ffffff"/>
-    <circle cx="560" cy="50" r="1" fill="#fef08a"/>
-    <circle cx="750" cy="180" r="1.4" fill="#ffffff"/>
-    <circle cx="390" cy="220" r="1.1" fill="#e9d5ff"/>
+    <circle cx="280" cy="38" r="1.3" fill="#ffffff"/>
+    <circle cx="560" cy="46" r="1" fill="#fef08a"/>
+    <circle cx="750" cy="155" r="1.4" fill="#ffffff"/>
+    <circle cx="390" cy="195" r="1.1" fill="#e9d5ff"/>
   </g>
   <g class="star-twinkle-2">
-    <circle cx="230" cy="210" r="1" fill="#ffffff"/>
-    <circle cx="490" cy="35" r="1.3" fill="#fef08a"/>
-    <circle cx="680" cy="75" r="1" fill="#c084fc"/>
-    <circle cx="790" cy="130" r="1.2" fill="#ffffff"/>
-  </g>
-  <g class="star-twinkle-3">
-    <!-- Star ✦ Glyphs -->
-    <text x="340" y="38" font-size="9" fill="#fbbf24" opacity="0.6">✦</text>
-    <text x="730" y="95" font-size="8" fill="#e879f9" opacity="0.5">✦</text>
-    <text x="610" y="225" font-size="9" fill="#fbbf24" opacity="0.6">✦</text>
+    <circle cx="230" cy="185" r="1" fill="#ffffff"/>
+    <circle cx="490" cy="32" r="1.3" fill="#fef08a"/>
+    <circle cx="680" cy="65" r="1" fill="#c084fc"/>
+    <text x="340" y="34" font-size="9" fill="#fbbf24" opacity="0.6">✦</text>
+    <text x="730" y="85" font-size="8" fill="#e879f9" opacity="0.5">✦</text>
   </g>
 
-  <!-- Left: Official Project Nox Symbol & Celestial Orbits -->
+  <!-- Official Icon & Celestial Orbits (Centered vertically at 118) -->
   <g id="symbolSection">
-    <!-- Nebula Auroras -->
-    <circle cx="110" cy="130" r="95" fill="url(#symbolNebula)" class="aurora-pulse"/>
-    <circle cx="110" cy="130" r="65" fill="url(#goldCoreGlow)" class="aurora-pulse"/>
+    <circle cx="110" cy="118" r="95" fill="url(#symbolNebula)" class="aurora-pulse"/>
+    <circle cx="110" cy="118" r="65" fill="url(#goldCoreGlow)" class="aurora-pulse"/>
 
     <!-- Outer Orbit Ring -->
-    <circle cx="110" cy="130" r="74" fill="none" stroke="url(#orbitStroke)" stroke-width="1.2" stroke-dasharray="14 10 3 10" class="orbit-cw"/>
+    <circle cx="110" cy="118" r="74" fill="none" stroke="url(#orbitStroke)" stroke-width="1.2" stroke-dasharray="14 10 3 10" class="orbit-cw"/>
     <!-- Inner Orbit Ring -->
-    <circle cx="110" cy="130" r="62" fill="none" stroke="#a855f7" stroke-width="0.8" stroke-dasharray="6 8" opacity="0.6" class="orbit-ccw"/>
+    <circle cx="110" cy="118" r="62" fill="none" stroke="#a855f7" stroke-width="0.8" stroke-dasharray="6 8" opacity="0.6" class="orbit-ccw"/>
 
-    <!-- Orbital Satellite Node 1 (Golden Star) -->
+    <!-- Orbital Satellites (Planetinhas) -->
     <g class="satellite">
-      <circle cx="110" cy="56" r="3" fill="#fef08a" filter="url(#goldGlow)"/>
-      <circle cx="110" cy="56" r="1.2" fill="#ffffff"/>
+      <circle cx="110" cy="44" r="3" fill="#fef08a" filter="url(#goldGlow)"/>
+      <circle cx="110" cy="44" r="1.2" fill="#ffffff"/>
     </g>
-    <!-- Orbital Satellite Node 2 (Violet Star) -->
     <g class="satellite-sub">
-      <circle cx="110" cy="192" r="2.2" fill="#d946ef" filter="url(#softGlow)"/>
+      <circle cx="110" cy="180" r="2.2" fill="#d946ef" filter="url(#softGlow)"/>
     </g>
 
     <!-- Official Emblem WebP (Golden Omega with Alpha inside) -->
-    <image href="${officialDataUri}" x="52" y="72" width="116" height="116" preserveAspectRatio="xMidYMid meet"/>
+    <image href="${officialDataUri}" x="52" y="60" width="116" height="116" preserveAspectRatio="xMidYMid meet"/>
   </g>
 
-  <!-- Center & Right: Typography & Brand -->
+  <!-- Typography & Brand -->
   <g transform="translate(216, 0)">
-    <!-- Top Monogram & Tracker -->
-    <g transform="translate(0, 52)">
+    <g transform="translate(0, 48)">
       <text x="0" y="0" font-size="9" fill="#fbbf24" filter="url(#softGlow)">✦</text>
       <text x="14" y="-1" class="badge-tracker">AWERKORI</text>
       <text x="122" y="-1" class="badge-tracker" fill="#8b859e">·</text>
       <text x="134" y="-1" class="badge-tracker" fill="#fbbf24">PROJECT NOX</text>
     </g>
 
-    <!-- Main Title -->
-    <text x="0" y="108" class="hero-title">Project Nox</text>
+    <text x="0" y="104" class="hero-title">Project Nox</text>
+    <text x="0" y="140" class="hero-tagline">Desenvolvimento de extensões, ferramentas e sistemas para o Project Nox.</text>
 
-    <!-- Tagline -->
-    <text x="0" y="142" class="hero-tagline">Sistemas, automações e ecossistemas abertos de leitura e streaming</text>
-
-    <!-- Refined Feature Badges -->
-    <g transform="translate(0, 168)">
-      <!-- Badge 1: Mihon & TachiyomiSY -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="168" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Mihon &amp; TachiyomiSY</text>
-      </g>
-      <!-- Badge 2: Aniyomi Streaming -->
-      <g transform="translate(178, 0)">
-        <rect x="0" y="0" width="138" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Aniyomi &amp; Forks</text>
-      </g>
-      <!-- Badge 3: Protobuf & Cloudflare -->
-      <g transform="translate(326, 0)">
-        <rect x="0" y="0" width="162" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Protobuf &amp; Cloudflare</text>
-      </g>
-    </g>
-
-    <!-- Bottom Decorative Horizon Line -->
-    <line x1="0" y1="216" x2="600" y2="216" stroke="#2a1c40" stroke-width="1"/>
-    <line x1="0" y1="216" x2="160" y2="216" stroke="url(#goldMetal)" stroke-width="1.2"/>
-    <text x="0" y="235" class="meta-edge">EST. 2022 · DIGITAL SOVEREIGNTY &amp; OPEN MEDIA</text>
-    <text x="596" y="235" class="monogram" text-anchor="end">NΩΛ</text>
+    <!-- Bottom Line -->
+    <line x1="0" y1="180" x2="600" y2="180" stroke="#2a1c40" stroke-width="1"/>
+    <line x1="0" y1="180" x2="140" y2="180" stroke="url(#goldMetal)" stroke-width="1.2"/>
+    <text x="596" y="198" class="monogram" text-anchor="end">✦ NΩΛ ✦</text>
   </g>
 
   <!-- Masked Light Sweep Beam -->
   <g mask="url(#heroMask)">
-    <rect x="0" y="0" width="160" height="260" fill="url(#sweepBeam)" class="sweep-move"/>
+    <rect x="0" y="0" width="160" height="236" fill="url(#sweepBeam)" class="sweep-move"/>
   </g>
 </svg>
 `;
 }
 
 function buildHeroMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="340" viewBox="0 0 420 340" role="img" aria-labelledby="heroMobTitle">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="286" viewBox="0 0 420 286" role="img" aria-labelledby="heroMobTitle">
   <title id="heroMobTitle">Awerkori · Project Nox</title>
   <defs>
     <linearGradient id="heroBgM" x1="0" y1="0" x2="1" y2="1">
@@ -350,12 +288,12 @@ function buildHeroMobile() {
     .badge-tracker-m {
       font-size: 9.5px;
       font-weight: 700;
-      letter-spacing: 2.5px;
+      letter-spacing: 2.2px;
       fill: #e9d5ff;
     }
     .hero-title-m {
       font-family: "Cinzel", Georgia, serif;
-      font-size: 36px;
+      font-size: 34px;
       font-weight: 700;
       letter-spacing: -0.5px;
       fill: url(#titleCosmicM);
@@ -363,19 +301,19 @@ function buildHeroMobile() {
     .hero-tagline-m {
       font-size: 11.5px;
       fill: #c4b5fd;
-    }
-    .pill-label-m {
-      font-size: 9px;
-      font-weight: 600;
-      fill: #fef08a;
+      line-height: 16px;
     }
     .orbit-cw-m {
       animation: spinCW 28s linear infinite;
-      transform-origin: 210px 80px;
+      transform-origin: 210px 72px;
+    }
+    .satellite-m {
+      animation: spinCW 16s linear infinite;
+      transform-origin: 210px 72px;
     }
     .aurora-pulse-m {
       animation: nebulaBreatheM 8s ease-in-out infinite alternate;
-      transform-origin: 210px 80px;
+      transform-origin: 210px 72px;
     }
     @keyframes spinCW {
       from { transform: rotate(0deg); }
@@ -386,72 +324,69 @@ function buildHeroMobile() {
       100% { opacity: 0.85; transform: scale(1.08); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .orbit-cw-m, .aurora-pulse-m { animation: none !important; }
+      .orbit-cw-m, .satellite-m, .aurora-pulse-m { animation: none !important; }
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="339" rx="14" fill="url(#heroBgM)" stroke="#382156" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="285" rx="14" fill="url(#heroBgM)" stroke="#382156" stroke-width="1"/>
 
   <!-- Symbol Top Center -->
   <g id="symbolMobile">
-    <circle cx="210" cy="80" r="70" fill="url(#nebulaM)" class="aurora-pulse-m"/>
-    <circle cx="210" cy="80" r="48" fill="url(#goldGlowM)" class="aurora-pulse-m"/>
-    <circle cx="210" cy="80" r="56" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="12 8 3 8" opacity="0.8" class="orbit-cw-m"/>
-    <image href="${officialDataUri}" x="165" y="35" width="90" height="90" preserveAspectRatio="xMidYMid meet"/>
+    <circle cx="210" cy="72" r="66" fill="url(#nebulaM)" class="aurora-pulse-m"/>
+    <circle cx="210" cy="72" r="44" fill="url(#goldGlowM)" class="aurora-pulse-m"/>
+    <circle cx="210" cy="72" r="52" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="12 8 3 8" opacity="0.8" class="orbit-cw-m"/>
+    <g class="satellite-m">
+      <circle cx="210" cy="20" r="2.5" fill="#fef08a"/>
+    </g>
+    <image href="${officialDataUri}" x="169" y="31" width="82" height="82" preserveAspectRatio="xMidYMid meet"/>
   </g>
 
   <!-- Centered Content -->
-  <g transform="translate(210, 158)" text-anchor="middle">
+  <g transform="translate(210, 146)" text-anchor="middle">
     <text x="0" y="0" class="badge-tracker-m">✦ AWERKORI · PROJECT NOX ✦</text>
-    <text x="0" y="40" class="hero-title-m">Project Nox</text>
-    <text x="0" y="66" class="hero-tagline-m">Sistemas abertos de leitura e streaming</text>
-
-    <!-- Badges Row -->
-    <g transform="translate(-165, 86)">
-      <rect x="0" y="0" width="102" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="51" y="16" class="pill-label-m" text-anchor="middle">Mihon / Forks</text>
-
-      <rect x="112" y="0" width="106" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="165" y="16" class="pill-label-m" text-anchor="middle">Aniyomi Anime</text>
-
-      <rect x="228" y="0" width="102" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="279" y="16" class="pill-label-m" text-anchor="middle">Protobuf / Web</text>
-    </g>
+    <text x="0" y="36" class="hero-title-m">Project Nox</text>
+    <text x="0" y="62" class="hero-tagline-m">Extensões, ferramentas e sistemas abertos</text>
+    <text x="0" y="78" class="hero-tagline-m">para leitura e streaming.</text>
 
     <!-- Bottom Line -->
-    <line x1="-160" y1="135" x2="160" y2="135" stroke="#2a1c40" stroke-width="1"/>
-    <line x1="-40" y1="135" x2="40" y2="135" stroke="url(#goldMetalM)" stroke-width="1.2"/>
-    <text x="0" y="156" font-size="9" fill="#8b859e" letter-spacing="2px">EST. 2022 · DIGITAL SOVEREIGNTY</text>
+    <line x1="-140" y1="104" x2="140" y2="104" stroke="#2a1c40" stroke-width="1"/>
+    <line x1="-35" y1="104" x2="35" y2="104" stroke="url(#goldMetalM)" stroke-width="1.2"/>
+    <text x="0" y="123" font-size="10" fill="#fbbf24" letter-spacing="3px">✦ NΩΛ ✦</text>
   </g>
 </svg>
 `;
 }
 
-function buildCardExtensoesMangaDesktop() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="154" viewBox="0 0 846 154" role="img" aria-labelledby="mangaCardTitle mangaCardDesc">
-  <title id="mangaCardTitle">Project Nox Extensões · Mangá</title>
-  <desc id="mangaCardDesc">Repositório oficial de extensões compiladas para Mihon, TachiyomiSY e variantes com foco em PT-BR.</desc>
+function buildProjectCard({
+  id,
+  title,
+  label,
+  desc1,
+  desc2,
+  reposText,
+  iconSvg,
+  buttonText,
+  accentColor = '#fbbf24'
+}) {
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="142" viewBox="0 0 846 142" role="img" aria-labelledby="${id}Title ${id}Desc">
+  <title id="${id}Title">${title}</title>
+  <desc id="${id}Desc">${desc1} ${desc2}</desc>
   <defs>
-    <linearGradient id="mangaCardBg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="${id}Bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0e0a19"/>
-      <stop offset="50%" stop-color="#150c26"/>
-      <stop offset="100%" stop-color="#0a0713"/>
+      <stop offset="50%" stop-color="#140c24"/>
+      <stop offset="100%" stop-color="#090612"/>
     </linearGradient>
-    <radialGradient id="mangaIconGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.4"/>
+    <radialGradient id="${id}Glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.38"/>
       <stop offset="100%" stop-color="#0e0a19" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="goldButton" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="${id}Btn" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fff099"/>
       <stop offset="50%" stop-color="#fbbf24"/>
       <stop offset="100%" stop-color="#d97706"/>
     </linearGradient>
-    <linearGradient id="borderGlow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fbbf24"/>
-      <stop offset="50%" stop-color="#7c3aed"/>
-      <stop offset="100%" stop-color="#fbbf24"/>
-    </linearGradient>
-    <filter id="mangaGlow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="${id}Filter" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
@@ -462,145 +397,95 @@ function buildCardExtensoesMangaDesktop() {
 
   <style>
     ${COMMON_FONTS}
-    .badge-primary {
+    .badge-label {
       font-size: 9.5px;
       font-weight: 700;
       letter-spacing: 2px;
-      fill: #fbbf24;
+      fill: ${accentColor};
     }
     .card-title {
       font-family: "Cinzel", Georgia, serif;
-      font-size: 23px;
+      font-size: 22px;
       font-weight: 700;
       letter-spacing: -0.2px;
       fill: #ffffff;
     }
     .card-desc {
       font-size: 12.5px;
-      line-height: 18px;
       fill: #c4b5fd;
     }
-    .spec-pill {
-      font-size: 10px;
+    .repos-sub {
+      font-size: 10.5px;
       font-weight: 600;
       fill: #e9d5ff;
     }
     .btn-text {
       font-size: 11.5px;
       font-weight: 700;
-      letter-spacing: 0.6px;
       fill: #090610;
     }
-    .card-halo {
-      animation: cardPulse 7s ease-in-out infinite alternate;
+    .halo-pulse {
+      animation: iconBreath 6s ease-in-out infinite alternate;
     }
-    .star-rot {
-      animation: starRotate 20s linear infinite;
-      transform-origin: 58px 77px;
-    }
-    .arrow-drift {
-      animation: arrowGlide 2.2s ease-in-out infinite;
-    }
-    @keyframes cardPulse {
+    @keyframes iconBreath {
       0% { opacity: 0.35; }
-      100% { opacity: 0.8; }
-    }
-    @keyframes starRotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    @keyframes arrowGlide {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(4px); }
+      100% { opacity: 0.85; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .card-halo, .star-rot, .arrow-drift { animation: none !important; }
+      .halo-pulse { animation: none !important; }
     }
   </style>
 
-  <!-- Card Surface -->
-  <rect x="0.5" y="0.5" width="845" height="153" rx="13" fill="url(#mangaCardBg)" stroke="#44216e" stroke-width="1"/>
-  <!-- Top Accent Bar -->
-  <path d="M14 1H260" stroke="url(#goldButton)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Surface -->
+  <rect x="0.5" y="0.5" width="845" height="141" rx="14" fill="url(#${id}Bg)" stroke="#3e2063" stroke-width="1"/>
+  <path d="M14 1H180" stroke="${accentColor}" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- Left Icon Frame (Grimoire / Manga Glyph) -->
-  <g transform="translate(24, 27)">
-    <circle cx="48" cy="50" r="44" fill="url(#mangaIconGlow)" class="card-halo"/>
-    <rect x="12" y="14" width="72" height="72" rx="14" fill="#1b112e" stroke="#5b2a95" stroke-width="1.2"/>
-    
-    <!-- Rotating Celestial Ring behind icon -->
-    <circle cx="48" cy="50" r="30" fill="none" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="8 6" opacity="0.6" class="star-rot"/>
-
-    <!-- Grimoire / Open Manga Book Icon -->
-    <g transform="translate(32, 33)" stroke="#fbbf24" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M2 5c4-2 9-2 14 2 5-4 10-4 14-2v24c-4-2-9-2-14 2-5-4-10-4-14-2Z" fill="#2d174d" fill-opacity="0.7"/>
-      <path d="M16 7v24"/>
-      <line x1="6" y1="13" x2="12" y2="13" stroke="#e9d5ff" stroke-width="1.4"/>
-      <line x1="6" y1="18" x2="12" y2="18" stroke="#e9d5ff" stroke-width="1.4"/>
-      <line x1="20" y1="13" x2="26" y2="13" stroke="#e9d5ff" stroke-width="1.4"/>
-      <line x1="20" y1="18" x2="26" y2="18" stroke="#e9d5ff" stroke-width="1.4"/>
+  <!-- Left Icon Frame (Exact Center at 65, 71) -->
+  <g transform="translate(26, 22)">
+    <circle cx="49" cy="49" r="44" fill="url(#${id}Glow)" class="halo-pulse"/>
+    <rect x="10" y="10" width="78" height="78" rx="16" fill="#1b112e" stroke="#522785" stroke-width="1.2"/>
+    <g transform="translate(10, 10)">
+      ${iconSvg}
     </g>
   </g>
 
   <!-- Central Content -->
-  <g transform="translate(142, 26)">
-    <!-- Category Badge -->
-    <text x="0" y="10" class="badge-primary">✦ REPOSITÓRIO OFICIAL · DESTAQUE PRINCIPAL</text>
-    
-    <!-- Title -->
-    <text x="0" y="38" class="card-title">Project Nox Extensões · Mangá</text>
-
-    <!-- Faithful Description -->
-    <text x="0" y="62" class="card-desc">Repositório oficial de distribuição e publicação das extensões compiladas do Project Nox.</text>
-    <text x="0" y="79" class="card-desc">Compatível com Mihon, TachiyomiSY e variantes, com foco principal na curadoria em PT-BR.</text>
-
-    <!-- Specs Pills -->
-    <g transform="translate(0, 96)">
-      <!-- Pill 1 -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="144" height="22" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-        <text x="8" y="14" font-size="8.5" fill="#fbbf24">✦</text>
-        <text x="20" y="14" class="spec-pill">Catálogo index.pb</text>
-      </g>
-      <!-- Pill 2 -->
-      <g transform="translate(152, 0)">
-        <rect x="0" y="0" width="138" height="22" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-        <text x="8" y="14" font-size="8.5" fill="#fbbf24">✦</text>
-        <text x="20" y="14" class="spec-pill">Foco Central PT-BR</text>
-      </g>
-      <!-- Pill 3 -->
-      <g transform="translate(298, 0)">
-        <rect x="0" y="0" width="138" height="22" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-        <text x="8" y="14" font-size="8.5" fill="#fbbf24">✦</text>
-        <text x="20" y="14" class="spec-pill">Mihon &amp; TachiyomiSY</text>
-      </g>
-    </g>
+  <g transform="translate(136, 24)">
+    <text x="0" y="8" class="badge-label">✦ ${label}</text>
+    <text x="0" y="34" class="card-title">${title}</text>
+    <text x="0" y="58" class="card-desc">${desc1}</text>
+    <text x="0" y="74" class="card-desc">${desc2}</text>
+    <text x="0" y="98" class="repos-sub">${reposText}</text>
   </g>
 
-  <!-- Right CTA Button -->
-  <g transform="translate(668, 56)">
-    <rect x="0" y="0" width="154" height="42" rx="10" fill="url(#goldButton)" filter="url(#mangaGlow)"/>
-    <g transform="translate(18, 25)">
-      <text x="0" y="0" class="btn-text">Ver Repositório</text>
-      <g class="arrow-drift">
-        <path d="M102 -4l5 4-5 4m5-4H90" fill="none" stroke="#090610" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-    </g>
+  <!-- Right CTA Button (Fully Contained) -->
+  <g transform="translate(676, 50)">
+    <rect x="0" y="0" width="146" height="42" rx="10" fill="url(#${id}Btn)" filter="url(#${id}Filter)"/>
+    <text x="64" y="26" class="btn-text" text-anchor="middle">${buttonText}</text>
+    <path d="M122 21l4 0m-2 -3l3 3-3 3" fill="none" stroke="#090610" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
 `;
 }
 
-function buildCardExtensoesMangaMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="210" viewBox="0 0 420 210" role="img" aria-labelledby="mangaCardMobTitle">
-  <title id="mangaCardMobTitle">Project Nox Extensões · Mangá</title>
+function buildProjectCardMobile({
+  id,
+  title,
+  label,
+  desc,
+  reposText,
+  buttonText,
+  accentColor = '#fbbf24'
+}) {
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="172" viewBox="0 0 420 172" role="img" aria-labelledby="${id}MobTitle">
+  <title id="${id}MobTitle">${title}</title>
   <defs>
-    <linearGradient id="mangaCardBgM" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="${id}BgM" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0e0a19"/>
-      <stop offset="50%" stop-color="#150c26"/>
-      <stop offset="100%" stop-color="#0a0713"/>
+      <stop offset="50%" stop-color="#140c24"/>
+      <stop offset="100%" stop-color="#090612"/>
     </linearGradient>
-    <linearGradient id="goldButtonM" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="${id}BtnM" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fff099"/>
       <stop offset="50%" stop-color="#fbbf24"/>
       <stop offset="100%" stop-color="#d97706"/>
@@ -609,25 +494,25 @@ function buildCardExtensoesMangaMobile() {
 
   <style>
     ${COMMON_FONTS}
-    .badge-primary-m {
+    .badge-label-m {
       font-size: 8.5px;
       font-weight: 700;
       letter-spacing: 1.8px;
-      fill: #fbbf24;
+      fill: ${accentColor};
     }
     .card-title-m {
       font-family: "Cinzel", Georgia, serif;
-      font-size: 19px;
+      font-size: 18.5px;
       font-weight: 700;
       fill: #ffffff;
     }
     .card-desc-m {
       font-size: 11px;
-      line-height: 16px;
+      line-height: 15px;
       fill: #c4b5fd;
     }
-    .spec-pill-m {
-      font-size: 9px;
+    .repos-sub-m {
+      font-size: 9.5px;
       font-weight: 600;
       fill: #e9d5ff;
     }
@@ -638,283 +523,91 @@ function buildCardExtensoesMangaMobile() {
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="209" rx="12" fill="url(#mangaCardBgM)" stroke="#44216e" stroke-width="1"/>
-  <path d="M12 1H180" stroke="url(#goldButtonM)" stroke-width="2" stroke-linecap="round"/>
+  <rect x="0.5" y="0.5" width="419" height="171" rx="12" fill="url(#${id}BgM)" stroke="#3e2063" stroke-width="1"/>
+  <path d="M12 1H120" stroke="${accentColor}" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- Content -->
-  <g transform="translate(18, 22)">
-    <text x="0" y="8" class="badge-primary-m">✦ REPOSITÓRIO OFICIAL · DESTAQUE</text>
-    <text x="0" y="32" class="card-title-m">Project Nox Extensões · Mangá</text>
-    <text x="0" y="54" class="card-desc-m">Extensões compiladas para Mihon, TachiyomiSY e variantes.</text>
-    <text x="0" y="70" class="card-desc-m">Catálogo moderno em Protobuf (index.pb) e foco em PT-BR.</text>
+  <g transform="translate(18, 18)">
+    <text x="0" y="6" class="badge-label-m">✦ ${label}</text>
+    <text x="0" y="27" class="card-title-m">${title}</text>
+    <text x="0" y="46" class="card-desc-m">${desc}</text>
+    <text x="0" y="66" class="repos-sub-m">${reposText}</text>
 
-    <!-- Pills -->
-    <g transform="translate(0, 86)">
-      <rect x="0" y="0" width="112" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="12" y="13" class="spec-pill-m">Catálogo index.pb</text>
-
-      <rect x="120" y="0" width="102" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="132" y="13" class="spec-pill-m">Foco em PT-BR</text>
-
-      <rect x="230" y="0" width="118" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="242" y="13" class="spec-pill-m">Mihon / Tachiyomi</text>
-    </g>
-
-    <!-- Button -->
-    <g transform="translate(0, 122)">
-      <rect x="0" y="0" width="384" height="36" rx="8" fill="url(#goldButtonM)"/>
-      <text x="192" y="22" class="btn-text-m" text-anchor="middle">Acessar Repositório Awerkori/extensoes →</text>
+    <!-- Full-width Mobile CTA Button -->
+    <g transform="translate(0, 84)">
+      <rect x="0" y="0" width="384" height="36" rx="8" fill="url(#${id}BtnM)"/>
+      <text x="192" y="23" class="btn-text-m" text-anchor="middle">${buttonText} →</text>
     </g>
   </g>
 </svg>
 `;
 }
 
-function buildCardExtensoesAnimeDesktop() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="154" viewBox="0 0 846 154" role="img" aria-labelledby="animeCardTitle animeCardDesc">
-  <title id="animeCardTitle">Project Nox Anime · Repositório de Extensões</title>
-  <desc id="animeCardDesc">Repositório oficial de extensões compiladas do Project Nox Anime para streaming no Aniyomi e forks.</desc>
-  <defs>
-    <linearGradient id="animeCardBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0e0a19"/>
-      <stop offset="50%" stop-color="#140a24"/>
-      <stop offset="100%" stop-color="#090612"/>
-    </linearGradient>
-    <radialGradient id="animeIconGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#9333ea" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#0e0a19" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="goldButtonA" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff099"/>
-      <stop offset="50%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#d97706"/>
-    </linearGradient>
-    <filter id="animeGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-  </defs>
-
-  <style>
-    ${COMMON_FONTS}
-    .badge-primary-a {
-      font-size: 9.5px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      fill: #fbbf24;
-    }
-    .card-title-a {
-      font-family: "Cinzel", Georgia, serif;
-      font-size: 23px;
-      font-weight: 700;
-      letter-spacing: -0.2px;
-      fill: #ffffff;
-    }
-    .card-desc-a {
-      font-size: 12.5px;
-      line-height: 18px;
-      fill: #c4b5fd;
-    }
-    .spec-pill-a {
-      font-size: 10px;
-      font-weight: 600;
-      fill: #e9d5ff;
-    }
-    .btn-text-a {
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 0.6px;
-      fill: #090610;
-    }
-    .card-halo-a {
-      animation: cardPulseA 7s ease-in-out infinite alternate 1s;
-    }
-    .prism-pulse {
-      animation: prismGlow 4s ease-in-out infinite alternate;
-    }
-    .arrow-drift-a {
-      animation: arrowGlideA 2.2s ease-in-out infinite 0.3s;
-    }
-    @keyframes cardPulseA {
-      0% { opacity: 0.35; }
-      100% { opacity: 0.85; }
-    }
-    @keyframes prismGlow {
-      0% { transform: scale(0.97); opacity: 0.8; }
-      100% { transform: scale(1.03); opacity: 1; }
-    }
-    @keyframes arrowGlideA {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(4px); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .card-halo-a, .prism-pulse, .arrow-drift-a { animation: none !important; }
-    }
-  </style>
-
-  <!-- Card Surface -->
-  <rect x="0.5" y="0.5" width="845" height="153" rx="13" fill="url(#animeCardBg)" stroke="#44216e" stroke-width="1"/>
-  <path d="M14 1H260" stroke="url(#goldButtonA)" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Left Icon Frame (Prism / Video Stream Glyph) -->
-  <g transform="translate(24, 27)">
-    <circle cx="48" cy="50" r="44" fill="url(#animeIconGlow)" class="card-halo-a"/>
-    <rect x="12" y="14" width="72" height="72" rx="14" fill="#1b112e" stroke="#5b2a95" stroke-width="1.2"/>
-    
-    <!-- Rotating Celestial Ring -->
-    <circle cx="48" cy="50" r="30" fill="none" stroke="#a855f7" stroke-width="0.8" stroke-dasharray="10 6" opacity="0.6"/>
-
-    <!-- Anime Play / Streaming Prism Icon -->
-    <g transform="translate(32, 34)" class="prism-pulse">
-      <!-- Screen Border -->
-      <rect x="2" y="4" width="28" height="24" rx="4" fill="#2d174d" fill-opacity="0.7" stroke="#fbbf24" stroke-width="1.8"/>
-      <!-- Play Triangle -->
-      <polygon points="12,11 22,16 12,21" fill="#fbbf24"/>
-      <!-- Signal Waves -->
-      <path d="M25 8a4 4 0 0 1 0 16" fill="none" stroke="#e9d5ff" stroke-width="1.4" stroke-linecap="round"/>
-    </g>
+// Exactly Centered Glyphs inside a 78x78 container (Center = 39, 39)
+const MANGA_GLYPH = `
+  <g stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(13, 17)">
+    <path d="M4 6c7-3 15-3 22 2 7-5 15-5 22-2v32c-7-3-15-3-22 2-7-5-15-5-22-2Z" fill="#2d174d" fill-opacity="0.8"/>
+    <path d="M26 8v32"/>
+    <line x1="10" y1="16" x2="20" y2="16" stroke="#e9d5ff" stroke-width="1.6"/>
+    <line x1="10" y1="22" x2="20" y2="22" stroke="#e9d5ff" stroke-width="1.6"/>
+    <line x1="32" y1="16" x2="42" y2="16" stroke="#e9d5ff" stroke-width="1.6"/>
+    <line x1="32" y1="22" x2="42" y2="22" stroke="#e9d5ff" stroke-width="1.6"/>
   </g>
-
-  <!-- Central Content -->
-  <g transform="translate(142, 26)">
-    <text x="0" y="10" class="badge-primary-a">✦ REPOSITÓRIO OFICIAL · DESTAQUE PRINCIPAL</text>
-    <text x="0" y="38" class="card-title-a">Project Nox Anime · Extensões</text>
-    <text x="0" y="62" class="card-desc-a">Repositório oficial de extensões compiladas para o ecossistema Aniyomi e forks.</text>
-    <text x="0" y="79" class="card-desc-a">Distribuição contínua de índices compilados para streaming direto de vídeos e animes.</text>
-
-    <!-- Specs Pills -->
-    <g transform="translate(0, 96)">
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="144" height="22" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-        <text x="8" y="14" font-size="8.5" fill="#fbbf24">✦</text>
-        <text x="20" y="14" class="spec-pill-a">Ecossistema Aniyomi</text>
-      </g>
-      <g transform="translate(152, 0)">
-        <rect x="0" y="0" width="154" height="22" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-        <text x="8" y="14" font-size="8.5" fill="#fbbf24">✦</text>
-        <text x="20" y="14" class="spec-pill-a">Catálogo index.min.json</text>
-      </g>
-      <g transform="translate(314, 0)">
-        <rect x="0" y="0" width="138" height="22" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-        <text x="8" y="14" font-size="8.5" fill="#fbbf24">✦</text>
-        <text x="20" y="14" class="spec-pill-a">Streaming de Vídeo</text>
-      </g>
-    </g>
-  </g>
-
-  <!-- Right CTA Button -->
-  <g transform="translate(668, 56)">
-    <rect x="0" y="0" width="154" height="42" rx="10" fill="url(#goldButtonA)" filter="url(#animeGlow)"/>
-    <g transform="translate(18, 25)">
-      <text x="0" y="0" class="btn-text-a">Ver Repositório</text>
-      <g class="arrow-drift-a">
-        <path d="M102 -4l5 4-5 4m5-4H90" fill="none" stroke="#090610" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-    </g>
-  </g>
-</svg>
 `;
-}
 
-function buildCardExtensoesAnimeMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="210" viewBox="0 0 420 210" role="img" aria-labelledby="animeCardMobTitle">
-  <title id="animeCardMobTitle">Project Nox Anime · Extensões</title>
-  <defs>
-    <linearGradient id="animeCardBgM" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0e0a19"/>
-      <stop offset="50%" stop-color="#140a24"/>
-      <stop offset="100%" stop-color="#090612"/>
-    </linearGradient>
-    <linearGradient id="goldButtonAM" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff099"/>
-      <stop offset="50%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#d97706"/>
-    </linearGradient>
-  </defs>
-
-  <style>
-    ${COMMON_FONTS}
-    .badge-primary-am {
-      font-size: 8.5px;
-      font-weight: 700;
-      letter-spacing: 1.8px;
-      fill: #fbbf24;
-    }
-    .card-title-am {
-      font-family: "Cinzel", Georgia, serif;
-      font-size: 19px;
-      font-weight: 700;
-      fill: #ffffff;
-    }
-    .card-desc-am {
-      font-size: 11px;
-      line-height: 16px;
-      fill: #c4b5fd;
-    }
-    .spec-pill-am {
-      font-size: 9px;
-      font-weight: 600;
-      fill: #e9d5ff;
-    }
-    .btn-text-am {
-      font-size: 11px;
-      font-weight: 700;
-      fill: #090610;
-    }
-  </style>
-
-  <rect x="0.5" y="0.5" width="419" height="209" rx="12" fill="url(#animeCardBgM)" stroke="#44216e" stroke-width="1"/>
-  <path d="M12 1H180" stroke="url(#goldButtonAM)" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Content -->
-  <g transform="translate(18, 22)">
-    <text x="0" y="8" class="badge-primary-am">✦ REPOSITÓRIO OFICIAL · DESTAQUE</text>
-    <text x="0" y="32" class="card-title-am">Project Nox Anime · Extensões</text>
-    <text x="0" y="54" class="card-desc-am">Extensões compiladas para o ecossistema Aniyomi e derivados.</text>
-    <text x="0" y="70" class="card-desc-am">Catálogo compilado para streaming contínuo de animes.</text>
-
-    <!-- Pills -->
-    <g transform="translate(0, 86)">
-      <rect x="0" y="0" width="112" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="12" y="13" class="spec-pill-am">Aniyomi &amp; Forks</text>
-
-      <rect x="120" y="0" width="122" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="132" y="13" class="spec-pill-am">Índice Compilado</text>
-
-      <rect x="250" y="0" width="98" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="262" y="13" class="spec-pill-am">Streaming HD</text>
-    </g>
-
-    <!-- Button -->
-    <g transform="translate(0, 122)">
-      <rect x="0" y="0" width="384" height="36" rx="8" fill="url(#goldButtonAM)"/>
-      <text x="192" y="22" class="btn-text-am" text-anchor="middle">Acessar Repositório Awerkori/anime-extensoes →</text>
-    </g>
+const ANIME_GLYPH = `
+  <g transform="translate(14, 19)">
+    <rect x="2" y="2" width="46" height="36" rx="8" fill="#2d174d" fill-opacity="0.8" stroke="#fbbf24" stroke-width="2"/>
+    <polygon points="19,13 32,20 19,27" fill="#fbbf24"/>
+    <path d="M38 12a6 6 0 0 1 0 16" fill="none" stroke="#e9d5ff" stroke-width="1.8" stroke-linecap="round"/>
   </g>
-</svg>
 `;
-}
+
+const TICKETS_GLYPH = `
+  <g transform="translate(15, 18)" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 8a4 4 0 0 1 4-4h32a4 4 0 0 1 4 4v7a5 5 0 0 0 0 10v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-7a5 5 0 0 0 0-10Z" fill="#2d174d" fill-opacity="0.8"/>
+    <line x1="16" y1="4" x2="16" y2="36" stroke="#522785" stroke-dasharray="2 3"/>
+    <polygon points="28,14 30,19 35,19 31,22 33,27 28,24 23,27 25,22 21,19 26,19" fill="#fbbf24" stroke="none"/>
+  </g>
+`;
+
+const SITE_GLYPH = `
+  <g transform="translate(0, 0)" stroke="#c4b5fd" stroke-width="1.8" fill="none">
+    <circle cx="28" cy="28" r="18" stroke="#fbbf24" fill="#2d174d" fill-opacity="0.7"/>
+    <ellipse cx="28" cy="28" rx="8" ry="18"/>
+    <line x1="10" y1="28" x2="46" y2="28"/>
+  </g>
+`;
+
+const ABOUT_GLYPH = `
+  <g transform="translate(26, 26)">
+    <circle cx="0" cy="0" r="21" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="7 5"/>
+    <polygon points="0,-14 4,-4 14,0 4,4 0,14 -4,4 -14,0 -4,-4" fill="#fbbf24"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
+  </g>
+`;
 
 function buildCardSiteMangaDesktop() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="98" viewBox="0 0 846 98" role="img" aria-labelledby="siteCardTitle">
-  <title id="siteCardTitle">Site Mangá — Plataforma de Leitura e Catálogo Web</title>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="106" viewBox="0 0 846 106" role="img" aria-labelledby="siteTitle siteDesc">
+  <title id="siteTitle">Project Nox · Leitor Web</title>
+  <desc id="siteDesc">Leitor online e catálogo público da Project Nox para leitura de mangás diretamente no navegador.</desc>
   <defs>
     <linearGradient id="siteBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0c0915"/>
-      <stop offset="100%" stop-color="#120c1e"/>
+      <stop offset="0%" stop-color="#0b0816"/>
+      <stop offset="100%" stop-color="#110b1d"/>
     </linearGradient>
-    <linearGradient id="goldAccentS" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#a855f7"/>
+    <radialGradient id="siteGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0b0816" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="siteBtn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#231438"/>
+      <stop offset="100%" stop-color="#160c26"/>
     </linearGradient>
   </defs>
 
   <style>
     ${COMMON_FONTS}
-    .badge-sec {
+    .badge-site {
       font-size: 9px;
       font-weight: 700;
       letter-spacing: 2px;
@@ -922,7 +615,7 @@ function buildCardSiteMangaDesktop() {
     }
     .site-title {
       font-family: "Cinzel", Georgia, serif;
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 700;
       fill: #f3e8ff;
     }
@@ -930,68 +623,60 @@ function buildCardSiteMangaDesktop() {
       font-size: 12px;
       fill: #9d94b0;
     }
-    .site-link {
-      font-size: 11.5px;
+    .site-sub {
+      font-size: 10px;
       font-weight: 600;
+      fill: #c4b5fd;
+    }
+    .btn-text-s {
+      font-size: 11px;
+      font-weight: 700;
       fill: #fbbf24;
-    }
-    .link-glow {
-      animation: linkPulse 3s ease-in-out infinite alternate;
-    }
-    @keyframes linkPulse {
-      0% { opacity: 0.8; }
-      100% { opacity: 1; transform: translateX(2px); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .link-glow { animation: none !important; }
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="845" height="97" rx="11" fill="url(#siteBg)" stroke="#301f4a" stroke-width="1"/>
-  <path d="M12 1H100" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="0.5" y="0.5" width="845" height="105" rx="12" fill="url(#siteBg)" stroke="#301c4a" stroke-width="1"/>
+  <path d="M14 1H90" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round"/>
 
-  <!-- Icon (Web Globe / Reader) -->
-  <g transform="translate(26, 26)">
-    <rect x="0" y="0" width="46" height="46" rx="10" fill="#181028" stroke="#4c277a" stroke-width="1"/>
-    <!-- Globe / Book icon -->
-    <g transform="translate(13, 13)" stroke="#c4b5fd" stroke-width="1.6" fill="none">
-      <circle cx="10" cy="10" r="9"/>
-      <ellipse cx="10" cy="10" rx="4" ry="9"/>
-      <line x1="1" y1="10" x2="19" y2="10"/>
+  <!-- Icon Centered -->
+  <g transform="translate(26, 17)">
+    <circle cx="36" cy="36" r="32" fill="url(#siteGlow)"/>
+    <rect x="8" y="8" width="56" height="56" rx="14" fill="#170e28" stroke="#482273" stroke-width="1"/>
+    <g transform="translate(8, 8)">
+      ${SITE_GLYPH}
     </g>
   </g>
 
   <!-- Details -->
-  <g transform="translate(90, 26)">
-    <text x="0" y="8" class="badge-sec">ECOSSISTEMA WEB · PROJETO COMPLEMENTAR</text>
-    <text x="0" y="30" class="site-title">Leitor Web &amp; Catálogo Project Nox</text>
-    <text x="0" y="49" class="site-desc">Plataforma de leitura contínua e catálogo mantido no ecossistema SvelteKit &amp; Cloudflare Workers.</text>
+  <g transform="translate(120, 22)">
+    <text x="0" y="8" class="badge-site">✦ LEITOR ONLINE · PROJETO COMPLEMENTAR</text>
+    <text x="0" y="30" class="site-title">Project Nox · Leitor Web</text>
+    <text x="0" y="50" class="site-desc">Plataforma web de leitura e catálogo público mantida em SvelteKit &amp; Cloudflare Workers.</text>
+    <text x="0" y="68" class="site-sub">Acesso direto: manga.project-nox-awerkori.workers.dev · Repositório: Awerkori/project-nox-manga</text>
   </g>
 
-  <!-- Right Access Link -->
-  <g transform="translate(818, 52)" text-anchor="end">
-    <g class="link-glow">
-      <text x="-22" y="0" class="site-link">Acessar leitor web</text>
-      <path d="M-14 -4l6 4-6 4m6-4h-10" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
+  <!-- Right Access Button -->
+  <g transform="translate(686, 34)">
+    <rect x="0" y="0" width="136" height="38" rx="8" fill="url(#siteBtn)" stroke="#482273" stroke-width="1"/>
+    <text x="68" y="24" class="btn-text-s" text-anchor="middle">Acessar leitor →</text>
   </g>
 </svg>
 `;
 }
 
 function buildCardSiteMangaMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120" viewBox="0 0 420 120" role="img" aria-labelledby="siteCardMobTitle">
-  <title id="siteCardMobTitle">Leitor Web Project Nox</title>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="136" viewBox="0 0 420 136" role="img" aria-labelledby="siteMobTitle">
+  <title id="siteMobTitle">Project Nox · Leitor Web</title>
   <defs>
     <linearGradient id="siteBgM" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0c0915"/>
-      <stop offset="100%" stop-color="#120c1e"/>
+      <stop offset="0%" stop-color="#0b0816"/>
+      <stop offset="100%" stop-color="#110b1d"/>
     </linearGradient>
   </defs>
 
   <style>
     ${COMMON_FONTS}
-    .badge-sec-m {
+    .badge-site-m {
       font-size: 8.5px;
       font-weight: 700;
       letter-spacing: 1.5px;
@@ -999,30 +684,31 @@ function buildCardSiteMangaMobile() {
     }
     .site-title-m {
       font-family: "Cinzel", Georgia, serif;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
       fill: #f3e8ff;
     }
     .site-desc-m {
-      font-size: 10.5px;
+      font-size: 11px;
       fill: #9d94b0;
     }
-    .site-link-m {
-      font-size: 10px;
-      font-weight: 600;
+    .btn-text-sm {
+      font-size: 10.5px;
+      font-weight: 700;
       fill: #fbbf24;
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="119" rx="10" fill="url(#siteBgM)" stroke="#301f4a" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="135" rx="10" fill="url(#siteBgM)" stroke="#301c4a" stroke-width="1"/>
 
-  <g transform="translate(18, 22)">
-    <text x="0" y="6" class="badge-sec-m">ECOSSISTEMA WEB · PROJETO COMPLEMENTAR</text>
-    <text x="0" y="28" class="site-title-m">Leitor Web &amp; Catálogo Project Nox</text>
-    <text x="0" y="47" class="site-desc-m">Leitura contínua em SvelteKit &amp; Cloudflare Workers.</text>
-    
-    <g transform="translate(0, 72)">
-      <text x="0" y="0" class="site-link-m">Acessar manga.project-nox-awerkori.workers.dev ↗</text>
+  <g transform="translate(18, 18)">
+    <text x="0" y="6" class="badge-site-m">✦ LEITOR ONLINE · PROJETO COMPLEMENTAR</text>
+    <text x="0" y="27" class="site-title-m">Project Nox · Leitor Web</text>
+    <text x="0" y="46" class="site-desc-m">Leitura contínua e catálogo diretamente no navegador.</text>
+
+    <g transform="translate(0, 66)">
+      <rect x="0" y="0" width="384" height="34" rx="7" fill="#170e28" stroke="#482273" stroke-width="1"/>
+      <text x="192" y="22" class="btn-text-sm" text-anchor="middle">Acessar manga.project-nox-awerkori.workers.dev ↗</text>
     </g>
   </g>
 </svg>
@@ -1031,8 +717,8 @@ function buildCardSiteMangaMobile() {
 
 function buildCardAboutDesktop() {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="114" viewBox="0 0 846 114" role="img" aria-labelledby="aboutTitle aboutDesc">
-  <title id="aboutTitle">Mais sobre mim — Conexões e Presença Digital</title>
-  <desc id="aboutDesc">Perfil, ecossistema pessoal e projetos autorais em zyo.se/awerkori.</desc>
+  <title id="aboutTitle">Mais sobre mim</title>
+  <desc id="aboutDesc">Meu perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</desc>
   <defs>
     <linearGradient id="aboutBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0c0817"/>
@@ -1044,11 +730,6 @@ function buildCardAboutDesktop() {
       <stop offset="70%" stop-color="#a855f7" stop-opacity="0.1"/>
       <stop offset="100%" stop-color="#0c0817" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="goldBorderA" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fbbf24"/>
-      <stop offset="50%" stop-color="#7c3aed"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
-    </linearGradient>
   </defs>
 
   <style>
@@ -1056,7 +737,7 @@ function buildCardAboutDesktop() {
     .badge-about {
       font-size: 9.5px;
       font-weight: 700;
-      letter-spacing: 2.2px;
+      letter-spacing: 2px;
       fill: #fbbf24;
     }
     .about-title {
@@ -1079,60 +760,45 @@ function buildCardAboutDesktop() {
     .portal-pulse {
       animation: portalBreath 6s ease-in-out infinite alternate;
     }
-    .compass-spin {
-      animation: compassRotate 26s linear infinite;
-      transform-origin: 48px 57px;
-    }
     @keyframes portalBreath {
       0% { opacity: 0.4; }
       100% { opacity: 0.9; }
     }
-    @keyframes compassRotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
     @media (prefers-reduced-motion: reduce) {
-      .portal-pulse, .compass-spin { animation: none !important; }
+      .portal-pulse { animation: none !important; }
     }
   </style>
 
   <rect x="0.5" y="0.5" width="845" height="113" rx="13" fill="url(#aboutBg)" stroke="#3c205c" stroke-width="1"/>
-  <path d="M14 1H160" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M14 1H140" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/>
 
-  <!-- Left Celestial Compass Glyph -->
-  <g transform="translate(24, 0)">
+  <!-- Centered Compass Icon Frame -->
+  <g transform="translate(26, 0)">
     <circle cx="48" cy="57" r="38" fill="url(#portalGlow)" class="portal-pulse"/>
-    <rect x="22" y="31" width="52" height="52" rx="12" fill="#1b102e" stroke="#502582" stroke-width="1.2"/>
-    
-    <!-- Rotating Compass Ring -->
-    <circle cx="48" cy="57" r="21" fill="none" stroke="#fbbf24" stroke-width="0.9" stroke-dasharray="6 4 2 4" opacity="0.8" class="compass-spin"/>
-
-    <!-- Celestial Core Star -->
-    <g transform="translate(48, 57)">
-      <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#fbbf24"/>
-      <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+    <rect x="22" y="31" width="52" height="52" rx="13" fill="#1b102e" stroke="#502582" stroke-width="1.2"/>
+    <g transform="translate(22, 31)">
+      ${ABOUT_GLYPH}
     </g>
   </g>
 
   <!-- Content -->
-  <g transform="translate(122, 25)">
-    <text x="0" y="8" class="badge-about">✦ ALÉM DO GITHUB · PRESENÇA DIGITAL</text>
+  <g transform="translate(124, 26)">
+    <text x="0" y="8" class="badge-about">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
     <text x="0" y="34" class="about-title">Mais sobre mim</text>
-    <text x="0" y="56" class="about-desc">Conexões pessoais, ecossistema expandido e trajetória criativa centralizados no Zyo.</text>
+    <text x="0" y="56" class="about-desc">Meu perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</text>
   </g>
 
   <!-- Right Access Button -->
   <g transform="translate(818, 57)" text-anchor="end">
-    <rect x="-190" y="-19" width="190" height="38" rx="9" fill="#1a112c" stroke="#502582" stroke-width="1"/>
-    <text x="-32" y="5" class="portal-link">zyo.se/awerkori</text>
-    <path d="M-22 -4l6 6m0 0h-6m6 0v-6" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-186" y="-19" width="186" height="38" rx="9" fill="#1a112c" stroke="#502582" stroke-width="1"/>
+    <text x="-28" y="5" class="portal-link">zyo.se/awerkori ↗</text>
   </g>
 </svg>
 `;
 }
 
 function buildCardAboutMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="136" viewBox="0 0 420 136" role="img" aria-labelledby="aboutMobTitle">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="130" viewBox="0 0 420 130" role="img" aria-labelledby="aboutMobTitle">
   <title id="aboutMobTitle">Mais sobre mim — zyo.se/awerkori</title>
   <defs>
     <linearGradient id="aboutBgM" x1="0" y1="0" x2="1" y2="1">
@@ -1167,16 +833,16 @@ function buildCardAboutMobile() {
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="135" rx="11" fill="url(#aboutBgM)" stroke="#3c205c" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="129" rx="11" fill="url(#aboutBgM)" stroke="#3c205c" stroke-width="1"/>
 
-  <g transform="translate(18, 22)">
-    <text x="0" y="6" class="badge-about-m">✦ ALÉM DO GITHUB · PRESENÇA DIGITAL</text>
-    <text x="0" y="30" class="about-title-m">Mais sobre mim</text>
-    <text x="0" y="50" class="about-desc-m">Perfil pessoal, ecossistema e projetos em zyo.se/awerkori.</text>
+  <g transform="translate(18, 18)">
+    <text x="0" y="6" class="badge-about-m">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
+    <text x="0" y="28" class="about-title-m">Mais sobre mim</text>
+    <text x="0" y="47" class="about-desc-m">Links pessoais, projetos e formas de contato no Zyo.</text>
 
-    <g transform="translate(0, 72)">
-      <rect x="0" y="0" width="384" height="32" rx="7" fill="#1b112e" stroke="#502582" stroke-width="0.9"/>
-      <text x="192" y="20" class="portal-link-m" text-anchor="middle">Acessar perfil completo em zyo.se/awerkori ↗</text>
+    <g transform="translate(0, 66)">
+      <rect x="0" y="0" width="384" height="34" rx="7" fill="#1b112e" stroke="#502582" stroke-width="0.9"/>
+      <text x="192" y="22" class="portal-link-m" text-anchor="middle">Acessar perfil pessoal em zyo.se/awerkori ↗</text>
     </g>
   </g>
 </svg>
@@ -1184,7 +850,7 @@ function buildCardAboutMobile() {
 }
 
 function buildDivider() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="32" viewBox="0 0 846 32" role="img" aria-hidden="true">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="30" viewBox="0 0 846 30" role="img" aria-hidden="true">
   <defs>
     <linearGradient id="divLine" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#3b1d62" stop-opacity="0"/>
@@ -1202,7 +868,7 @@ function buildDivider() {
   <style>
     .star-breathe {
       animation: divPulse 4s ease-in-out infinite alternate;
-      transform-origin: 423px 16px;
+      transform-origin: 423px 15px;
     }
     @keyframes divPulse {
       0% { transform: scale(0.85); opacity: 0.7; }
@@ -1212,45 +878,110 @@ function buildDivider() {
       .star-breathe { animation: none !important; }
     }
   </style>
-  <line x1="28" y1="16" x2="818" y2="16" stroke="url(#divLine)" stroke-width="1.2"/>
-  <circle cx="423" cy="16" r="12" fill="url(#divStarGlow)" class="star-breathe"/>
-  <text x="423" y="20" font-size="11" fill="#fef08a" text-anchor="middle" class="star-breathe">✦</text>
+  <line x1="28" y1="15" x2="818" y2="15" stroke="url(#divLine)" stroke-width="1.2"/>
+  <circle cx="423" cy="15" r="11" fill="url(#divStarGlow)" class="star-breathe"/>
+  <text x="423" y="19" font-size="10" fill="#fef08a" text-anchor="middle" class="star-breathe">✦</text>
 </svg>
 `;
 }
 
 async function main() {
-  console.log('[Art] Building high-end Project Nox cosmic assets...');
+  console.log('[Art] Gerando assets refinados do Project Nox...');
 
   await fs.mkdir(profileDir, { recursive: true });
 
+  // Hero
   await fs.writeFile(path.join(profileDir, 'hero.svg'), buildHeroDesktop(), 'utf8');
   await fs.writeFile(path.join(profileDir, 'hero-mobile.svg'), buildHeroMobile(), 'utf8');
   console.log('  ✓ hero.svg & hero-mobile.svg');
 
-  await fs.writeFile(path.join(profileDir, 'card-extensoes-manga.svg'), buildCardExtensoesMangaDesktop(), 'utf8');
-  await fs.writeFile(path.join(profileDir, 'card-extensoes-manga-mobile.svg'), buildCardExtensoesMangaMobile(), 'utf8');
-  console.log('  ✓ card-extensoes-manga.svg & mobile');
+  // Card 1: Project Nox · Mangá
+  const mangaD = buildProjectCard({
+    id: 'manga',
+    title: 'Project Nox · Mangá',
+    label: 'EXTENSÕES DE MANGÁ · MIHON E FORKS',
+    desc1: 'Extensões compiladas para Mihon e forks, com foco em estabilidade e fontes em português.',
+    desc2: 'Reúne o catálogo moderno de distribuição e o repositório de código-fonte.',
+    reposText: 'Distribuição: Awerkori/extensoes · Código-fonte: Awerkori/fonte-extensoes',
+    iconSvg: MANGA_GLYPH,
+    buttonText: 'Ver Projeto'
+  });
+  const mangaM = buildProjectCardMobile({
+    id: 'manga',
+    title: 'Project Nox · Mangá',
+    label: 'EXTENSÕES · MIHON E FORKS',
+    desc: 'Extensões compiladas para Mihon e forks, com foco em fontes PT-BR.',
+    reposText: 'Distribuição: Awerkori/extensoes · Fonte: fonte-extensoes',
+    buttonText: 'Acessar Projeto'
+  });
+  await fs.writeFile(path.join(profileDir, 'card-manga.svg'), mangaD, 'utf8');
+  await fs.writeFile(path.join(profileDir, 'card-manga-mobile.svg'), mangaM, 'utf8');
+  console.log('  ✓ card-manga.svg & mobile');
 
-  await fs.writeFile(path.join(profileDir, 'card-extensoes-anime.svg'), buildCardExtensoesAnimeDesktop(), 'utf8');
-  await fs.writeFile(path.join(profileDir, 'card-extensoes-anime-mobile.svg'), buildCardExtensoesAnimeMobile(), 'utf8');
-  console.log('  ✓ card-extensoes-anime.svg & mobile');
+  // Card 2: Project Nox · Anime
+  const animeD = buildProjectCard({
+    id: 'anime',
+    title: 'Project Nox · Anime',
+    label: 'EXTENSÕES DE ANIME · ANIYOMI E FORKS',
+    desc1: 'Extensões compiladas para Aniyomi e forks, com catálogo pronto para streaming contínuo.',
+    desc2: 'Reúne o repositório oficial de distribuição e o código-fonte das extensões.',
+    reposText: 'Distribuição: Awerkori/anime-extensoes · Código-fonte: Awerkori/anime-fonte-extensoes',
+    iconSvg: ANIME_GLYPH,
+    buttonText: 'Ver Projeto'
+  });
+  const animeM = buildProjectCardMobile({
+    id: 'anime',
+    title: 'Project Nox · Anime',
+    label: 'EXTENSÕES · ANIYOMI E FORKS',
+    desc: 'Extensões para Aniyomi e forks com catálogo compilado para streaming.',
+    reposText: 'Distribuição: anime-extensoes · Fonte: anime-fonte-extensoes',
+    buttonText: 'Acessar Projeto'
+  });
+  await fs.writeFile(path.join(profileDir, 'card-anime.svg'), animeD, 'utf8');
+  await fs.writeFile(path.join(profileDir, 'card-anime-mobile.svg'), animeM, 'utf8');
+  console.log('  ✓ card-anime.svg & mobile');
 
+  // Card 3: Project Nox · Tickets
+  const ticketsD = buildProjectCard({
+    id: 'tickets',
+    title: 'Project Nox · Tickets',
+    label: 'CENTRAL DE PEDIDOS · TRACKER & TICKETS',
+    desc1: 'Central para sugerir novas extensões, avisar sobre fontes quebradas e relatar mudanças.',
+    desc2: 'Acompanhe a demanda e os pedidos mais votados pela comunidade através do Tracker.',
+    reposText: 'Abertura de Tickets: Awerkori/project-nox-requests · Painel: project-nox-tracker',
+    iconSvg: TICKETS_GLYPH,
+    buttonText: 'Ver Tickets'
+  });
+  const ticketsM = buildProjectCardMobile({
+    id: 'tickets',
+    title: 'Project Nox · Tickets',
+    label: 'CENTRAL DE PEDIDOS · TRACKER',
+    desc: 'Sugestões, reporte de fontes quebradas e votação comunitária no Tracker.',
+    reposText: 'Pedidos: project-nox-requests · Painel: project-nox-tracker',
+    buttonText: 'Acessar Tickets'
+  });
+  await fs.writeFile(path.join(profileDir, 'card-tickets.svg'), ticketsD, 'utf8');
+  await fs.writeFile(path.join(profileDir, 'card-tickets-mobile.svg'), ticketsM, 'utf8');
+  console.log('  ✓ card-tickets.svg & mobile');
+
+  // Secondary Project: Leitor Web
   await fs.writeFile(path.join(profileDir, 'card-site-manga.svg'), buildCardSiteMangaDesktop(), 'utf8');
   await fs.writeFile(path.join(profileDir, 'card-site-manga-mobile.svg'), buildCardSiteMangaMobile(), 'utf8');
   console.log('  ✓ card-site-manga.svg & mobile');
 
+  // Mais sobre mim
   await fs.writeFile(path.join(profileDir, 'card-about.svg'), buildCardAboutDesktop(), 'utf8');
   await fs.writeFile(path.join(profileDir, 'card-about-mobile.svg'), buildCardAboutMobile(), 'utf8');
   console.log('  ✓ card-about.svg & mobile');
 
+  // Divider
   await fs.writeFile(path.join(profileDir, 'divider.svg'), buildDivider(), 'utf8');
   console.log('  ✓ divider.svg');
 
-  console.log('[Art] All assets built successfully!');
+  console.log('[Art] Todos os assets foram construídos com sucesso!');
 }
 
 main().catch(err => {
-  console.error('[Art] Error:', err);
+  console.error('[Art] Erro:', err);
   process.exit(1);
 });

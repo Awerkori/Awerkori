@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
 const USERNAME = 'Awerkori';
+const TIMEZONE = 'America/Sao_Paulo';
 
 function getToken() {
   if (process.env.GH_TOKEN) return process.env.GH_TOKEN;
@@ -18,6 +19,16 @@ function getToken() {
   } catch {
     return null;
   }
+}
+
+function getTodayInBrasilia() {
+  const formatter = new Intl.DateTimeFormat('en-CA', {
+    timeZone: TIMEZONE,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  });
+  return formatter.format(new Date());
 }
 
 async function fetchContributions(token) {
@@ -65,7 +76,6 @@ async function fetchContributions(token) {
 }
 
 const PT_MONTHS = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-const PT_MONTHS_FULL = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
 function formatDateShort(dateStr) {
   const [y, m, d] = dateStr.split('-').map(Number);
@@ -85,9 +95,31 @@ function getBarColor(count) {
   return 'url(#goldPeak)';
 }
 
+function alignDaysToToday(calendar) {
+  const allDays = calendar.weeks.flatMap(w => w.contributionDays);
+  const todayBR = getTodayInBrasilia();
+
+  // Ensure the list includes todayBR
+  const hasToday = allDays.some(d => d.date === todayBR);
+  if (!hasToday && allDays.length > 0) {
+    const lastDate = allDays[allDays.length - 1].date;
+    if (todayBR > lastDate) {
+      // Midnight just crossed in Brasilia; add today with 0 pending API refresh
+      const lastWeekday = allDays[allDays.length - 1].weekday;
+      allDays.push({
+        date: todayBR,
+        contributionCount: 0,
+        weekday: (lastWeekday + 1) % 7
+      });
+    }
+  }
+
+  return { allDays, todayBR };
+}
+
 function renderDesktopSvg(calendar, trailingDays) {
-  const days = calendar.weeks.flatMap(w => w.contributionDays);
-  const slice = days.slice(-trailingDays);
+  const { allDays, todayBR } = alignDaysToToday(calendar);
+  const slice = allDays.slice(-trailingDays);
   const totalYear = calendar.totalContributions;
   const maxDay = slice.reduce((max, d) => (d.contributionCount > max.contributionCount ? d : max), slice[0]);
   const sliceTotal = slice.reduce((sum, d) => sum + d.contributionCount, 0);
@@ -102,8 +134,6 @@ function renderDesktopSvg(calendar, trailingDays) {
   const barW = Math.max(4, slotW - 3.8);
   const baseY = 168;
   const maxBarH = 78;
-
-  // Peak scaling
   const peakVal = Math.max(1, maxDay.contributionCount);
 
   const barsMarkup = slice.map((day, i) => {
@@ -111,13 +141,12 @@ function renderDesktopSvg(calendar, trailingDays) {
     const count = day.contributionCount;
     let h = 3.5;
     if (count > 0) {
-      // Power scale for smooth aesthetic distribution
       const norm = Math.pow(count / peakVal, 0.6);
       h = Math.min(maxBarH, Math.max(8, 8 + norm * (maxBarH - 8)));
     }
     const y = (baseY - h).toFixed(2);
     const color = getBarColor(count);
-    const isToday = i === barCount - 1;
+    const isToday = day.date === todayBR;
     const isPeak = count === peakVal && count > 0;
 
     let marker = '';
@@ -138,10 +167,9 @@ function renderDesktopSvg(calendar, trailingDays) {
   }).join('');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="228" viewBox="0 0 846 228" role="img" aria-labelledby="actTitle actDesc">
-  <title id="actTitle">Atividade real de contribuições no GitHub — ${totalYear.toLocaleString('pt-BR')} contribuições</title>
-  <desc id="actDesc">${sliceTotal.toLocaleString('pt-BR')} contribuições nas últimas ${Math.round(barCount / 7)} semanas (${startDate} a ${endDate}). Atualizado automaticamente via GitHub Actions.</desc>
+  <title id="actTitle">Atividade no GitHub — ${totalYear.toLocaleString('pt-BR')} contribuições</title>
+  <desc id="actDesc">${sliceTotal.toLocaleString('pt-BR')} contribuições nas últimas ${Math.round(barCount / 7)} semanas (${startDate} a ${endDate}). Atualização periódica automática.</desc>
   <defs>
-    <!-- Background gradients -->
     <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0e0a17"/>
       <stop offset="50%" stop-color="#140d22"/>
@@ -157,7 +185,6 @@ function renderDesktopSvg(calendar, trailingDays) {
       <stop offset="100%" stop-color="#0e0a17" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Bar Tier Gradients -->
     <linearGradient id="violetLow" x1="0" y1="1" x2="0" y2="0">
       <stop offset="0%" stop-color="#581c87"/>
       <stop offset="100%" stop-color="#7c3aed"/>
@@ -176,7 +203,6 @@ function renderDesktopSvg(calendar, trailingDays) {
       <stop offset="100%" stop-color="#fef08a"/>
     </linearGradient>
 
-    <!-- Metallic Gold Text Gradient -->
     <linearGradient id="goldText" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#fef08a"/>
       <stop offset="50%" stop-color="#f59e0b"/>
@@ -199,7 +225,7 @@ function renderDesktopSvg(calendar, trailingDays) {
     .label-badge {
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 2.2px;
+      letter-spacing: 2px;
       fill: #c4b5fd;
     }
     .big-num {
@@ -259,17 +285,14 @@ function renderDesktopSvg(calendar, trailingDays) {
     }
   </style>
 
-  <!-- Card Surface -->
   <rect x="0.5" y="0.5" width="845" height="227" rx="14" fill="url(#cardBg)" stroke="#372353" stroke-width="1"/>
-  <!-- Ambient glows -->
   <rect x="1" y="1" width="844" height="226" rx="13" fill="url(#nebulaAura)" class="nebula-breath"/>
   <rect x="1" y="1" width="844" height="226" rx="13" fill="url(#goldAmbient)"/>
 
   <!-- Card Header -->
   <g transform="translate(28, 26)">
-    <!-- Small live beacon -->
     <circle cx="4" cy="4" r="3" fill="#fbbf24"/>
-    <text x="14" y="8" class="label-badge">ATIVIDADE NO GITHUB · DADOS REAIS</text>
+    <text x="14" y="8" class="label-badge">ATIVIDADE NO GITHUB · ATUALIZAÇÃO AUTOMÁTICA</text>
     
     <text x="0" y="44" class="big-num">${totalYear.toLocaleString('pt-BR')}</text>
     <text x="${(totalYear.toString().length * 20 + 26)}" y="40" class="stat-sub">contribuições no último ano</text>
@@ -279,7 +302,7 @@ function renderDesktopSvg(calendar, trailingDays) {
     <text x="790" y="38" class="meta-text" text-anchor="end">Pico do período: <tspan class="gold-highlight">${maxDay.contributionCount} contribuições</tspan> (${formatDateISO(maxDay.date)})</text>
   </g>
 
-  <!-- Chart Baseline & Grid Guides -->
+  <!-- Guides & Baseline -->
   <line x1="28" y1="92" x2="818" y2="92" stroke="#251c38" stroke-width="0.8" stroke-dasharray="3 4"/>
   <line x1="28" y1="130" x2="818" y2="130" stroke="#251c38" stroke-width="0.8" stroke-dasharray="3 4"/>
   <line x1="28" y1="${baseY + 1}" x2="818" y2="${baseY + 1}" stroke="#34254f" stroke-width="1"/>
@@ -288,12 +311,12 @@ function renderDesktopSvg(calendar, trailingDays) {
   <!-- Contribution Bars -->
   ${barsMarkup}
 
-  <!-- Chart Footer / Legend -->
+  <!-- Footer / Legend -->
   <g transform="translate(28, 204)">
     <text x="0" y="0" class="meta-text">${startDate}</text>
     <text x="790" y="0" class="meta-text gold-highlight" text-anchor="end">Hoje · ${endDate}</text>
 
-    <!-- Centered Legend -->
+    <!-- Legend -->
     <g transform="translate(320, -8)">
       <text x="-8" y="7" class="meta-text" text-anchor="end" font-size="10">Menos</text>
       <rect x="0" y="0" width="8" height="8" rx="1.5" fill="#201833"/>
@@ -309,11 +332,10 @@ function renderDesktopSvg(calendar, trailingDays) {
 }
 
 function renderMobileSvg(calendar, trailingDays) {
-  const days = calendar.weeks.flatMap(w => w.contributionDays);
-  const slice = days.slice(-trailingDays);
+  const { allDays, todayBR } = alignDaysToToday(calendar);
+  const slice = allDays.slice(-trailingDays);
   const totalYear = calendar.totalContributions;
   const maxDay = slice.reduce((max, d) => (d.contributionCount > max.contributionCount ? d : max), slice[0]);
-  const sliceTotal = slice.reduce((sum, d) => sum + d.contributionCount, 0);
 
   const startDate = formatDateShort(slice[0].date);
   const endDate = formatDateShort(slice[slice.length - 1].date);
@@ -337,7 +359,7 @@ function renderMobileSvg(calendar, trailingDays) {
     }
     const y = (baseY - h).toFixed(2);
     const color = getBarColor(count);
-    const isToday = i === barCount - 1;
+    const isToday = day.date === todayBR;
 
     let marker = '';
     if (isToday) {
@@ -387,7 +409,7 @@ function renderMobileSvg(calendar, trailingDays) {
     </linearGradient>
     <linearGradient id="goldTextM" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#fef08a"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
     </linearGradient>
     <filter id="glowGoldM" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="2" result="blur"/>
@@ -447,11 +469,9 @@ function renderMobileSvg(calendar, trailingDays) {
     }
   </style>
 
-  <!-- Background -->
   <rect x="0.5" y="0.5" width="419" height="219" rx="12" fill="url(#cardBgM)" stroke="#372353" stroke-width="1"/>
   <rect x="1" y="1" width="418" height="218" rx="11" fill="url(#nebulaAuraM)"/>
 
-  <!-- Header -->
   <g transform="translate(18, 22)">
     <circle cx="3" cy="3" r="2.5" fill="#fbbf24"/>
     <text x="11" y="6" class="label-badge">ATIVIDADE NO GITHUB</text>
@@ -463,13 +483,10 @@ function renderMobileSvg(calendar, trailingDays) {
     <text x="384" y="32" class="meta-text" text-anchor="end">Pico: <tspan class="gold-highlight">${maxDay.contributionCount}</tspan></text>
   </g>
 
-  <!-- Baseline -->
   <line x1="18" y1="${baseY + 1}" x2="402" y2="${baseY + 1}" stroke="#34254f" stroke-width="1"/>
 
-  <!-- Bars -->
   ${barsMarkup}
 
-  <!-- Footer -->
   <g transform="translate(18, 196)">
     <text x="0" y="0" class="meta-text">${startDate}</text>
     <text x="384" y="0" class="meta-text gold-highlight" text-anchor="end">Hoje · ${endDate}</text>
@@ -480,39 +497,38 @@ function renderMobileSvg(calendar, trailingDays) {
 
 async function main() {
   const token = getToken();
-  console.log(`[Activity] Fetching GitHub contribution data for ${USERNAME}...`);
+  console.log(`[Activity] Buscando contribuições para ${USERNAME} (Fuso: ${TIMEZONE})...`);
   const calendar = await fetchContributions(token);
-  console.log(`[Activity] Total yearly contributions: ${calendar.totalContributions}`);
+  console.log(`[Activity] Total de contribuições no ano móvel: ${calendar.totalContributions}`);
 
   const profileDir = path.join(rootDir, 'assets', 'profile');
   await fs.mkdir(profileDir, { recursive: true });
 
-  // Generate desktop SVG (trailing 63 days = 9 weeks)
   const desktopSvg = renderDesktopSvg(calendar, 63);
   await fs.writeFile(path.join(profileDir, 'activity.svg'), desktopSvg, 'utf8');
-  console.log('[Activity] Generated assets/profile/activity.svg (Desktop 846px)');
+  console.log('[Activity] Gerado assets/profile/activity.svg (Desktop 846px)');
 
-  // Generate mobile SVG (trailing 35 days = 5 weeks)
   const mobileSvg = renderMobileSvg(calendar, 35);
   await fs.writeFile(path.join(profileDir, 'activity-mobile.svg'), mobileSvg, 'utf8');
-  console.log('[Activity] Generated assets/profile/activity-mobile.svg (Mobile 420px)');
+  console.log('[Activity] Gerado assets/profile/activity-mobile.svg (Mobile 420px)');
 
-  // Save raw data JSON
-  const allDays = calendar.weeks.flatMap(w => w.contributionDays);
+  const { allDays, todayBR } = alignDaysToToday(calendar);
   const dataPayload = {
     updatedAt: new Date().toISOString(),
+    todayBrasilia: todayBR,
+    timezone: TIMEZONE,
     user: USERNAME,
     totalYear: calendar.totalContributions,
     recentTotal63: allDays.slice(-63).reduce((sum, d) => sum + d.contributionCount, 0),
     days: allDays
   };
   await fs.writeFile(path.join(profileDir, 'activity.json'), JSON.stringify(dataPayload, null, 2) + '\n', 'utf8');
-  console.log('[Activity] Generated assets/profile/activity.json');
+  console.log('[Activity] Gerado assets/profile/activity.json');
 
-  console.log('[Activity] Complete! Live contribution activity updated successfully.');
+  console.log('[Activity] Concluído com sucesso.');
 }
 
 main().catch(err => {
-  console.error('[Activity] Error:', err);
+  console.error('[Activity] Erro:', err);
   process.exit(1);
 });

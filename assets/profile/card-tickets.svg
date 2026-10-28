@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="846" height="142" viewBox="0 0 846 142" role="img" aria-labelledby="ticketsTitle ticketsDesc">
+  <title id="ticketsTitle">Project Nox · Tickets</title>
+  <desc id="ticketsDesc">Central para sugerir novas extensões, avisar sobre fontes quebradas e relatar mudanças. Acompanhe a demanda e os pedidos mais votados pela comunidade através do Tracker.</desc>
+  <defs>
+    <linearGradient id="ticketsBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e0a19"/>
+      <stop offset="50%" stop-color="#140c24"/>
+      <stop offset="100%" stop-color="#090612"/>
+    </linearGradient>
+    <radialGradient id="ticketsGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#0e0a19" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ticketsBtn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff099"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="ticketsFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    
+  text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+    .badge-label {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      fill: #fbbf24;
+    }
+    .card-title {
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      fill: #ffffff;
+    }
+    .card-desc {
+      font-size: 12.5px;
+      fill: #c4b5fd;
+    }
+    .repos-sub {
+      font-size: 10.5px;
+      font-weight: 600;
+      fill: #e9d5ff;
+    }
+    .btn-text {
+      font-size: 11.5px;
+      font-weight: 700;
+      fill: #090610;
+    }
+    .halo-pulse {
+      animation: iconBreath 6s ease-in-out infinite alternate;
+    }
+    @keyframes iconBreath {
+      0% { opacity: 0.35; }
+      100% { opacity: 0.85; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .halo-pulse { animation: none !important; }
+    }
+  </style>
+
+  <!-- Surface -->
+  <rect x="0.5" y="0.5" width="845" height="141" rx="14" fill="url(#ticketsBg)" stroke="#3e2063" stroke-width="1"/>
+  <path d="M14 1H180" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Left Icon Frame (Exact Center at 65, 71) -->
+  <g transform="translate(26, 22)">
+    <circle cx="49" cy="49" r="44" fill="url(#ticketsGlow)" class="halo-pulse"/>
+    <rect x="10" y="10" width="78" height="78" rx="16" fill="#1b112e" stroke="#522785" stroke-width="1.2"/>
+    <g transform="translate(10, 10)">
+      
+  <g transform="translate(15, 18)" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 8a4 4 0 0 1 4-4h32a4 4 0 0 1 4 4v7a5 5 0 0 0 0 10v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-7a5 5 0 0 0 0-10Z" fill="#2d174d" fill-opacity="0.8"/>
+    <line x1="16" y1="4" x2="16" y2="36" stroke="#522785" stroke-dasharray="2 3"/>
+    <polygon points="28,14 30,19 35,19 31,22 33,27 28,24 23,27 25,22 21,19 26,19" fill="#fbbf24" stroke="none"/>
+  </g>
+
+    </g>
+  </g>
+
+  <!-- Central Content -->
+  <g transform="translate(136, 24)">
+    <text x="0" y="8" class="badge-label">✦ CENTRAL DE PEDIDOS · TRACKER & TICKETS</text>
+    <text x="0" y="34" class="card-title">Project Nox · Tickets</text>
+    <text x="0" y="58" class="card-desc">Central para sugerir novas extensões, avisar sobre fontes quebradas e relatar mudanças.</text>
+    <text x="0" y="74" class="card-desc">Acompanhe a demanda e os pedidos mais votados pela comunidade através do Tracker.</text>
+    <text x="0" y="98" class="repos-sub">Abertura de Tickets: Awerkori/project-nox-requests · Painel: project-nox-tracker</text>
+  </g>
+
+  <!-- Right CTA Button (Fully Contained) -->
+  <g transform="translate(676, 50)">
+    <rect x="0" y="0" width="146" height="42" rx="10" fill="url(#ticketsBtn)" filter="url(#ticketsFilter)"/>
+    <text x="64" y="26" class="btn-text" text-anchor="middle">Ver Tickets</text>
+    <path d="M122 21l4 0m-2 -3l3 3-3 3" fill="none" stroke="#090610" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
