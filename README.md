@@ -24,9 +24,7 @@
   </picture>
 </a>
 <p align="center">
-  <a href="https://github.com/Awerkori/manga-extensoes"><img src="./assets/profile/btn-manga-dist.svg" height="34" alt="Distribuição"></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/Awerkori/manga-fonte-extensoes"><img src="./assets/profile/btn-manga-source.svg" height="34" alt="Código-fonte"></a>
+  <a href="https://github.com/Awerkori/manga-extensoes"><img src="./assets/profile/btn-manga-dist.svg" height="34" alt="Distribuição"></a> <a href="https://github.com/Awerkori/manga-fonte-extensoes"><img src="./assets/profile/btn-manga-source.svg" height="34" alt="Código-fonte"></a>
 </p>
 
 <!-- 4. Project Nox · Anime -->
@@ -37,9 +35,7 @@
   </picture>
 </a>
 <p align="center">
-  <a href="https://github.com/Awerkori/anime-extensoes"><img src="./assets/profile/btn-anime-dist.svg" height="34" alt="Distribuição"></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/Awerkori/anime-fonte-extensoes"><img src="./assets/profile/btn-anime-source.svg" height="34" alt="Código-fonte"></a>
+  <a href="https://github.com/Awerkori/anime-extensoes"><img src="./assets/profile/btn-anime-dist.svg" height="34" alt="Distribuição"></a> <a href="https://github.com/Awerkori/anime-fonte-extensoes"><img src="./assets/profile/btn-anime-source.svg" height="34" alt="Código-fonte"></a>
 </p>
 
 <!-- 5. Project Nox · Tickets -->
@@ -50,9 +46,7 @@
   </picture>
 </a>
 <p align="center">
-  <a href="https://awerkori.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tickets-tracker.svg" height="34" alt="Painel de tickets"></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/Awerkori/project-nox-requests/issues/new/choose"><img src="./assets/profile/btn-tickets-open.svg" height="34" alt="Abrir ticket"></a>
+  <a href="https://awerkori.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tickets-tracker.svg" height="34" alt="Painel de tickets"></a> <a href="https://github.com/Awerkori/project-nox-requests/issues/new/choose"><img src="./assets/profile/btn-tickets-open.svg" height="34" alt="Abrir ticket"></a>
 </p>
 
 <!-- 6. Project Nox · Site -->
@@ -63,9 +57,7 @@
   </picture>
 </a>
 <p align="center">
-  <a href="https://manga.project-nox-awerkori.workers.dev"><img src="./assets/profile/btn-site-open.svg" height="34" alt="Acessar nosso site"></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/Awerkori/project-nox-manga"><img src="./assets/profile/btn-site-source.svg" height="34" alt="Código-fonte"></a>
+  <a href="https://manga.project-nox-awerkori.workers.dev"><img src="./assets/profile/btn-site-open.svg" height="34" alt="Acessar o site"></a> <a href="https://github.com/Awerkori/project-nox-manga"><img src="./assets/profile/btn-site-source.svg" height="34" alt="Código-fonte"></a>
 </p>
 
 <img src="./assets/profile/divider.svg" width="846" alt="—">
@@ -74,7 +66,7 @@
 <a href="https://zyo.se/awerkori">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/profile/card-about-mobile.svg">
-    <img src="./assets/profile/card-about.svg" width="846" alt="Mais sobre mim — zyo.se/awerkori">
+    <img src="./assets/profile/card-about.svg" width="846" alt="Mais sobre mim — Clique aqui para saber mais sobre mim">
   </picture>
 </a>
 

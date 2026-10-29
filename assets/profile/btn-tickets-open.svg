@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="145" height="34" viewBox="0 0 145 34" role="img" aria-label="Abrir ticket">
+<svg xmlns="http://www.w3.org/2000/svg" width="155" height="34" viewBox="0 0 155 34" role="img" aria-label="Abrir ticket">
   <defs>
     <linearGradient id="btnTicketsOpenBtnBg" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#130b22"/>
@@ -11,11 +11,9 @@
       </linearGradient>
   </defs>
   <style>
-    
-  text {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  }
-
+    text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
     .btn-lbl {
       font-size: 11.5px;
       font-weight: 600;
@@ -23,8 +21,8 @@
       fill: #e6edf3;
     }
   </style>
-  <rect x="0.5" y="0.5" width="144" height="33" rx="7" fill="url(#btnTicketsOpenBtnBg)" stroke="url(#btnTicketsOpenBtnBorder)" stroke-width="1"/>
-  <path d="M8 2H137" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" stroke-linecap="round"/>
+  <rect x="0.5" y="0.5" width="154" height="33" rx="7" fill="url(#btnTicketsOpenBtnBg)" stroke="url(#btnTicketsOpenBtnBorder)" stroke-width="1"/>
+  <path d="M8 2H147" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" stroke-linecap="round"/>
 
   <!-- Left Icon -->
   <g transform="translate(11, 8)">
@@ -35,7 +33,7 @@
   <text x="32" y="22" class="btn-lbl">Abrir ticket</text>
 
   <!-- Right Chevron -->
-  <g transform="translate(129, 12)">
+  <g transform="translate(139, 12)">
     <path d="M0 0l3.5 4.5-3.5 4.5" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

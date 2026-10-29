@@ -67,8 +67,8 @@
   </g>
 
   <!-- Right Pill -->
-  <g transform="translate(650, 27)">
-    <rect x="0" y="0" width="168" height="34" rx="8" fill="#1c1130" stroke="#582a8c" stroke-width="1"/>
-    <text x="74" y="22" class="btn-about-text" text-anchor="middle">zyo.se/awerkori ↗</text>
+  <g transform="translate(555, 27)">
+    <rect x="0" y="0" width="265" height="34" rx="8" fill="#1c1130" stroke="#582a8c" stroke-width="1"/>
+    <text x="132" y="22" class="btn-about-text" text-anchor="middle">Clique aqui para saber mais sobre mim ↗</text>
   </g>
 </svg>
