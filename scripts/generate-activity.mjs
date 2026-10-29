@@ -96,16 +96,19 @@ function getBarColor(count) {
 }
 
 function alignDaysToToday(calendar) {
-  const allDays = calendar.weeks.flatMap(w => w.contributionDays);
+  let allDays = calendar.weeks.flatMap(w => w.contributionDays);
   const todayBR = getTodayInBrasilia();
 
-  // Ensure the list includes todayBR
+  // Garante que nenhuma data futura em relação ao fuso de Brasília seja exibida
+  allDays = allDays.filter(d => d.date <= todayBR);
+
+  // Garante que o dia de hoje em Brasília sempre conste no gráfico
   const hasToday = allDays.some(d => d.date === todayBR);
   if (!hasToday && allDays.length > 0) {
     const lastDate = allDays[allDays.length - 1].date;
     if (todayBR > lastDate) {
-      // Midnight just crossed in Brasilia; add today with 0 pending API refresh
-      const lastWeekday = allDays[allDays.length - 1].weekday;
+      // Meia-noite acabou de virar em Brasília; adiciona o novo dia com 0 até a próxima atualização da API
+      const lastWeekday = allDays[allDays.length - 1].weekday ?? 0;
       allDays.push({
         date: todayBR,
         contributionCount: 0,

@@ -2,8 +2,8 @@ name: Update Live Profile Activity
 
 on:
   schedule:
-    # Executa a cada 6 horas para manter os dados de contribuição sempre vivos e atualizados
-    - cron: '17 */6 * * *'
+    # Executa a cada 4 horas para manter os dados de contribuição vivos e registrar rapidamente o novo dia
+    - cron: '20 */4 * * *'
   workflow_dispatch:
 
 permissions:
