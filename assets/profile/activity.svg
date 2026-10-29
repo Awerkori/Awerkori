@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="846" height="228" viewBox="0 0 846 228" role="img" aria-labelledby="actTitle actDesc">
-  <title id="actTitle">Atividade no GitHub — 3.469 contribuições</title>
-  <desc id="actDesc">3.411 contribuições nas últimas 9 semanas (27 ago 2026 a 28 out 2026). Atualização periódica automática.</desc>
+  <title id="actTitle">Atividade no GitHub — 3.475 contribuições</title>
+  <desc id="actDesc">3.403 contribuições nas últimas 9 semanas (28 ago 2026 a 29 out 2026). Atualização periódica automática.</desc>
   <defs>
     <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0e0a17"/>
@@ -126,11 +126,11 @@
     <circle cx="4" cy="4" r="3" fill="#fbbf24"/>
     <text x="14" y="8" class="label-badge">ATIVIDADE NO GITHUB · ATUALIZAÇÃO AUTOMÁTICA</text>
     
-    <text x="0" y="44" class="big-num">3.469</text>
+    <text x="0" y="44" class="big-num">3.475</text>
     <text x="106" y="40" class="stat-sub">contribuições no último ano</text>
 
     <!-- Right Header Meta -->
-    <text x="790" y="14" class="meta-text" text-anchor="end">9 semanas recentes (27 ago 2026 – 28 out 2026)</text>
+    <text x="790" y="14" class="meta-text" text-anchor="end">9 semanas recentes (28 ago 2026 – 29 out 2026)</text>
     <text x="790" y="38" class="meta-text" text-anchor="end">Pico do período: <tspan class="gold-highlight">174 contribuições</tspan> (05/10/2026)</text>
   </g>
 
@@ -143,391 +143,391 @@
   <!-- Contribution Bars -->
   
       <g>
-        <title>27/08/2026: 14 contribuições</title>
-        <rect x="28.00" y="144.57" width="8.74" height="23.43" rx="2" fill="url(#violetMid)" />
-        
-      </g>
-    
-      <g>
         <title>28/08/2026: 4 contribuições</title>
-        <rect x="40.54" y="152.72" width="8.74" height="15.28" rx="2" fill="url(#violetLow)" />
+        <rect x="28.00" y="152.72" width="8.74" height="15.28" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>29/08/2026: 1 contribuição</title>
-        <rect x="53.08" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
+        <rect x="40.54" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>30/08/2026: 1 contribuição</title>
-        <rect x="65.62" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
+        <rect x="53.08" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>31/08/2026: 1 contribuição</title>
-        <rect x="78.16" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
+        <rect x="65.62" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>01/09/2026: 5 contribuições</title>
-        <rect x="90.70" y="151.68" width="8.74" height="16.32" rx="2" fill="url(#violetLow)" />
+        <rect x="78.16" y="151.68" width="8.74" height="16.32" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>02/09/2026: 1 contribuição</title>
-        <rect x="103.24" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
+        <rect x="90.70" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>03/09/2026: 0 contribuições</title>
-        <rect x="115.78" y="164.50" width="8.74" height="3.50" rx="2" fill="#201833" />
+        <rect x="103.24" y="164.50" width="8.74" height="3.50" rx="2" fill="#201833" />
         
       </g>
     
       <g>
         <title>04/09/2026: 46 contribuições</title>
-        <rect x="128.32" y="128.49" width="8.74" height="39.51" rx="2" fill="url(#violetHigh)" />
+        <rect x="115.78" y="128.49" width="8.74" height="39.51" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>05/09/2026: 9 contribuições</title>
-        <rect x="140.86" y="148.16" width="8.74" height="19.84" rx="2" fill="url(#violetLow)" />
+        <rect x="128.32" y="148.16" width="8.74" height="19.84" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>06/09/2026: 7 contribuições</title>
-        <rect x="153.40" y="149.82" width="8.74" height="18.18" rx="2" fill="url(#violetLow)" />
+        <rect x="140.86" y="149.82" width="8.74" height="18.18" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>07/09/2026: 16 contribuições</title>
-        <rect x="165.94" y="143.28" width="8.74" height="24.72" rx="2" fill="url(#violetMid)" />
+        <rect x="153.40" y="143.28" width="8.74" height="24.72" rx="2" fill="url(#violetMid)" />
         
       </g>
     
       <g>
         <title>08/09/2026: 48 contribuições</title>
-        <rect x="178.48" y="127.68" width="8.74" height="40.32" rx="2" fill="url(#violetHigh)" />
+        <rect x="165.94" y="127.68" width="8.74" height="40.32" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>09/09/2026: 58 contribuições</title>
-        <rect x="191.02" y="123.79" width="8.74" height="44.21" rx="2" fill="url(#violetHigh)" />
+        <rect x="178.48" y="123.79" width="8.74" height="44.21" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>10/09/2026: 30 contribuições</title>
-        <rect x="203.56" y="135.62" width="8.74" height="32.38" rx="2" fill="url(#violetMid)" />
+        <rect x="191.02" y="135.62" width="8.74" height="32.38" rx="2" fill="url(#violetMid)" />
         
       </g>
     
       <g>
         <title>11/09/2026: 8 contribuições</title>
-        <rect x="216.10" y="148.97" width="8.74" height="19.03" rx="2" fill="url(#violetLow)" />
+        <rect x="203.56" y="148.97" width="8.74" height="19.03" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>12/09/2026: 4 contribuições</title>
-        <rect x="228.63" y="152.72" width="8.74" height="15.28" rx="2" fill="url(#violetLow)" />
+        <rect x="216.10" y="152.72" width="8.74" height="15.28" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>13/09/2026: 41 contribuições</title>
-        <rect x="241.17" y="130.59" width="8.74" height="37.41" rx="2" fill="url(#violetHigh)" />
+        <rect x="228.63" y="130.59" width="8.74" height="37.41" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>14/09/2026: 117 contribuições</title>
-        <rect x="253.71" y="104.83" width="8.74" height="63.17" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="241.17" y="104.83" width="8.74" height="63.17" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>15/09/2026: 42 contribuições</title>
-        <rect x="266.25" y="130.17" width="8.74" height="37.83" rx="2" fill="url(#violetHigh)" />
+        <rect x="253.71" y="130.17" width="8.74" height="37.83" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>16/09/2026: 6 contribuições</title>
-        <rect x="278.79" y="150.72" width="8.74" height="17.28" rx="2" fill="url(#violetLow)" />
+        <rect x="266.25" y="150.72" width="8.74" height="17.28" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>17/09/2026: 1 contribuição</title>
-        <rect x="291.33" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
+        <rect x="278.79" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>18/09/2026: 1 contribuição</title>
-        <rect x="303.87" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
+        <rect x="291.33" y="156.83" width="8.74" height="11.17" rx="2" fill="url(#violetLow)" />
         
       </g>
     
       <g>
         <title>19/09/2026: 15 contribuições</title>
-        <rect x="316.41" y="143.91" width="8.74" height="24.09" rx="2" fill="url(#violetMid)" />
+        <rect x="303.87" y="143.91" width="8.74" height="24.09" rx="2" fill="url(#violetMid)" />
         
       </g>
     
       <g>
         <title>20/09/2026: 72 contribuições</title>
-        <rect x="328.95" y="118.77" width="8.74" height="49.23" rx="2" fill="url(#violetHigh)" />
+        <rect x="316.41" y="118.77" width="8.74" height="49.23" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>21/09/2026: 56 contribuições</title>
-        <rect x="341.49" y="124.54" width="8.74" height="43.46" rx="2" fill="url(#violetHigh)" />
+        <rect x="328.95" y="124.54" width="8.74" height="43.46" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>22/09/2026: 12 contribuições</title>
-        <rect x="354.03" y="145.93" width="8.74" height="22.07" rx="2" fill="url(#violetMid)" />
+        <rect x="341.49" y="145.93" width="8.74" height="22.07" rx="2" fill="url(#violetMid)" />
         
       </g>
     
       <g>
         <title>23/09/2026: 14 contribuições</title>
-        <rect x="366.57" y="144.57" width="8.74" height="23.43" rx="2" fill="url(#violetMid)" />
+        <rect x="354.03" y="144.57" width="8.74" height="23.43" rx="2" fill="url(#violetMid)" />
         
       </g>
     
       <g>
         <title>24/09/2026: 41 contribuições</title>
-        <rect x="379.11" y="130.59" width="8.74" height="37.41" rx="2" fill="url(#violetHigh)" />
+        <rect x="366.57" y="130.59" width="8.74" height="37.41" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>25/09/2026: 36 contribuições</title>
-        <rect x="391.65" y="132.80" width="8.74" height="35.20" rx="2" fill="url(#violetHigh)" />
+        <rect x="379.11" y="132.80" width="8.74" height="35.20" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>26/09/2026: 42 contribuições</title>
-        <rect x="404.19" y="130.17" width="8.74" height="37.83" rx="2" fill="url(#violetHigh)" />
+        <rect x="391.65" y="130.17" width="8.74" height="37.83" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>27/09/2026: 23 contribuições</title>
-        <rect x="416.73" y="139.21" width="8.74" height="28.79" rx="2" fill="url(#violetMid)" />
+        <rect x="404.19" y="139.21" width="8.74" height="28.79" rx="2" fill="url(#violetMid)" />
         
       </g>
     
       <g>
         <title>28/09/2026: 130 contribuições</title>
-        <rect x="429.27" y="101.23" width="8.74" height="66.77" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="416.73" y="101.23" width="8.74" height="66.77" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>29/09/2026: 105 contribuições</title>
-        <rect x="441.81" y="108.30" width="8.74" height="59.70" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="429.27" y="108.30" width="8.74" height="59.70" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>30/09/2026: 35 contribuições</title>
-        <rect x="454.35" y="133.26" width="8.74" height="34.74" rx="2" fill="url(#violetHigh)" />
+        <rect x="441.81" y="133.26" width="8.74" height="34.74" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>01/10/2026: 23 contribuições</title>
-        <rect x="466.89" y="139.21" width="8.74" height="28.79" rx="2" fill="url(#violetMid)" />
+        <rect x="454.35" y="139.21" width="8.74" height="28.79" rx="2" fill="url(#violetMid)" />
         
       </g>
     
       <g>
         <title>02/10/2026: 52 contribuições</title>
-        <rect x="479.43" y="126.09" width="8.74" height="41.91" rx="2" fill="url(#violetHigh)" />
+        <rect x="466.89" y="126.09" width="8.74" height="41.91" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>03/10/2026: 99 contribuições</title>
-        <rect x="491.97" y="110.09" width="8.74" height="57.91" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="479.43" y="110.09" width="8.74" height="57.91" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>04/10/2026: 52 contribuições</title>
-        <rect x="504.51" y="126.09" width="8.74" height="41.91" rx="2" fill="url(#violetHigh)" />
+        <rect x="491.97" y="126.09" width="8.74" height="41.91" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>05/10/2026: 174 contribuições · Pico do período</title>
-        <rect x="517.05" y="90.00" width="8.74" height="78.00" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="504.51" y="90.00" width="8.74" height="78.00" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>06/10/2026: 85 contribuições</title>
-        <rect x="529.59" y="114.46" width="8.74" height="53.54" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="517.05" y="114.46" width="8.74" height="53.54" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>07/10/2026: 59 contribuições</title>
-        <rect x="542.13" y="123.42" width="8.74" height="44.58" rx="2" fill="url(#violetHigh)" />
+        <rect x="529.59" y="123.42" width="8.74" height="44.58" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>08/10/2026: 113 contribuições</title>
-        <rect x="554.67" y="105.97" width="8.74" height="62.03" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="542.13" y="105.97" width="8.74" height="62.03" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>09/10/2026: 78 contribuições</title>
-        <rect x="567.21" y="116.75" width="8.74" height="51.25" rx="2" fill="url(#violetHigh)" />
+        <rect x="554.67" y="116.75" width="8.74" height="51.25" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>10/10/2026: 108 contribuições</title>
-        <rect x="579.75" y="107.42" width="8.74" height="60.58" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="567.21" y="107.42" width="8.74" height="60.58" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>11/10/2026: 143 contribuições</title>
-        <rect x="592.29" y="97.77" width="8.74" height="70.23" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="579.75" y="97.77" width="8.74" height="70.23" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>12/10/2026: 93 contribuições</title>
-        <rect x="604.83" y="111.93" width="8.74" height="56.07" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="592.29" y="111.93" width="8.74" height="56.07" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>13/10/2026: 102 contribuições</title>
-        <rect x="617.37" y="109.19" width="8.74" height="58.81" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="604.83" y="109.19" width="8.74" height="58.81" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>14/10/2026: 145 contribuições</title>
-        <rect x="629.90" y="97.25" width="8.74" height="70.75" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="617.37" y="97.25" width="8.74" height="70.75" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>15/10/2026: 104 contribuições</title>
-        <rect x="642.44" y="108.60" width="8.74" height="59.40" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="629.90" y="108.60" width="8.74" height="59.40" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>16/10/2026: 125 contribuições</title>
-        <rect x="654.98" y="102.60" width="8.74" height="65.40" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="642.44" y="102.60" width="8.74" height="65.40" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>17/10/2026: 38 contribuições</title>
-        <rect x="667.52" y="131.90" width="8.74" height="36.10" rx="2" fill="url(#violetHigh)" />
+        <rect x="654.98" y="131.90" width="8.74" height="36.10" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>18/10/2026: 141 contribuições</title>
-        <rect x="680.06" y="98.30" width="8.74" height="69.70" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="667.52" y="98.30" width="8.74" height="69.70" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>19/10/2026: 135 contribuições</title>
-        <rect x="692.60" y="99.89" width="8.74" height="68.11" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="680.06" y="99.89" width="8.74" height="68.11" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>20/10/2026: 12 contribuições</title>
-        <rect x="705.14" y="145.93" width="8.74" height="22.07" rx="2" fill="url(#violetMid)" />
+        <rect x="692.60" y="145.93" width="8.74" height="22.07" rx="2" fill="url(#violetMid)" />
         
       </g>
     
       <g>
         <title>21/10/2026: 22 contribuições</title>
-        <rect x="717.68" y="139.76" width="8.74" height="28.24" rx="2" fill="url(#violetMid)" />
+        <rect x="705.14" y="139.76" width="8.74" height="28.24" rx="2" fill="url(#violetMid)" />
         
       </g>
     
       <g>
         <title>22/10/2026: 66 contribuições</title>
-        <rect x="730.22" y="120.87" width="8.74" height="47.13" rx="2" fill="url(#violetHigh)" />
+        <rect x="717.68" y="120.87" width="8.74" height="47.13" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>23/10/2026: 14 contribuições</title>
-        <rect x="742.76" y="144.57" width="8.74" height="23.43" rx="2" fill="url(#violetMid)" />
+        <rect x="730.22" y="144.57" width="8.74" height="23.43" rx="2" fill="url(#violetMid)" />
         
       </g>
     
       <g>
         <title>24/10/2026: 36 contribuições</title>
-        <rect x="755.30" y="132.80" width="8.74" height="35.20" rx="2" fill="url(#violetHigh)" />
+        <rect x="742.76" y="132.80" width="8.74" height="35.20" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>25/10/2026: 127 contribuições</title>
-        <rect x="767.84" y="102.05" width="8.74" height="65.95" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="755.30" y="102.05" width="8.74" height="65.95" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
         <title>26/10/2026: 81 contribuições</title>
-        <rect x="780.38" y="115.76" width="8.74" height="52.24" rx="2" fill="url(#violetHigh)" />
+        <rect x="767.84" y="115.76" width="8.74" height="52.24" rx="2" fill="url(#violetHigh)" />
         
       </g>
     
       <g>
         <title>27/10/2026: 88 contribuições</title>
-        <rect x="792.92" y="113.50" width="8.74" height="54.50" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
+        <rect x="780.38" y="113.50" width="8.74" height="54.50" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
       </g>
     
       <g>
-        <title>28/10/2026: 54 contribuições (Hoje)</title>
-        <rect x="805.46" y="125.31" width="8.74" height="42.69" rx="2" fill="url(#violetHigh)" />
+        <title>28/10/2026: 60 contribuições</title>
+        <rect x="792.92" y="123.05" width="8.74" height="44.95" rx="2" fill="url(#violetHigh)" />
         
-        <circle cx="809.83" cy="118.31" r="2.8" fill="#fef08a" class="pulse-dot"/>
-        <circle cx="809.83" cy="118.31" r="6" fill="none" stroke="#fbbf24" stroke-width="1.2" class="pulse-ring"/>
+      </g>
+    
+      <g>
+        <title>29/10/2026: 0 contribuições (Hoje)</title>
+        <rect x="805.46" y="164.50" width="8.74" height="3.50" rx="2" fill="#201833" />
+        
+        <circle cx="809.83" cy="157.50" r="2.8" fill="#fef08a" class="pulse-dot"/>
+        <circle cx="809.83" cy="157.50" r="6" fill="none" stroke="#fbbf24" stroke-width="1.2" class="pulse-ring"/>
       
       </g>
     
 
   <!-- Footer / Legend -->
   <g transform="translate(28, 204)">
-    <text x="0" y="0" class="meta-text">27 ago 2026</text>
-    <text x="790" y="0" class="meta-text gold-highlight" text-anchor="end">Hoje · 28 out 2026</text>
+    <text x="0" y="0" class="meta-text">28 ago 2026</text>
+    <text x="790" y="0" class="meta-text gold-highlight" text-anchor="end">Hoje · 29 out 2026</text>
 
     <!-- Legend -->
     <g transform="translate(320, -8)">
