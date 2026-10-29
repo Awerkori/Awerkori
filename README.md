@@ -17,16 +17,16 @@
 <img src="./assets/profile/divider.svg" width="846" alt="—">
 
 <!-- 3. Project Nox · Mangá -->
-<a href="https://github.com/Awerkori/extensoes">
+<a href="https://github.com/Awerkori/manga-extensoes">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/profile/card-manga-mobile.svg">
     <img src="./assets/profile/card-manga.svg" width="846" alt="Project Nox · Mangá">
   </picture>
 </a>
 <p align="center">
-  <a href="https://github.com/Awerkori/extensoes"><img src="./assets/profile/btn-manga-dist.svg" height="34" alt="Distribuição"></a>
+  <a href="https://github.com/Awerkori/manga-extensoes"><img src="./assets/profile/btn-manga-dist.svg" height="34" alt="Distribuição"></a>
   &nbsp;&nbsp;
-  <a href="https://github.com/Awerkori/fonte-extensoes"><img src="./assets/profile/btn-manga-source.svg" height="34" alt="Código-fonte"></a>
+  <a href="https://github.com/Awerkori/manga-fonte-extensoes"><img src="./assets/profile/btn-manga-source.svg" height="34" alt="Código-fonte"></a>
 </p>
 
 <!-- 4. Project Nox · Anime -->
