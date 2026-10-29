@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="140" viewBox="0 0 420 140" role="img" aria-labelledby="mangaMobTitle">
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="106" viewBox="0 0 420 106" role="img" aria-labelledby="mangaMobTitle">
   <title id="mangaMobTitle">Project Nox · Mangá</title>
   <defs>
     <linearGradient id="mangaBgM" x1="0" y1="0" x2="1" y2="1">
@@ -26,33 +26,32 @@
     }
     .card-title-m {
       font-family: "Cinzel", Georgia, serif;
-      font-size: 18.5px;
+      font-size: 17.5px;
       font-weight: 700;
       fill: #ffffff;
     }
     .card-desc-m {
       font-size: 11px;
-      line-height: 15px;
       fill: #c4b5fd;
     }
     .tag-label-m {
-      font-size: 8.5px;
+      font-size: 8px;
       font-weight: 600;
       fill: #fef08a;
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="139" rx="12" fill="url(#mangaBgM)" stroke="url(#mangaBorderM)" stroke-width="1"/>
-  <path d="M12 1H100" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+  <rect x="0.5" y="0.5" width="419" height="105" rx="11" fill="url(#mangaBgM)" stroke="url(#mangaBorderM)" stroke-width="1"/>
+  <path d="M12 1H90" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
 
-  <g transform="translate(18, 20)">
+  <g transform="translate(16, 17)">
     <text x="0" y="6" class="badge-label-m">✦ EXTENSÕES DE MANGÁ</text>
-    <text x="0" y="28" class="card-title-m">Project Nox · Mangá</text>
-    <text x="0" y="48" class="card-desc-m">Extensões compiladas para Mihon e forks em português.</text>
+    <text x="0" y="27" class="card-title-m">Project Nox · Mangá</text>
+    <text x="0" y="47" class="card-desc-m">Extensões para Mihon e forks em português.</text>
     
-    <g transform="translate(0, 78)">
-      <rect x="0" y="0" width="120" height="20" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="60" y="14" class="tag-label-m" text-anchor="middle">✦ Mihon e forks</text>
+    <g transform="translate(0, 58)">
+      <rect x="0" y="0" width="115" height="19" rx="5" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="57" y="13" class="tag-label-m" text-anchor="middle">✦ Mihon e forks</text>
     </g>
   </g>
 </svg>

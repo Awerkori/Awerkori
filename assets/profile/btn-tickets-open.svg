@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="160" height="36" viewBox="0 0 160 36" role="img" aria-label="Abrir ticket">
+<svg xmlns="http://www.w3.org/2000/svg" width="145" height="34" viewBox="0 0 145 34" role="img" aria-label="Abrir ticket">
   <defs>
     <linearGradient id="btnTicketsOpenBtnBg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#21123d"/>
-        <stop offset="50%" stop-color="#2a144e"/>
-        <stop offset="100%" stop-color="#190d2e"/>
+        <stop offset="0%" stop-color="#130b22"/>
+        <stop offset="50%" stop-color="#180e2b"/>
+        <stop offset="100%" stop-color="#0c0717"/>
       </linearGradient>
     <linearGradient id="btnTicketsOpenBtnBorder" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.85"/>
-        <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.6"/>
+        <stop offset="0%" stop-color="#552887" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#2f144d" stop-opacity="0.5"/>
       </linearGradient>
   </defs>
   <style>
@@ -20,22 +20,22 @@
       font-size: 11.5px;
       font-weight: 600;
       letter-spacing: 0.2px;
-      fill: #ffffff;
+      fill: #e6edf3;
     }
   </style>
-  <rect x="0.5" y="0.5" width="159" height="35" rx="8" fill="url(#btnTicketsOpenBtnBg)" stroke="url(#btnTicketsOpenBtnBorder)" stroke-width="1"/>
-  <path d="M10 2H150" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" stroke-linecap="round"/>
+  <rect x="0.5" y="0.5" width="144" height="33" rx="7" fill="url(#btnTicketsOpenBtnBg)" stroke="url(#btnTicketsOpenBtnBorder)" stroke-width="1"/>
+  <path d="M8 2H137" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" stroke-linecap="round"/>
 
   <!-- Left Icon -->
-  <g transform="translate(12, 9)">
-    <rect x="1" y="3" width="16" height="12" rx="2" fill="none" stroke="#fbbf24" stroke-width="1.4"/><line x1="6" y1="3" x2="6" y2="15" stroke="#fbbf24" stroke-width="1" stroke-dasharray="2 2"/><circle cx="11" cy="9" r="1.8" fill="#fbbf24"/>
+  <g transform="translate(11, 8)">
+    <rect x="1" y="3" width="16" height="12" rx="2" fill="none" stroke="#fbbf24" stroke-width="1.3"/><line x1="6" y1="3" x2="6" y2="15" stroke="#fbbf24" stroke-width="1" stroke-dasharray="2 2"/><circle cx="11" cy="9" r="1.6" fill="#fbbf24"/>
   </g>
 
   <!-- Button Label -->
-  <text x="34" y="23" class="btn-lbl">Abrir ticket</text>
+  <text x="32" y="22" class="btn-lbl">Abrir ticket</text>
 
   <!-- Right Chevron -->
-  <g transform="translate(142, 13)">
-    <path d="M0 0l3.5 4.5-3.5 4.5" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(129, 12)">
+    <path d="M0 0l3.5 4.5-3.5 4.5" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

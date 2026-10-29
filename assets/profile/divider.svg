@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="846" height="16" viewBox="0 0 846 16" role="presentation">
+<svg xmlns="http://www.w3.org/2000/svg" width="846" height="10" viewBox="0 0 846 10" role="presentation">
   <defs>
     <linearGradient id="divGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#382156" stop-opacity="0"/>
@@ -8,6 +8,6 @@
       <stop offset="100%" stop-color="#382156" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <line x1="20" y1="8" x2="826" y2="8" stroke="url(#divGrad)" stroke-width="1"/>
-  <circle cx="423" cy="8" r="2.5" fill="#fef08a"/>
+  <line x1="20" y1="5" x2="826" y2="5" stroke="url(#divGrad)" stroke-width="1"/>
+  <circle cx="423" cy="5" r="2" fill="#fef08a"/>
 </svg>
