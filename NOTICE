@@ -1,0 +1,44 @@
+Awerkori · Perfil Oficial e Recursos de Design do Project Nox
+Copyright (C) 2026 Awerkori & Project Nox Contributors
+
+SPDX-License-Identifier: GPL-3.0-only
+
+================================================================================
+1. ESCOPO DO LICENCIAMENTO DE CÓDIGO E RECURSOS VETORIAIS
+================================================================================
+Este repositório contém o código-fonte de automação, scripts geradores e recursos
+visuais originais que compõem a identidade do perfil Awerkori e do ecossistema
+Project Nox.
+
+Os scripts de geração de arte (scripts/*.mjs), automações de métricas do GitHub
+Actions e arquivos vetoriais originais (SVGs) criados pelo autor são licenciados
+sob os termos da GNU General Public License versão 3.0 (GPL-3.0-only).
+
+================================================================================
+2. SALVAGUARDA DE IDENTIDADE, AUTENTICIDADE E MARCAS REGISTRADAS
+================================================================================
+A concessão da licença de código-fonte aberto GPL 3.0 refere-se estritamente aos
+direitos autorais de software e aos arquivos gráficos de código aberto.
+
+Fica expressamente estabelecido que:
+a) A licença GPL 3.0 NÃO concede direito, autorização ou transferência de marca
+   comercial, nome de projeto, logotipo oficial, insígnia ou identidade visual
+   distintiva do "Project Nox" ou de "Awerkori".
+b) É expressamente proibida a utilização dos nomes "Project Nox" ou "Awerkori",
+   bem como dos respectivos logotipos oficiais ou trade dress, para endossar,
+   promover ou fazer-se passar oficialmente pelo titular ou pelo projeto.
+c) Qualquer redistribuição ou bifurcação (fork) deve remover referências que
+   possam induzir terceiros a acreditar que se trata de uma publicação ou
+   serviço mantido oficialmente pelo Project Nox ou por Awerkori.
+
+================================================================================
+3. ESCLARECIMENTO SOBRE LICENCIAMENTO (GPL-3.0 vs. AGPL-3.0)
+================================================================================
+Este repositório adota a licença GNU GPL versão 3.0 (GPL-3.0-only). A GNU GPLv3
+não contém a cláusula de interação remota de rede (Seção 13 da AGPLv3).
+
+================================================================================
+4. RECURSOS E PLATAFORMAS DE TERCEIROS
+================================================================================
+- GitHub Actions Runtime e especificações de perfil: GitHub, Inc.
+- Tipografia e renderizadores web: sujeitos às suas respectivas licenças abertas.
