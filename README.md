@@ -79,7 +79,7 @@
 
 ---
 
-## ⚖️ Licenciamento e Proteção de Marca
+## ⚖️ Licença e Copyright
 
 Os scripts de automação, arquivos de configuração e recursos vetoriais originais deste repositório são software livre licenciados sob a **GNU Affero General Public License versão 3.0** (`AGPL-3.0-only`). Consulte o arquivo [LICENSE](LICENSE) para obter o texto integral inalterado da licença e o arquivo [NOTICE](NOTICE) para o inventário de autoria e termos legais.
 
