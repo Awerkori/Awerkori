@@ -1,7 +1,7 @@
 Awerkori · Perfil Oficial e Recursos de Design do Project Nox
 Copyright (C) 2026 Awerkori & Project Nox Contributors
 
-SPDX-License-Identifier: GPL-3.0-only
+SPDX-License-Identifier: AGPL-3.0-only
 
 ================================================================================
 1. ESCOPO DO LICENCIAMENTO DE CÓDIGO E RECURSOS VETORIAIS
@@ -12,30 +12,34 @@ Project Nox.
 
 Os scripts de geração de arte (scripts/*.mjs), automações de métricas do GitHub
 Actions e arquivos vetoriais originais (SVGs) criados pelo autor são licenciados
-sob os termos da GNU General Public License versão 3.0 (GPL-3.0-only).
+sob os termos da GNU Affero General Public License versão 3.0 (AGPL-3.0-only).
 
 ================================================================================
-2. SALVAGUARDA DE IDENTIDADE, AUTENTICIDADE E MARCAS REGISTRADAS
+2. CLÁUSULA DE INTERAÇÃO REMOTA DE REDE (AGPLv3 Seção 13)
 ================================================================================
-A concessão da licença de código-fonte aberto GPL 3.0 refere-se estritamente aos
+Este repositório adota oficialmente a licença GNU AGPL versão 3.0 (AGPL-3.0-only).
+Em cumprimento aos termos da Seção 13 da AGPLv3, qualquer versão modificada
+destes scripts ou serviços de perfil operada em servidores ou instâncias acessíveis
+remotamente através de rede deve fornecer a oportunidade de acesso ao
+Código-Fonte Correspondente (Corresponding Source) a todos os usuários remotos,
+sem cobrança, por meio habitual de distribuição de software em rede.
+
+================================================================================
+3. PROTEÇÃO DE IDENTIDADE E MARCA (AGPLv3 Seção 7(e))
+================================================================================
+A concessão da licença de código aberto AGPLv3 refere-se estritamente aos
 direitos autorais de software e aos arquivos gráficos de código aberto.
 
-Fica expressamente estabelecido que:
-a) A licença GPL 3.0 NÃO concede direito, autorização ou transferência de marca
-   comercial, nome de projeto, logotipo oficial, insígnia ou identidade visual
-   distintiva do "Project Nox" ou de "Awerkori".
-b) É expressamente proibida a utilização dos nomes "Project Nox" ou "Awerkori",
-   bem como dos respectivos logotipos oficiais ou trade dress, para endossar,
-   promover ou fazer-se passar oficialmente pelo titular ou pelo projeto.
-c) Qualquer redistribuição ou bifurcação (fork) deve remover referências que
-   possam induzir terceiros a acreditar que se trata de uma publicação ou
-   serviço mantido oficialmente pelo Project Nox ou por Awerkori.
-
-================================================================================
-3. ESCLARECIMENTO SOBRE LICENCIAMENTO (GPL-3.0 vs. AGPL-3.0)
-================================================================================
-Este repositório adota a licença GNU GPL versão 3.0 (GPL-3.0-only). A GNU GPLv3
-não contém a cláusula de interação remota de rede (Seção 13 da AGPLv3).
+Fica expressamente estabelecido em conformidade com a Seção 7(e) da GNU AGPLv3:
+a) A licença AGPLv3 NÃO concede direito ou autorização de uso comercial ou
+   promocional dos nomes "Project Nox" ou "Awerkori", nem de seus logotipos
+   oficiais, insígnias ou identidade visual distintiva.
+b) É vedada a utilização dos nomes "Project Nox" ou "Awerkori" para insinuar
+   endosso, homologação, afiliação oficial ou representação do titular sem
+   consentimento prévio por escrito.
+c) Qualquer bifurcação (fork) ou redistribuição deve distinguir-se claramente do
+   projeto original, removendo alegações de endosso oficial por parte de Awerkori
+   ou do Project Nox.
 
 ================================================================================
 4. RECURSOS E PLATAFORMAS DE TERCEIROS

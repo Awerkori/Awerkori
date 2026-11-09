@@ -81,20 +81,20 @@
 
 ## ⚖️ Licenciamento e Proteção de Marca
 
-Os scripts de automação, arquivos de configuração e recursos vetoriais originais deste repositório são software livre licenciados sob a **GNU General Public License versão 3.0** (`GPL-3.0-only`). Consulte o arquivo [LICENSE](LICENSE) para obter o texto integral inalterado da licença e o arquivo [NOTICE](NOTICE) para o inventário de autoria e termos legais.
+Os scripts de automação, arquivos de configuração e recursos vetoriais originais deste repositório são software livre licenciados sob a **GNU Affero General Public License versão 3.0** (`AGPL-3.0-only`). Consulte o arquivo [LICENSE](LICENSE) para obter o texto integral inalterado da licença e o arquivo [NOTICE](NOTICE) para o inventário de autoria e termos legais.
 
 ```
 Copyright (C) 2026 Awerkori & Project Nox Contributors
 
 This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
+it under the terms of the GNU Affero General Public License as published by
 the Free Software Foundation, version 3 of the License.
 ```
 
-### 🛡️ Preservação de Identidade e Autenticidade
-A licença GPL 3.0 aplica-se exclusivamente aos direitos autorais do código e dos recursos abertos. Ela **não concede** direitos de uso da marca, do nome "Project Nox", da denominação "Awerkori" ou de logotipos oficiais para alegar afiliação, representação oficial ou endosso. É vedado utilizar esta identidade para se passar pelo titular ou pelo Project Nox.
+### 📌 Interação Remota de Rede (GNU AGPLv3 Seção 13)
+O repositório adota oficialmente a licença **GNU AGPL versão 3.0**. Nos termos da Seção 13 da AGPLv3, qualquer versão modificada destes scripts ou serviços operada através de uma rede com interação remota de usuários deve disponibilizar o Código-Fonte Correspondente da aplicação em execução, sem cobrança e através de meio habitual de transmissão de software em rede.
 
-### 📌 Nota sobre GPL-3.0 e AGPL-3.0
-O repositório adota formalmente a licença **GNU GPL versão 3.0**, a qual não contém a cláusula de interação remota por rede (Seção 13 da AGPLv3).
+### 🛡️ Proteção de Identidade e Marca (AGPLv3 Seção 7(e))
+A licença AGPLv3 aplica-se exclusivamente aos direitos autorais do código e dos recursos abertos. Ela **não concede** direitos de uso dos nomes "Project Nox" ou "Awerkori", nem de seus logotipos oficiais para alegar afiliação, representação oficial ou endosso sem consentimento prévio por escrito.
 
 </div>
