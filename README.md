@@ -76,4 +76,25 @@
 
 <sub>✦ NΩΛ · Awerkori × Project Nox ✦</sub>
 
+
+---
+
+## ⚖️ Licença e Copyright
+
+Os scripts de automação, arquivos de configuração e recursos vetoriais originais deste repositório são software livre licenciados sob a **GNU Affero General Public License versão 3.0** (`AGPL-3.0-only`). Consulte o arquivo [LICENSE](LICENSE) para obter o texto integral inalterado da licença e o arquivo [NOTICE](NOTICE) para o inventário de autoria e termos legais.
+
+```
+Copyright (C) 2026 Awerkori & Project Nox Contributors
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, version 3 of the License.
+```
+
+### 📌 Interação Remota de Rede (GNU AGPLv3 Seção 13)
+O repositório adota oficialmente a licença **GNU AGPL versão 3.0**. Nos termos da Seção 13 da AGPLv3, qualquer versão modificada destes scripts ou serviços operada através de uma rede com interação remota de usuários deve disponibilizar o Código-Fonte Correspondente da aplicação em execução, sem cobrança e através de meio habitual de transmissão de software em rede.
+
+### 🛡️ Proteção de Identidade e Marca (AGPLv3 Seção 7(e))
+A licença AGPLv3 aplica-se exclusivamente aos direitos autorais do código e dos recursos abertos. Ela **não concede** direitos de uso dos nomes "Project Nox" ou "Awerkori", nem de seus logotipos oficiais para alegar afiliação, representação oficial ou endosso sem consentimento prévio por escrito.
+
 </div>
