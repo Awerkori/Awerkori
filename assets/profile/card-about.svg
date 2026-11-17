@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="846" height="88" viewBox="0 0 846 88" role="img" aria-labelledby="aboutTitle aboutDesc">
-  <title id="aboutTitle">Mais sobre mim — zyo.se/awerkori</title>
-  <desc id="aboutDesc">Perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</desc>
+  <title id="aboutTitle">Mais sobre mim — canais e redes pessoais de Awerkori</title>
+  <desc id="aboutDesc">Acesso ao agregador de links pessoais, redes sociais, comunidades e demais canais de Awerkori fora do GitHub.</desc>
   <defs>
     <linearGradient id="aboutBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0f091c"/>
@@ -11,6 +11,10 @@
       <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.35"/>
       <stop offset="100%" stop-color="#0f091c" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="aboutBtnBorder" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6b21a8" stop-opacity="0.75"/>
+    </linearGradient>
   </defs>
 
   <style>
@@ -20,7 +24,7 @@
   }
 
     .badge-about {
-      font-size: 8.5px;
+      font-size: 9px;
       font-weight: 700;
       letter-spacing: 2px;
       fill: #fbbf24;
@@ -32,13 +36,14 @@
       fill: #ffffff;
     }
     .about-desc {
-      font-size: 12px;
-      fill: #c4b5fd;
+      font-size: 13px;
+      fill: #d4c6f7;
     }
     .btn-about-text {
-      font-size: 11.5px;
+      font-size: 12.5px;
       font-weight: 600;
       fill: #fef08a;
+      letter-spacing: 0.2px;
     }
   </style>
 
@@ -60,15 +65,16 @@
   </g>
 
   <!-- Text -->
-  <g transform="translate(100, 19)">
-    <text x="0" y="7" class="badge-about">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
-    <text x="0" y="29" class="about-title">Mais sobre mim</text>
-    <text x="0" y="49" class="about-desc">Trajetória, projetos autorais e canais fora do GitHub.</text>
+  <g transform="translate(100, 18)">
+    <text x="0" y="8" class="badge-about">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
+    <text x="0" y="31" class="about-title">Mais sobre mim</text>
+    <text x="0" y="52" class="about-desc">Minhas redes sociais, comunidades e outros canais em um só lugar.</text>
   </g>
 
-  <!-- Right Pill -->
-  <g transform="translate(595, 27)">
-    <rect x="0" y="0" width="225" height="34" rx="8" fill="#1c1130" stroke="#582a8c" stroke-width="1"/>
-    <text x="112.5" y="21.5" class="btn-about-text" text-anchor="middle">Acessar zyo.se/awerkori ↗</text>
+  <!-- Right Action Button -->
+  <g transform="translate(680, 26)">
+    <rect x="0" y="0" width="140" height="36" rx="8" fill="#1c1130" stroke="url(#aboutBtnBorder)" stroke-width="1"/>
+    <text x="61" y="22.5" class="btn-about-text" text-anchor="middle">Acessar</text>
+    <path d="M98 14l3.5 4-3.5 4" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

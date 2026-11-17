@@ -829,8 +829,8 @@ const BTN_ICONS = {
 // ==========================================
 function buildAboutDesktop() {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="88" viewBox="0 0 846 88" role="img" aria-labelledby="aboutTitle aboutDesc">
-  <title id="aboutTitle">Mais sobre mim — zyo.se/awerkori</title>
-  <desc id="aboutDesc">Perfil pessoal com links, projetos autorais e canais de contato fora do GitHub.</desc>
+  <title id="aboutTitle">Mais sobre mim — canais e redes pessoais de Awerkori</title>
+  <desc id="aboutDesc">Acesso ao agregador de links pessoais, redes sociais, comunidades e demais canais de Awerkori fora do GitHub.</desc>
   <defs>
     <linearGradient id="aboutBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0f091c"/>
@@ -841,12 +841,16 @@ function buildAboutDesktop() {
       <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.35"/>
       <stop offset="100%" stop-color="#0f091c" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="aboutBtnBorder" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6b21a8" stop-opacity="0.75"/>
+    </linearGradient>
   </defs>
 
   <style>
     ${COMMON_FONTS}
     .badge-about {
-      font-size: 8.5px;
+      font-size: 9px;
       font-weight: 700;
       letter-spacing: 2px;
       fill: #fbbf24;
@@ -858,13 +862,14 @@ function buildAboutDesktop() {
       fill: #ffffff;
     }
     .about-desc {
-      font-size: 12px;
-      fill: #c4b5fd;
+      font-size: 13px;
+      fill: #d4c6f7;
     }
     .btn-about-text {
-      font-size: 11.5px;
+      font-size: 12.5px;
       font-weight: 600;
       fill: #fef08a;
+      letter-spacing: 0.2px;
     }
   </style>
 
@@ -881,24 +886,26 @@ function buildAboutDesktop() {
   </g>
 
   <!-- Text -->
-  <g transform="translate(100, 19)">
-    <text x="0" y="7" class="badge-about">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
-    <text x="0" y="29" class="about-title">Mais sobre mim</text>
-    <text x="0" y="49" class="about-desc">Trajetória, projetos autorais e canais fora do GitHub.</text>
+  <g transform="translate(100, 18)">
+    <text x="0" y="8" class="badge-about">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
+    <text x="0" y="31" class="about-title">Mais sobre mim</text>
+    <text x="0" y="52" class="about-desc">Minhas redes sociais, comunidades e outros canais em um só lugar.</text>
   </g>
 
-  <!-- Right Pill -->
-  <g transform="translate(595, 27)">
-    <rect x="0" y="0" width="225" height="34" rx="8" fill="#1c1130" stroke="#582a8c" stroke-width="1"/>
-    <text x="112.5" y="21.5" class="btn-about-text" text-anchor="middle">Acessar zyo.se/awerkori ↗</text>
+  <!-- Right Action Button -->
+  <g transform="translate(680, 26)">
+    <rect x="0" y="0" width="140" height="36" rx="8" fill="#1c1130" stroke="url(#aboutBtnBorder)" stroke-width="1"/>
+    <text x="61" y="22.5" class="btn-about-text" text-anchor="middle">Acessar</text>
+    <path d="M98 14l3.5 4-3.5 4" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
 `;
 }
 
 function buildAboutMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="108" viewBox="0 0 420 108" role="img" aria-labelledby="aboutMobTitle">
-  <title id="aboutMobTitle">Mais sobre mim — Perfil Pessoal</title>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="138" viewBox="0 0 420 138" role="img" aria-labelledby="aboutMobTitle aboutMobDesc">
+  <title id="aboutMobTitle">Mais sobre mim — canais e redes pessoais de Awerkori</title>
+  <desc id="aboutMobDesc">Acesso ao agregador de links pessoais, redes sociais, comunidades e demais canais de Awerkori fora do GitHub.</desc>
   <defs>
     <linearGradient id="aboutBgM" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0e0a19"/>
@@ -910,45 +917,51 @@ function buildAboutMobile() {
       <stop offset="50%" stop-color="#a855f7" stop-opacity="0.5"/>
       <stop offset="100%" stop-color="#3e2063" stop-opacity="0.4"/>
     </linearGradient>
+    <linearGradient id="aboutBtnBorderM" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6b21a8" stop-opacity="0.75"/>
+    </linearGradient>
   </defs>
 
   <style>
     ${COMMON_FONTS}
     .badge-label-m {
-      font-size: 8.5px;
+      font-size: 9px;
       font-weight: 700;
       letter-spacing: 1.8px;
       fill: #fbbf24;
     }
     .card-title-m {
       font-family: "Cinzel", Georgia, serif;
-      font-size: 17.5px;
+      font-size: 18px;
       font-weight: 700;
       fill: #ffffff;
     }
     .card-desc-m {
-      font-size: 11px;
-      fill: #c4b5fd;
+      font-size: 12.5px;
+      fill: #d4c6f7;
     }
     .btn-callout-m {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 600;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.2px;
       fill: #fef08a;
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="107" rx="12" fill="url(#aboutBgM)" stroke="url(#aboutBorderM)" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="137" rx="12" fill="url(#aboutBgM)" stroke="url(#aboutBorderM)" stroke-width="1"/>
   <path d="M165 1H255" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
 
-  <g transform="translate(210, 18)" text-anchor="middle">
-    <text x="0" y="6" class="badge-label-m" text-anchor="middle">✦ PERFIL PESSOAL ✦</text>
+  <g transform="translate(210, 22)" text-anchor="middle">
+    <text x="0" y="4" class="badge-label-m" text-anchor="middle">✦ PERFIL PESSOAL · ALÉM DO GITHUB ✦</text>
     <text x="0" y="27" class="card-title-m" text-anchor="middle">Mais sobre mim</text>
-    <text x="0" y="47" class="card-desc-m" text-anchor="middle">Trajetória, projetos autorais e canais fora do GitHub.</text>
+    <text x="0" y="49" class="card-desc-m" text-anchor="middle">Minhas redes sociais, comunidades e</text>
+    <text x="0" y="66" class="card-desc-m" text-anchor="middle">outros canais em um só lugar.</text>
 
-    <g transform="translate(-115, 58)">
-      <rect x="0" y="0" width="230" height="24" rx="6" fill="#1b122c" stroke="#5b2d91" stroke-width="0.9"/>
-      <text x="115" y="16" class="btn-callout-m" text-anchor="middle">Acessar zyo.se/awerkori ↗</text>
+    <g transform="translate(-68, 76)">
+      <rect x="0" y="0" width="136" height="28" rx="7" fill="#1b122c" stroke="url(#aboutBtnBorderM)" stroke-width="0.9"/>
+      <text x="60" y="18.5" class="btn-callout-m" text-anchor="middle">Acessar</text>
+      <path d="M95 10l3.5 4-3.5 4" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
   </g>
 </svg>
@@ -1185,8 +1198,17 @@ async function main() {
   const heroOnly = process.argv.includes('--hero-only');
   const introHeroOnly = process.argv.includes('--intro-hero');
   const tilesOnly = process.argv.includes('--tiles-only');
+  const aboutOnly = process.argv.includes('--about-only');
   const profileOnly = process.argv.includes('--profile-only');
   console.log('Generating Project Nox compact assets...');
+
+  if (aboutOnly) {
+    await fs.writeFile(path.join(profileDir, 'card-about.svg'), buildAboutDesktop());
+    await fs.writeFile(path.join(profileDir, 'card-about-mobile.svg'), buildAboutMobile());
+    console.log('  ✓ card-about.svg & card-about-mobile.svg');
+    console.log('Done (--about-only).');
+    return;
+  }
 
   if (tilesOnly) {
     await writeNavTiles();

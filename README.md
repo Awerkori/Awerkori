@@ -32,7 +32,7 @@
 <a href="https://zyo.se/awerkori">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/profile/card-about-mobile.svg">
-    <img src="./assets/profile/card-about.svg" width="846" alt="Mais sobre mim — zyo.se/awerkori">
+    <img src="./assets/profile/card-about.svg" width="846" alt="Mais sobre mim — redes sociais, comunidades e outros canais pessoais.">
   </picture>
 </a>
 
