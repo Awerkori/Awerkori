@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="846" height="228" viewBox="0 0 846 228" role="img" aria-labelledby="actTitle actDesc">
-  <title id="actTitle">Atividade no GitHub — 4.249 contribuições</title>
-  <desc id="actDesc">3.780 contribuições nas últimas 9 semanas (16 set 2026 a 17 nov 2026). Atualização periódica automática.</desc>
+  <title id="actTitle">Atividade no GitHub — 4.275 contribuições</title>
+  <desc id="actDesc">3.806 contribuições nas últimas 9 semanas (16 set 2026 a 17 nov 2026). Atualização periódica automática.</desc>
   <defs>
     <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0e0a17"/>
@@ -126,7 +126,7 @@
     <circle cx="4" cy="4" r="3" fill="#fbbf24"/>
     <text x="14" y="8" class="label-badge">ATIVIDADE NO GITHUB · ATUALIZAÇÃO AUTOMÁTICA</text>
     
-    <text x="0" y="44" class="big-num">4.249</text>
+    <text x="0" y="44" class="big-num">4.275</text>
     <text x="106" y="40" class="stat-sub">contribuições no último ano</text>
 
     <!-- Right Header Meta -->
@@ -515,11 +515,11 @@
       </g>
     
       <g>
-        <title>17/11/2026: 59 contribuições (Hoje)</title>
-        <rect x="805.46" y="123.42" width="8.74" height="44.58" rx="2" fill="url(#violetHigh)" />
+        <title>17/11/2026: 85 contribuições (Hoje)</title>
+        <rect x="805.46" y="114.46" width="8.74" height="53.54" rx="2" fill="url(#goldPeak)" filter="url(#glowGold)"/>
         
-        <circle cx="809.83" cy="116.42" r="2.8" fill="#fef08a" class="pulse-dot"/>
-        <circle cx="809.83" cy="116.42" r="6" fill="none" stroke="#fbbf24" stroke-width="1.2" class="pulse-ring"/>
+        <circle cx="809.83" cy="107.46" r="2.8" fill="#fef08a" class="pulse-dot"/>
+        <circle cx="809.83" cy="107.46" r="6" fill="none" stroke="#fbbf24" stroke-width="1.2" class="pulse-ring"/>
       
       </g>
     
