@@ -19,47 +19,47 @@
 <img src="./assets/profile/divider.svg" width="846" alt="—">
 
 <!-- 3. Project Nox · Mangá -->
-<a href="https://github.com/Awerkori/manga-extensoes">
+<a href="https://github.com/ProjectNox-org/manga-extensoes">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/profile/card-manga-mobile.svg">
     <img src="./assets/profile/card-manga.svg" width="846" alt="Project Nox · Mangá">
   </picture>
 </a>
 <p align="center">
-  <a href="https://github.com/Awerkori/manga-extensoes"><img src="./assets/profile/btn-manga-dist.svg" height="34" alt="Distribuição"></a> <a href="https://github.com/Awerkori/manga-fonte-extensoes"><img src="./assets/profile/btn-manga-source.svg" height="34" alt="Código-fonte"></a>
+  <a href="https://github.com/ProjectNox-org/manga-extensoes"><img src="./assets/profile/btn-manga-dist.svg" height="34" alt="Distribuição"></a> <a href="https://github.com/ProjectNox-org/manga-fonte-extensoes"><img src="./assets/profile/btn-manga-source.svg" height="34" alt="Código-fonte"></a>
 </p>
 
 <!-- 4. Project Nox · Anime -->
-<a href="https://github.com/Awerkori/anime-extensoes">
+<a href="https://github.com/ProjectNox-org/anime-extensoes">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/profile/card-anime-mobile.svg">
     <img src="./assets/profile/card-anime.svg" width="846" alt="Project Nox · Anime">
   </picture>
 </a>
 <p align="center">
-  <a href="https://github.com/Awerkori/anime-extensoes"><img src="./assets/profile/btn-anime-dist.svg" height="34" alt="Distribuição"></a> <a href="https://github.com/Awerkori/anime-fonte-extensoes"><img src="./assets/profile/btn-anime-source.svg" height="34" alt="Código-fonte"></a>
+  <a href="https://github.com/ProjectNox-org/anime-extensoes"><img src="./assets/profile/btn-anime-dist.svg" height="34" alt="Distribuição"></a> <a href="https://github.com/ProjectNox-org/anime-fonte-extensoes"><img src="./assets/profile/btn-anime-source.svg" height="34" alt="Código-fonte"></a>
 </p>
 
 <!-- 5. Project Nox · Tickets -->
-<a href="https://awerkori.github.io/project-nox-tracker/">
+<a href="https://projectnox-org.github.io/project-nox-tracker/">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/profile/card-tickets-mobile.svg">
     <img src="./assets/profile/card-tickets.svg" width="846" alt="Project Nox · Tickets">
   </picture>
 </a>
 <p align="center">
-  <a href="https://awerkori.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tickets-tracker.svg" height="34" alt="Painel de tickets"></a> <a href="https://github.com/ProjectNox-org/project-nox-requests/issues/new/choose"><img src="./assets/profile/btn-tickets-open.svg" height="34" alt="Abrir ticket"></a>
+  <a href="https://projectnox-org.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tickets-tracker.svg" height="34" alt="Painel de tickets"></a> <a href="https://github.com/ProjectNox-org/project-nox-requests/issues/new/choose"><img src="./assets/profile/btn-tickets-open.svg" height="34" alt="Abrir ticket"></a>
 </p>
 
 <!-- 6. Project Nox · Site -->
-<a href="https://manga.project-nox-awerkori.workers.dev">
+<a href="https://github.com/ProjectNox-org/project-nox-manga">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/profile/card-site-mobile.svg">
     <img src="./assets/profile/card-site.svg" width="846" alt="Project Nox · Site">
   </picture>
 </a>
 <p align="center">
-  <a href="https://manga.project-nox-awerkori.workers.dev"><img src="./assets/profile/btn-site-open.svg" height="34" alt="Acessar o site"></a> <a href="https://github.com/Awerkori/project-nox-manga"><img src="./assets/profile/btn-site-source.svg" height="34" alt="Código-fonte"></a>
+  <a href="https://github.com/ProjectNox-org"><img src="./assets/profile/btn-site-open.svg" height="34" alt="Organização Project Nox"></a> <a href="https://github.com/ProjectNox-org/project-nox-manga"><img src="./assets/profile/btn-site-source.svg" height="34" alt="Código-fonte"></a>
 </p>
 
 <img src="./assets/profile/divider.svg" width="846" alt="—">
@@ -73,7 +73,7 @@
 </a>
 
 <p align="center">
-  <a href="https://github.com/Awerkori?tab=repositories"><b>Ver todos os repositórios públicos no GitHub →</b></a>
+  <a href="https://github.com/ProjectNox-org?tab=repositories"><b>Ver todos os repositórios do Project Nox no GitHub →</b></a>
 </p>
 
 <sub>✦ NΩΛ · Awerkori × Project Nox ✦</sub>
