@@ -1090,11 +1090,11 @@ function buildIntroMobile() {
 }
 
 // ==========================================
-// 11. NAVIGATION TILES (268 x 60 — fits single row inside GitHub 1280px column)
+// 11. NAVIGATION TILES (404 x 64 — 2 balanced tiles side-by-side)
 // ==========================================
 function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
-  const width = 268;
-  const height = 60;
+  const width = 404;
+  const height = 64;
   const bgGrad = isPrimary
     ? `<linearGradient id="${id}Bg" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#1b0f33"/>
@@ -1102,9 +1102,9 @@ function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
         <stop offset="100%" stop-color="#130a26"/>
       </linearGradient>`
     : `<linearGradient id="${id}Bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#110920"/>
-        <stop offset="55%" stop-color="#160c29"/>
-        <stop offset="100%" stop-color="#0b0615"/>
+        <stop offset="0%" stop-color="#150b29"/>
+        <stop offset="55%" stop-color="#1d0f38"/>
+        <stop offset="100%" stop-color="#100820"/>
       </linearGradient>`;
 
   const borderGrad = isPrimary
@@ -1113,12 +1113,12 @@ function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
         <stop offset="100%" stop-color="#6b21a8" stop-opacity="0.6"/>
       </linearGradient>`
     : `<linearGradient id="${id}Border" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#4c277a" stop-opacity="0.75"/>
-        <stop offset="100%" stop-color="#331854" stop-opacity="0.55"/>
+        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#6b21a8" stop-opacity="0.6"/>
       </linearGradient>`;
 
-  const iconBoxStroke = isPrimary ? '#fbbf24' : '#5b2d91';
-  const arrowColor = isPrimary ? '#fbbf24' : '#a78bfa';
+  const iconBoxStroke = '#fbbf24';
+  const arrowColor = '#fbbf24';
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(title)} — ${escapeXml(subtitle)}">
   <defs>
@@ -1128,36 +1128,54 @@ function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
   <style>
     ${COMMON_FONTS}
     .tile-title {
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 700;
       fill: #ffffff;
       letter-spacing: 0.15px;
     }
     .tile-sub {
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 400;
       fill: #c4b5fd;
     }
   </style>
   <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="10" fill="url(#${id}Bg)" stroke="url(#${id}Border)" stroke-width="1"/>
-  <path d="M10 1.5H${width - 10}" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" stroke-linecap="round"/>
+  <path d="M12 1.5H${width - 12}" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" stroke-linecap="round"/>
 
   <!-- Icon Container -->
-  <rect x="13" y="13" width="34" height="34" rx="8" fill="#1b1030" stroke="${iconBoxStroke}" stroke-opacity="0.6" stroke-width="0.9"/>
-  <g transform="translate(21, 21)">
+  <rect x="14" y="14" width="36" height="36" rx="8" fill="#1b1030" stroke="${iconBoxStroke}" stroke-opacity="0.6" stroke-width="0.9"/>
+  <g transform="translate(23, 23)">
     ${iconSvg}
   </g>
 
   <!-- Text -->
-  <text x="58" y="27" class="tile-title">${escapeXml(title)}</text>
-  <text x="58" y="44" class="tile-sub">${escapeXml(subtitle)}</text>
+  <text x="62" y="29" class="tile-title">${escapeXml(title)}</text>
+  <text x="62" y="46" class="tile-sub">${escapeXml(subtitle)}</text>
 
   <!-- Right Arrow -->
-  <g transform="translate(248, 25.5)">
+  <g transform="translate(${width - 24}, 27.5)">
     <path d="M0 0l4 4.5-4 4.5" fill="none" stroke="${arrowColor}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
 `;
+}
+
+async function writeNavTiles() {
+  await fs.writeFile(path.join(profileDir, 'tile-central.svg'), buildNavTile({
+    id: 'tileCentral',
+    title: 'Central Oficial',
+    subtitle: 'Portal, projetos e visão geral.',
+    iconSvg: `<circle cx="9" cy="9" r="7.5" fill="none" stroke="#fbbf24" stroke-width="1.4"/><path d="M9 1.5v15M1.5 9h15M3.5 5.2c1.8 1 3.6 1.4 5.5 1.4s3.7-.4 5.5-1.4M3.5 12.8c1.8-1 3.6-1.4 5.5-1.4s3.7.4 5.5 1.4" fill="none" stroke="#fbbf24" stroke-width="1.1"/>`,
+    isPrimary: true
+  }));
+
+  await fs.writeFile(path.join(profileDir, 'tile-org.svg'), buildNavTile({
+    id: 'tileOrg',
+    title: 'Organização GitHub',
+    subtitle: 'Repositórios e código-fonte.',
+    iconSvg: `<g transform="scale(1.125)"><path fill="#fbbf24" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></g>`,
+    isPrimary: false
+  }));
 }
 
 // ==========================================
@@ -1166,8 +1184,16 @@ function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
 async function main() {
   const heroOnly = process.argv.includes('--hero-only');
   const introHeroOnly = process.argv.includes('--intro-hero');
+  const tilesOnly = process.argv.includes('--tiles-only');
   const profileOnly = process.argv.includes('--profile-only');
   console.log('Generating Project Nox compact assets...');
+
+  if (tilesOnly) {
+    await writeNavTiles();
+    console.log('  ✓ 2 nav tiles (tile-central, tile-org)');
+    console.log('Done (--tiles-only).');
+    return;
+  }
 
   // 1. Hero (Preserved approved)
   await fs.writeFile(path.join(profileDir, 'hero.svg'), buildHeroDesktop());
@@ -1193,32 +1219,9 @@ async function main() {
     await fs.writeFile(path.join(profileDir, 'card-about.svg'), buildAboutDesktop());
     await fs.writeFile(path.join(profileDir, 'card-about-mobile.svg'), buildAboutMobile());
     await fs.writeFile(path.join(profileDir, 'divider.svg'), buildDivider());
+    await writeNavTiles();
 
-    await fs.writeFile(path.join(profileDir, 'tile-central.svg'), buildNavTile({
-      id: 'tileCentral',
-      title: 'Central Oficial',
-      subtitle: 'Portal, projetos e visão geral',
-      iconSvg: `<circle cx="9" cy="9" r="7.5" fill="none" stroke="#fbbf24" stroke-width="1.4"/><path d="M9 1.5v15M1.5 9h15M3.5 5.2c1.8 1 3.6 1.4 5.5 1.4s3.7-.4 5.5-1.4M3.5 12.8c1.8-1 3.6-1.4 5.5-1.4s3.7.4 5.5 1.4" fill="none" stroke="#fbbf24" stroke-width="1.1"/>`,
-      isPrimary: true
-    }));
-
-    await fs.writeFile(path.join(profileDir, 'tile-org.svg'), buildNavTile({
-      id: 'tileOrg',
-      title: 'Organização GitHub',
-      subtitle: 'Repositórios e código-fonte',
-      iconSvg: `<path d="M5.5 5.5L2 9l3.5 3.5M12.5 5.5L16 9l-3.5 3.5M10 3.5l-2 11" fill="none" stroke="#c4b5fd" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>`,
-      isPrimary: false
-    }));
-
-    await fs.writeFile(path.join(profileDir, 'tile-tracker.svg'), buildNavTile({
-      id: 'tileTracker',
-      title: 'Tracker Oficial',
-      subtitle: 'Status e pedidos da comunidade',
-      iconSvg: `<path d="M2 12h3l2-6 3 9 2.5-6 1.5 3h2" fill="none" stroke="#c4b5fd" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>`,
-      isPrimary: false
-    }));
-
-    console.log('  ✓ card-intro*, card-about*, divider & 3 nav tiles (tile-central, tile-org, tile-tracker)');
+    console.log('  ✓ card-intro*, card-about*, divider & 2 nav tiles (tile-central, tile-org)');
     console.log('Done (--profile-only).');
     return;
   }
