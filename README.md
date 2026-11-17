@@ -18,7 +18,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ProjectNox-org"><img src="./assets/profile/btn-org.svg" width="206" height="34" alt="Acessar organização Project Nox"></a>&nbsp;&nbsp;<a href="https://projectnox-org.github.io/"><img src="./assets/profile/btn-projects.svg" width="206" height="34" alt="Todos os projetos"></a>&nbsp;&nbsp;<a href="https://projectnox-org.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tracker.svg" width="206" height="34" alt="Tracker Oficial"></a>
+  <a href="https://github.com/ProjectNox-org"><img src="./assets/profile/btn-org.svg" width="206" height="34" alt="Acessar organização Project Nox"></a>
+  <a href="https://projectnox-org.github.io/"><img src="./assets/profile/btn-projects.svg" width="206" height="34" alt="Todos os projetos"></a>
+  <a href="https://projectnox-org.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tracker.svg" width="206" height="34" alt="Tracker Oficial"></a>
 </p>
 
 <img src="./assets/profile/divider.svg" width="846" alt="—">
@@ -39,7 +41,8 @@
   </picture>
 </a>
 <p align="center">
-  <a href="https://github.com/ProjectNox-org/manga-extensoes"><img src="./assets/profile/btn-manga-dist.svg" width="164" height="34" alt="Distribuição"></a>&nbsp;&nbsp;<a href="https://github.com/ProjectNox-org/manga-fonte-extensoes"><img src="./assets/profile/btn-manga-source.svg" width="164" height="34" alt="Código-fonte"></a>
+  <a href="https://github.com/ProjectNox-org/manga-extensoes"><img src="./assets/profile/btn-manga-dist.svg" width="164" height="34" alt="Distribuição"></a>
+  <a href="https://github.com/ProjectNox-org/manga-fonte-extensoes"><img src="./assets/profile/btn-manga-source.svg" width="164" height="34" alt="Código-fonte"></a>
 </p>
 
 <!-- 4. Project Nox · Anime -->
@@ -50,7 +53,8 @@
   </picture>
 </a>
 <p align="center">
-  <a href="https://github.com/ProjectNox-org/anime-extensoes"><img src="./assets/profile/btn-anime-dist.svg" width="164" height="34" alt="Distribuição"></a>&nbsp;&nbsp;<a href="https://github.com/ProjectNox-org/anime-fonte-extensoes"><img src="./assets/profile/btn-anime-source.svg" width="164" height="34" alt="Código-fonte"></a>
+  <a href="https://github.com/ProjectNox-org/anime-extensoes"><img src="./assets/profile/btn-anime-dist.svg" width="164" height="34" alt="Distribuição"></a>
+  <a href="https://github.com/ProjectNox-org/anime-fonte-extensoes"><img src="./assets/profile/btn-anime-source.svg" width="164" height="34" alt="Código-fonte"></a>
 </p>
 
 <!-- 5. Project Nox · Tickets -->
@@ -61,7 +65,8 @@
   </picture>
 </a>
 <p align="center">
-  <a href="https://projectnox-org.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tickets-tracker.svg" width="164" height="34" alt="Painel de tickets"></a>&nbsp;&nbsp;<a href="https://github.com/ProjectNox-org/project-nox-requests/issues/new/choose"><img src="./assets/profile/btn-tickets-open.svg" width="164" height="34" alt="Abrir ticket"></a>
+  <a href="https://projectnox-org.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tickets-tracker.svg" width="164" height="34" alt="Painel de tickets"></a>
+  <a href="https://github.com/ProjectNox-org/project-nox-requests/issues/new/choose"><img src="./assets/profile/btn-tickets-open.svg" width="164" height="34" alt="Abrir ticket"></a>
 </p>
 
 <!-- 6. Project Nox · Plataforma & Infraestrutura -->
@@ -72,7 +77,8 @@
   </picture>
 </a>
 <p align="center">
-  <a href="https://github.com/ProjectNox-org"><img src="./assets/profile/btn-site-open.svg" width="164" height="34" alt="Acessar o site"></a>&nbsp;&nbsp;<a href="https://github.com/ProjectNox-org/project-nox-manga"><img src="./assets/profile/btn-site-source.svg" width="164" height="34" alt="Código-fonte"></a>
+  <a href="https://github.com/ProjectNox-org"><img src="./assets/profile/btn-site-open.svg" width="164" height="34" alt="Acessar o site"></a>
+  <a href="https://github.com/ProjectNox-org/project-nox-manga"><img src="./assets/profile/btn-site-source.svg" width="164" height="34" alt="Código-fonte"></a>
 </p>
 
 <img src="./assets/profile/divider.svg" width="846" alt="—">
