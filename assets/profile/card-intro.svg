@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="846" height="102" viewBox="0 0 846 102" role="img" aria-labelledby="introTitle introDesc">
+  <title id="introTitle">Awerkori — Fundador e Desenvolvedor Principal do Project Nox</title>
+  <desc id="introDesc">Ecossistema aberto de plataformas web, ferramentas digitais, automação e software para a comunidade.</desc>
+  <defs>
+    <linearGradient id="introBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0818"/>
+      <stop offset="55%" stop-color="#130b22"/>
+      <stop offset="100%" stop-color="#090612"/>
+    </linearGradient>
+    <linearGradient id="introAccent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <style>
+    
+  text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+    .intro-kicker {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2.2px;
+      fill: #fbbf24;
+    }
+    .intro-lead {
+      font-size: 13.5px;
+      font-weight: 500;
+      fill: #f3e8ff;
+    }
+    .intro-sub {
+      font-size: 12px;
+      font-weight: 400;
+      fill: #b8a8de;
+    }
+    .intro-meta {
+      font-size: 10.5px;
+      font-weight: 500;
+      fill: #8b859e;
+      letter-spacing: 0.3px;
+    }
+  </style>
+  <rect x="0.5" y="0.5" width="845" height="101" rx="12" fill="url(#introBg)" stroke="#331d52" stroke-width="1"/>
+  <rect x="20" y="20" width="2.5" height="62" rx="1.25" fill="url(#introAccent)"/>
+
+  <g transform="translate(38, 28)">
+    <text x="0" y="0" class="intro-kicker">✦ APRESENTAÇÃO · PROJECT NOX</text>
+    <text x="0" y="24" class="intro-lead">Desenvolvedor de software e fundador do Project Nox — ecossistema aberto</text>
+    <text x="0" y="43" class="intro-sub">de plataformas web, automação, ferramentas digitais e software para a comunidade.</text>
+    <text x="0" y="63" class="intro-meta">Código-fonte, documentação e lançamentos centralizados em github.com/ProjectNox-org</text>
+  </g>
+</svg>

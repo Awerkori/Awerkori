@@ -6,27 +6,22 @@
   <img src="./assets/profile/hero.svg" width="846" alt="Awerkori · Project Nox — Fundador & Desenvolvedor">
 </picture>
 
-<br>
+<!-- 2. Apresentação Institucional & Pessoal -->
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/profile/card-intro-mobile.svg">
+  <img src="./assets/profile/card-intro.svg" width="846" alt="Awerkori — Fundador e Desenvolvedor Principal do Project Nox">
+</picture>
 
-<p>
-  Desenvolvedor de software e fundador do
-  <a href="https://github.com/ProjectNox-org"><strong>Project Nox</strong></a>
-  — uma iniciativa de código aberto dedicada a plataformas digitais, ferramentas de automação e software para a comunidade.
-</p>
-
-<p>
-  Os repositórios públicos, lançamentos e a documentação oficial estão centralizados na organização:
-</p>
-
+<!-- 3. Navegação Principal -->
 <p align="center">
-  <a href="https://github.com/ProjectNox-org"><img src="./assets/profile/btn-org.svg" width="206" height="34" alt="Acessar organização Project Nox"></a>
-  <a href="https://projectnox-org.github.io/"><img src="./assets/profile/btn-projects.svg" width="206" height="34" alt="Todos os projetos"></a>
-  <a href="https://projectnox-org.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tracker.svg" width="206" height="34" alt="Tracker Oficial"></a>
+  <a href="https://projectnox-org.github.io/"><img src="./assets/profile/btn-central.svg" width="274" height="56" alt="Central Oficial — Portal, projetos e visão geral"></a>
+  <a href="https://github.com/ProjectNox-org"><img src="./assets/profile/btn-org.svg" width="274" height="56" alt="Organização GitHub — Repositórios e código-fonte"></a>
+  <a href="https://projectnox-org.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tracker.svg" width="274" height="56" alt="Tracker Oficial — Status e pedidos da comunidade"></a>
 </p>
 
 <img src="./assets/profile/divider.svg" width="846" alt="—">
 
-<!-- 2. Atividade do GitHub (atualização automática) -->
+<!-- 4. Atividade do GitHub (atualização automática) -->
 <picture>
   <source media="(max-width: 600px)" srcset="./assets/profile/activity-mobile.svg">
   <img src="./assets/profile/activity.svg" width="846" alt="Atividade no GitHub — Awerkori">
@@ -34,7 +29,7 @@
 
 <img src="./assets/profile/divider.svg" width="846" alt="—">
 
-<!-- 3. Mais sobre mim -->
+<!-- 5. Mais sobre mim -->
 <a href="https://zyo.se/awerkori">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/profile/card-about-mobile.svg">

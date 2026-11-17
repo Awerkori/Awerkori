@@ -976,6 +976,181 @@ function buildDivider() {
 }
 
 // ==========================================
+// 10. EDITORIAL INTRO PANEL (DESKTOP: 846 x 102, MOBILE: 420 x 134)
+// ==========================================
+function buildIntroDesktop() {
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="102" viewBox="0 0 846 102" role="img" aria-labelledby="introTitle introDesc">
+  <title id="introTitle">Awerkori — Fundador e Desenvolvedor Principal do Project Nox</title>
+  <desc id="introDesc">Ecossistema aberto de plataformas web, ferramentas digitais, automação e software para a comunidade.</desc>
+  <defs>
+    <linearGradient id="introBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0818"/>
+      <stop offset="55%" stop-color="#130b22"/>
+      <stop offset="100%" stop-color="#090612"/>
+    </linearGradient>
+    <linearGradient id="introAccent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <style>
+    ${COMMON_FONTS}
+    .intro-kicker {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2.2px;
+      fill: #fbbf24;
+    }
+    .intro-lead {
+      font-size: 13.5px;
+      font-weight: 500;
+      fill: #f3e8ff;
+    }
+    .intro-sub {
+      font-size: 12px;
+      font-weight: 400;
+      fill: #b8a8de;
+    }
+    .intro-meta {
+      font-size: 10.5px;
+      font-weight: 500;
+      fill: #8b859e;
+      letter-spacing: 0.3px;
+    }
+  </style>
+  <rect x="0.5" y="0.5" width="845" height="101" rx="12" fill="url(#introBg)" stroke="#331d52" stroke-width="1"/>
+  <rect x="20" y="20" width="2.5" height="62" rx="1.25" fill="url(#introAccent)"/>
+
+  <g transform="translate(38, 28)">
+    <text x="0" y="0" class="intro-kicker">✦ APRESENTAÇÃO · PROJECT NOX</text>
+    <text x="0" y="24" class="intro-lead">Desenvolvedor de software e fundador do Project Nox — ecossistema aberto</text>
+    <text x="0" y="43" class="intro-sub">de plataformas web, automação, ferramentas digitais e software para a comunidade.</text>
+    <text x="0" y="63" class="intro-meta">Código-fonte, documentação e lançamentos centralizados em github.com/ProjectNox-org</text>
+  </g>
+</svg>
+`;
+}
+
+function buildIntroMobile() {
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="134" viewBox="0 0 420 134" role="img" aria-labelledby="introMobTitle">
+  <title id="introMobTitle">Awerkori — Fundador do Project Nox</title>
+  <defs>
+    <linearGradient id="introBgM" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0818"/>
+      <stop offset="55%" stop-color="#130b22"/>
+      <stop offset="100%" stop-color="#090612"/>
+    </linearGradient>
+  </defs>
+  <style>
+    ${COMMON_FONTS}
+    .intro-kicker-m {
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      fill: #fbbf24;
+    }
+    .intro-lead-m {
+      font-size: 12px;
+      font-weight: 500;
+      fill: #f3e8ff;
+    }
+    .intro-sub-m {
+      font-size: 11px;
+      font-weight: 400;
+      fill: #b8a8de;
+    }
+    .intro-meta-m {
+      font-size: 9.5px;
+      font-weight: 500;
+      fill: #8b859e;
+    }
+  </style>
+  <rect x="0.5" y="0.5" width="419" height="133" rx="12" fill="url(#introBgM)" stroke="#331d52" stroke-width="1"/>
+  <path d="M165 1H255" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+
+  <g transform="translate(210, 26)" text-anchor="middle">
+    <text x="0" y="0" class="intro-kicker-m">✦ APRESENTAÇÃO · PROJECT NOX ✦</text>
+    <text x="0" y="24" class="intro-lead-m">Desenvolvedor de software e fundador do Project Nox.</text>
+    <text x="0" y="45" class="intro-sub-m">Plataformas web, automação, ferramentas digitais</text>
+    <text x="0" y="62" class="intro-sub-m">e software aberto para a comunidade.</text>
+    <text x="0" y="88" class="intro-meta-m">Repositórios oficiais em github.com/ProjectNox-org</text>
+  </g>
+</svg>
+`;
+}
+
+// ==========================================
+// 11. NAVIGATION TILES (274 x 56 — 3 tiles = 846px edge-to-edge)
+// ==========================================
+function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
+  const width = 274;
+  const height = 56;
+  const bgGrad = isPrimary
+    ? `<linearGradient id="${id}Bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#1e1038"/>
+        <stop offset="55%" stop-color="#28144a"/>
+        <stop offset="100%" stop-color="#140b29"/>
+      </linearGradient>`
+    : `<linearGradient id="${id}Bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#110920"/>
+        <stop offset="55%" stop-color="#170d2b"/>
+        <stop offset="100%" stop-color="#0b0615"/>
+      </linearGradient>`;
+
+  const borderGrad = isPrimary
+    ? `<linearGradient id="${id}Border" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.65"/>
+      </linearGradient>`
+    : `<linearGradient id="${id}Border" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#552887" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#331854" stop-opacity="0.55"/>
+      </linearGradient>`;
+
+  const iconBoxStroke = isPrimary ? '#fbbf24' : '#5b2d91';
+  const arrowColor = isPrimary ? '#fbbf24' : '#a78bfa';
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(title)} — ${escapeXml(subtitle)}">
+  <defs>
+    ${bgGrad}
+    ${borderGrad}
+  </defs>
+  <style>
+    ${COMMON_FONTS}
+    .tile-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      fill: #ffffff;
+      letter-spacing: 0.2px;
+    }
+    .tile-sub {
+      font-size: 10.5px;
+      font-weight: 400;
+      fill: #b8a8de;
+    }
+  </style>
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="10" fill="url(#${id}Bg)" stroke="url(#${id}Border)" stroke-width="1"/>
+  <path d="M10 1.5H${width - 10}" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Icon Container -->
+  <rect x="12" y="11" width="34" height="34" rx="8" fill="#1b1030" stroke="${iconBoxStroke}" stroke-opacity="0.65" stroke-width="0.9"/>
+  <g transform="translate(20, 19)">
+    ${iconSvg}
+  </g>
+
+  <!-- Text -->
+  <text x="56" y="25" class="tile-title">${escapeXml(title)}</text>
+  <text x="56" y="41" class="tile-sub">${escapeXml(subtitle)}</text>
+
+  <!-- Right Arrow -->
+  <g transform="translate(254, 23.5)">
+    <path d="M0 0l4 4.5-4 4.5" fill="none" stroke="${arrowColor}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
+`;
+}
+
+// ==========================================
 // BUILD ALL ASSETS
 // ==========================================
 async function main() {
@@ -994,10 +1169,37 @@ async function main() {
   }
 
   if (profileOnly) {
+    await fs.writeFile(path.join(profileDir, 'card-intro.svg'), buildIntroDesktop());
+    await fs.writeFile(path.join(profileDir, 'card-intro-mobile.svg'), buildIntroMobile());
     await fs.writeFile(path.join(profileDir, 'card-about.svg'), buildAboutDesktop());
     await fs.writeFile(path.join(profileDir, 'card-about-mobile.svg'), buildAboutMobile());
     await fs.writeFile(path.join(profileDir, 'divider.svg'), buildDivider());
-    console.log('  ✓ card-about.svg, card-about-mobile.svg & divider.svg');
+
+    await fs.writeFile(path.join(profileDir, 'btn-central.svg'), buildNavTile({
+      id: 'btnCentral',
+      title: 'Central Oficial',
+      subtitle: 'Portal, projetos e visão geral',
+      iconSvg: `<circle cx="9" cy="9" r="7.5" fill="none" stroke="#fbbf24" stroke-width="1.4"/><path d="M9 1.5v15M1.5 9h15M3.5 5.2c1.8 1 3.6 1.4 5.5 1.4s3.7-.4 5.5-1.4M3.5 12.8c1.8-1 3.6-1.4 5.5-1.4s3.7.4 5.5 1.4" fill="none" stroke="#fbbf24" stroke-width="1.1"/>`,
+      isPrimary: true
+    }));
+
+    await fs.writeFile(path.join(profileDir, 'btn-org.svg'), buildNavTile({
+      id: 'btnOrg',
+      title: 'Organização GitHub',
+      subtitle: 'Repositórios e código-fonte',
+      iconSvg: `<path d="M5.5 5.5L2 9l3.5 3.5M12.5 5.5L16 9l-3.5 3.5M10 3.5l-2 11" fill="none" stroke="#c4b5fd" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>`,
+      isPrimary: false
+    }));
+
+    await fs.writeFile(path.join(profileDir, 'btn-tracker.svg'), buildNavTile({
+      id: 'btnTracker',
+      title: 'Tracker Oficial',
+      subtitle: 'Status e pedidos da comunidade',
+      iconSvg: `<path d="M2 12h3l2-6 3 9 2.5-6 1.5 3h2" fill="none" stroke="#c4b5fd" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>`,
+      isPrimary: false
+    }));
+
+    console.log('  ✓ card-intro*, card-about*, divider & 3 nav tiles (btn-central, btn-org, btn-tracker)');
     console.log('Done (--profile-only).');
     return;
   }
