@@ -270,41 +270,41 @@ function buildHeroDesktop() {
     <!-- Top Monogram and Tracker -->
     <g transform="translate(0, 52)">
       <text x="0" y="0" font-size="9" fill="#fbbf24" filter="url(#softGlow)">✦</text>
-      <text x="14" y="-1" class="badge-tracker">AWERKORI</text>
-      <text x="122" y="-1" class="badge-tracker" fill="#8b859e">·</text>
-      <text x="134" y="-1" class="badge-tracker" fill="#fbbf24">PROJECT NOX</text>
+      <text x="14" y="-1" class="badge-tracker">PROJECT NOX</text>
+      <text x="134" y="-1" class="badge-tracker" fill="#8b859e">·</text>
+      <text x="148" y="-1" class="badge-tracker" fill="#fbbf24">FUNDADOR &amp; DESENVOLVEDOR</text>
     </g>
 
     <!-- Main Title -->
-    <text x="0" y="108" class="hero-title">Project Nox</text>
+    <text x="0" y="108" class="hero-title">Awerkori</text>
 
     <!-- Refined Portuguese Tagline -->
-    <text x="0" y="142" class="hero-tagline">Desenvolvimento de extensões, ferramentas e ecossistema aberto.</text>
+    <text x="0" y="142" class="hero-tagline">Software, ferramentas, automação e experiências digitais.</text>
 
     <!-- Refined Feature Badges -->
     <g transform="translate(0, 168)">
       <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="140" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+        <rect x="0" y="0" width="182" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
         <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Mihon e forks</text>
+        <text x="23" y="17" class="pill-label">Engenharia de Software</text>
       </g>
-      <g transform="translate(150, 0)">
-        <rect x="0" y="0" width="145" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+      <g transform="translate(192, 0)">
+        <rect x="0" y="0" width="198" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
         <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Aniyomi e forks</text>
+        <text x="23" y="17" class="pill-label">Automação &amp; Ferramentas</text>
       </g>
-      <g transform="translate(305, 0)">
-        <rect x="0" y="0" width="155" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+      <g transform="translate(400, 0)">
+        <rect x="0" y="0" width="168" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
         <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Software aberto</text>
+        <text x="23" y="17" class="pill-label">Ecossistema Aberto</text>
       </g>
     </g>
 
     <!-- Bottom Decorative Horizon Line -->
     <line x1="0" y1="216" x2="600" y2="216" stroke="#2a1c40" stroke-width="1"/>
     <line x1="0" y1="216" x2="160" y2="216" stroke="url(#goldMetal)" stroke-width="1.2"/>
-    <text x="0" y="235" class="meta-edge">✦ IDENTIDADE E ENGENHARIA DIGITAL ✦</text>
-    <text x="596" y="235" class="monogram" text-anchor="end">✦ NΩΛ ✦</text>
+    <text x="0" y="235" class="meta-edge">✦ TECNOLOGIA · ARQUITETURA · CÓDIGO ABERTO ✦</text>
+    <text x="596" y="235" class="monogram" text-anchor="end">✦ NOX ✦</text>
   </g>
 
   <!-- Masked Light Sweep Beam -->
@@ -512,23 +512,23 @@ function buildHeroMobile() {
 
   <!-- Centered Content -->
   <g transform="translate(210, 168)" text-anchor="middle">
-    <text x="0" y="0" class="badge-tracker-m">✦ AWERKORI · PROJECT NOX ✦</text>
-    <text x="0" y="34" class="hero-title-m">Project Nox</text>
-    <text x="0" y="56" class="hero-tagline-m">Extensões, ferramentas e ecossistema aberto</text>
+    <text x="0" y="0" class="badge-tracker-m">✦ FUNDADOR · PROJECT NOX ✦</text>
+    <text x="0" y="34" class="hero-title-m">Awerkori</text>
+    <text x="0" y="56" class="hero-tagline-m">Software, ferramentas e automação digital</text>
 
     <!-- Badges Row -->
-    <g transform="translate(-140, 72)">
-      <rect x="0" y="0" width="130" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="65" y="16" class="pill-label-m" text-anchor="middle">Mihon e forks</text>
+    <g transform="translate(0, 72)">
+      <rect x="-156" y="0" width="148" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="-82" y="16" class="pill-label-m" text-anchor="middle">Engenharia de Software</text>
 
-      <rect x="150" y="0" width="130" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="215" y="16" class="pill-label-m" text-anchor="middle">Aniyomi e forks</text>
+      <rect x="8" y="0" width="148" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="82" y="16" class="pill-label-m" text-anchor="middle">Automação &amp; Código Aberto</text>
     </g>
 
     <!-- Bottom Line -->
     <line x1="-150" y1="116" x2="150" y2="116" stroke="#2a1c40" stroke-width="1"/>
     <line x1="-35" y1="116" x2="35" y2="116" stroke="url(#goldMetalM)" stroke-width="1.2"/>
-    <text x="0" y="136" font-size="10" fill="#fbbf24" letter-spacing="3px">✦ NΩΛ ✦</text>
+    <text x="0" y="136" font-size="10" fill="#fbbf24" letter-spacing="3px">✦ NOX ✦</text>
   </g>
 
   <!-- Masked Light Sweep Beam -->
@@ -976,12 +976,18 @@ function buildDivider() {
 // BUILD ALL ASSETS
 // ==========================================
 async function main() {
+  const heroOnly = process.argv.includes('--hero-only');
   console.log('Generating Project Nox compact assets...');
 
   // 1. Hero (Preserved approved)
   await fs.writeFile(path.join(profileDir, 'hero.svg'), buildHeroDesktop());
   await fs.writeFile(path.join(profileDir, 'hero-mobile.svg'), buildHeroMobile());
   console.log('  ✓ hero.svg & hero-mobile.svg');
+
+  if (heroOnly) {
+    console.log('Done (--hero-only).');
+    return;
+  }
 
   // 2. Project Nox · Mangá
   await fs.writeFile(path.join(profileDir, 'card-manga.svg'), buildProjectCard({
