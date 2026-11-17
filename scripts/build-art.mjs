@@ -135,10 +135,10 @@ function buildHeroDesktop() {
       letter-spacing: 0.2px;
     }
     .pill-label {
-      font-size: 10.5px;
+      font-size: 11.5px;
       font-weight: 600;
       fill: #fef08a;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
     }
     .monogram {
       font-family: "Cinzel", Georgia, serif;
@@ -273,27 +273,24 @@ function buildHeroDesktop() {
     </g>
 
     <!-- Main Title -->
-    <text x="0" y="106" class="hero-title">Awerkori</text>
+    <text x="0" y="104" class="hero-title">Awerkori</text>
 
     <!-- Refined Portuguese Tagline -->
-    <text x="0" y="138" class="hero-tagline">Desenvolvedor de software, automação e ecossistemas abertos.</text>
+    <text x="0" y="136" class="hero-tagline">Desenvolvedor de software, automação e ecossistemas abertos.</text>
 
-    <!-- Refined Feature Badges -->
-    <g transform="translate(0, 166)">
+    <!-- Refined Feature Badges (Centered as a 564px group inside 600px content area) -->
+    <g transform="translate(18, 162)">
       <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="150" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="24" y="17" class="pill-label">Sistemas &amp; Web</text>
+        <rect x="0" y="0" width="160" height="32" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
+        <text x="80" y="20" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Sistemas &amp; Web</tspan></text>
       </g>
-      <g transform="translate(162, 0)">
-        <rect x="0" y="0" width="206" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="24" y="17" class="pill-label">Ferramentas &amp; Automação</text>
+      <g transform="translate(174, 0)">
+        <rect x="0" y="0" width="224" height="32" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
+        <text x="112" y="20" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Ferramentas &amp; Automação</tspan></text>
       </g>
-      <g transform="translate(380, 0)">
-        <rect x="0" y="0" width="142" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="24" y="17" class="pill-label">Código Aberto</text>
+      <g transform="translate(412, 0)">
+        <rect x="0" y="0" width="152" height="32" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
+        <text x="76" y="20" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Código Aberto</tspan></text>
       </g>
     </g>
 
@@ -398,9 +395,10 @@ function buildHeroMobile() {
       fill: #c4b5fd;
     }
     .pill-label-m {
-      font-size: 9.5px;
+      font-size: 10.5px;
       font-weight: 600;
       fill: #fef08a;
+      letter-spacing: 0.2px;
     }
 
     /* Orbital and Nebula Animations matching Desktop */
@@ -508,24 +506,24 @@ function buildHeroMobile() {
   </g>
 
   <!-- Centered Content -->
-  <g transform="translate(210, 168)" text-anchor="middle">
+  <g transform="translate(210, 166)" text-anchor="middle">
     <text x="0" y="0" class="badge-tracker-m">✦ FUNDADOR · PROJECT NOX ✦</text>
     <text x="0" y="34" class="hero-title-m">Awerkori</text>
     <text x="0" y="56" class="hero-tagline-m">Software, automação e ecossistemas abertos</text>
 
-    <!-- Badges Row -->
-    <g transform="translate(0, 72)">
-      <rect x="-152" y="0" width="146" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="-79" y="16" class="pill-label-m" text-anchor="middle">Sistemas &amp; Web</text>
+    <!-- Badges Row (Centered 336px group) -->
+    <g transform="translate(0, 71)">
+      <rect x="-168" y="0" width="160" height="28" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+      <text x="-88" y="18" class="pill-label-m" text-anchor="middle">Sistemas &amp; Web</text>
 
-      <rect x="6" y="0" width="146" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="79" y="16" class="pill-label-m" text-anchor="middle">Ferramentas &amp; Automação</text>
+      <rect x="8" y="0" width="160" height="28" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+      <text x="88" y="18" class="pill-label-m" text-anchor="middle">Ferramentas &amp; Automação</text>
     </g>
 
     <!-- Bottom Line -->
-    <line x1="-150" y1="116" x2="150" y2="116" stroke="#2a1c40" stroke-width="1"/>
-    <line x1="-35" y1="116" x2="35" y2="116" stroke="url(#goldMetalM)" stroke-width="1.2"/>
-    <text x="0" y="136" font-size="10" fill="#fbbf24" letter-spacing="3px">✦ NOX ✦</text>
+    <line x1="-150" y1="118" x2="150" y2="118" stroke="#2a1c40" stroke-width="1"/>
+    <line x1="-35" y1="118" x2="35" y2="118" stroke="url(#goldMetalM)" stroke-width="1.2"/>
+    <text x="0" y="138" font-size="10" fill="#fbbf24" letter-spacing="3px">✦ NOX ✦</text>
   </g>
 
   <!-- Masked Light Sweep Beam -->
@@ -976,104 +974,118 @@ function buildDivider() {
 }
 
 // ==========================================
-// 10. EDITORIAL INTRO PANEL (DESKTOP: 846 x 102, MOBILE: 420 x 134)
+// 10. EDITORIAL INTRO PANEL (DESKTOP: 846 x 148, MOBILE: 420 x 182)
 // ==========================================
 function buildIntroDesktop() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="102" viewBox="0 0 846 102" role="img" aria-labelledby="introTitle introDesc">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="148" viewBox="0 0 846 148" role="img" aria-labelledby="introTitle introDesc">
   <title id="introTitle">Awerkori — Fundador e Desenvolvedor Principal do Project Nox</title>
   <desc id="introDesc">Ecossistema aberto de plataformas web, ferramentas digitais, automação e software para a comunidade.</desc>
   <defs>
     <linearGradient id="introBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0d0818"/>
-      <stop offset="55%" stop-color="#130b22"/>
+      <stop offset="55%" stop-color="#140c24"/>
       <stop offset="100%" stop-color="#090612"/>
     </linearGradient>
     <linearGradient id="introAccent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fbbf24"/>
       <stop offset="100%" stop-color="#7c3aed"/>
     </linearGradient>
+    <linearGradient id="introRule" gradientUnits="userSpaceOnUse" x1="42" y1="108" x2="812" y2="108">
+      <stop offset="0%" stop-color="#4c277a" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#2e1650" stop-opacity="0.1"/>
+    </linearGradient>
   </defs>
   <style>
     ${COMMON_FONTS}
     .intro-kicker {
-      font-size: 9px;
+      font-size: 10.5px;
       font-weight: 700;
-      letter-spacing: 2.2px;
+      letter-spacing: 2.4px;
       fill: #fbbf24;
     }
     .intro-lead {
-      font-size: 13.5px;
-      font-weight: 500;
-      fill: #f3e8ff;
+      font-size: 19px;
+      font-weight: 700;
+      fill: #ffffff;
+      letter-spacing: -0.2px;
     }
     .intro-sub {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 400;
-      fill: #b8a8de;
+      fill: #d4c6f7;
     }
     .intro-meta {
-      font-size: 10.5px;
+      font-size: 11.5px;
       font-weight: 500;
-      fill: #8b859e;
-      letter-spacing: 0.3px;
+      fill: #9b93b3;
+      letter-spacing: 0.2px;
     }
   </style>
-  <rect x="0.5" y="0.5" width="845" height="101" rx="12" fill="url(#introBg)" stroke="#331d52" stroke-width="1"/>
-  <rect x="20" y="20" width="2.5" height="62" rx="1.25" fill="url(#introAccent)"/>
+  <rect x="0.5" y="0.5" width="845" height="147" rx="12" fill="url(#introBg)" stroke="#382156" stroke-width="1"/>
+  <rect x="24" y="24" width="3" height="100" rx="1.5" fill="url(#introAccent)"/>
 
-  <g transform="translate(38, 28)">
+  <g transform="translate(44, 38)">
     <text x="0" y="0" class="intro-kicker">✦ APRESENTAÇÃO · PROJECT NOX</text>
-    <text x="0" y="24" class="intro-lead">Desenvolvedor de software e fundador do Project Nox — ecossistema aberto</text>
-    <text x="0" y="43" class="intro-sub">de plataformas web, automação, ferramentas digitais e software para a comunidade.</text>
-    <text x="0" y="63" class="intro-meta">Código-fonte, documentação e lançamentos centralizados em github.com/ProjectNox-org</text>
+    <text x="0" y="28" class="intro-lead">Desenvolvedor de software e fundador do Project Nox</text>
+    <text x="0" y="54" class="intro-sub">Ecossistema aberto de plataformas web, automação, ferramentas digitais e software para a comunidade.</text>
+    <rect x="0" y="70" width="768" height="1" fill="url(#introRule)"/>
+    <text x="0" y="90" class="intro-meta">Código-fonte, documentação e lançamentos centralizados em <tspan fill="#fef08a" font-weight="600">github.com/ProjectNox-org</tspan></text>
   </g>
 </svg>
 `;
 }
 
 function buildIntroMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="134" viewBox="0 0 420 134" role="img" aria-labelledby="introMobTitle">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="182" viewBox="0 0 420 182" role="img" aria-labelledby="introMobTitle">
   <title id="introMobTitle">Awerkori — Fundador do Project Nox</title>
   <defs>
     <linearGradient id="introBgM" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0d0818"/>
-      <stop offset="55%" stop-color="#130b22"/>
+      <stop offset="55%" stop-color="#140c24"/>
       <stop offset="100%" stop-color="#090612"/>
+    </linearGradient>
+    <linearGradient id="introRuleM" gradientUnits="userSpaceOnUse" x1="50" y1="142" x2="370" y2="142">
+      <stop offset="0%" stop-color="#4c277a" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4c277a" stop-opacity="0"/>
     </linearGradient>
   </defs>
   <style>
     ${COMMON_FONTS}
     .intro-kicker-m {
-      font-size: 8.5px;
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: 2px;
       fill: #fbbf24;
     }
     .intro-lead-m {
-      font-size: 12px;
-      font-weight: 500;
-      fill: #f3e8ff;
+      font-size: 16.5px;
+      font-weight: 700;
+      fill: #ffffff;
+      letter-spacing: -0.2px;
     }
     .intro-sub-m {
-      font-size: 11px;
+      font-size: 12.5px;
       font-weight: 400;
-      fill: #b8a8de;
+      fill: #d4c6f7;
     }
     .intro-meta-m {
-      font-size: 9.5px;
+      font-size: 11px;
       font-weight: 500;
-      fill: #8b859e;
+      fill: #9b93b3;
     }
   </style>
-  <rect x="0.5" y="0.5" width="419" height="133" rx="12" fill="url(#introBgM)" stroke="#331d52" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="181" rx="12" fill="url(#introBgM)" stroke="#382156" stroke-width="1"/>
   <path d="M165 1H255" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
 
-  <g transform="translate(210, 26)" text-anchor="middle">
+  <g transform="translate(210, 30)" text-anchor="middle">
     <text x="0" y="0" class="intro-kicker-m">✦ APRESENTAÇÃO · PROJECT NOX ✦</text>
-    <text x="0" y="24" class="intro-lead-m">Desenvolvedor de software e fundador do Project Nox.</text>
-    <text x="0" y="45" class="intro-sub-m">Plataformas web, automação, ferramentas digitais</text>
-    <text x="0" y="62" class="intro-sub-m">e software aberto para a comunidade.</text>
-    <text x="0" y="88" class="intro-meta-m">Repositórios oficiais em github.com/ProjectNox-org</text>
+    <text x="0" y="28" class="intro-lead-m">Desenvolvedor de software e</text>
+    <text x="0" y="49" class="intro-lead-m">fundador do Project Nox</text>
+    <text x="0" y="77" class="intro-sub-m">Plataformas web, automação, ferramentas</text>
+    <text x="0" y="96" class="intro-sub-m">digitais e software aberto para a comunidade.</text>
+    <rect x="-160" y="112" width="320" height="1" fill="url(#introRuleM)"/>
+    <text x="0" y="132" class="intro-meta-m">Repositórios em <tspan fill="#fef08a" font-weight="600">github.com/ProjectNox-org</tspan></text>
   </g>
 </svg>
 `;
@@ -1155,6 +1167,7 @@ function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
 // ==========================================
 async function main() {
   const heroOnly = process.argv.includes('--hero-only');
+  const introHeroOnly = process.argv.includes('--intro-hero');
   const profileOnly = process.argv.includes('--profile-only');
   console.log('Generating Project Nox compact assets...');
 
@@ -1165,6 +1178,14 @@ async function main() {
 
   if (heroOnly) {
     console.log('Done (--hero-only).');
+    return;
+  }
+
+  if (introHeroOnly) {
+    await fs.writeFile(path.join(profileDir, 'card-intro.svg'), buildIntroDesktop());
+    await fs.writeFile(path.join(profileDir, 'card-intro-mobile.svg'), buildIntroMobile());
+    console.log('  ✓ card-intro.svg & card-intro-mobile.svg');
+    console.log('Done (--intro-hero).');
     return;
   }
 

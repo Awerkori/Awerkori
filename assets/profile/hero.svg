@@ -107,10 +107,10 @@
       letter-spacing: 0.2px;
     }
     .pill-label {
-      font-size: 10.5px;
+      font-size: 11.5px;
       font-weight: 600;
       fill: #fef08a;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
     }
     .monogram {
       font-family: "Cinzel", Georgia, serif;
@@ -245,27 +245,24 @@
     </g>
 
     <!-- Main Title -->
-    <text x="0" y="106" class="hero-title">Awerkori</text>
+    <text x="0" y="104" class="hero-title">Awerkori</text>
 
     <!-- Refined Portuguese Tagline -->
-    <text x="0" y="138" class="hero-tagline">Desenvolvedor de software, automação e ecossistemas abertos.</text>
+    <text x="0" y="136" class="hero-tagline">Desenvolvedor de software, automação e ecossistemas abertos.</text>
 
-    <!-- Refined Feature Badges -->
-    <g transform="translate(0, 166)">
+    <!-- Refined Feature Badges (Centered as a 564px group inside 600px content area) -->
+    <g transform="translate(18, 162)">
       <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="150" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="24" y="17" class="pill-label">Sistemas &amp; Web</text>
+        <rect x="0" y="0" width="160" height="32" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
+        <text x="80" y="20" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Sistemas &amp; Web</tspan></text>
       </g>
-      <g transform="translate(162, 0)">
-        <rect x="0" y="0" width="206" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="24" y="17" class="pill-label">Ferramentas &amp; Automação</text>
+      <g transform="translate(174, 0)">
+        <rect x="0" y="0" width="224" height="32" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
+        <text x="112" y="20" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Ferramentas &amp; Automação</tspan></text>
       </g>
-      <g transform="translate(380, 0)">
-        <rect x="0" y="0" width="142" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="24" y="17" class="pill-label">Código Aberto</text>
+      <g transform="translate(412, 0)">
+        <rect x="0" y="0" width="152" height="32" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
+        <text x="76" y="20" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Código Aberto</tspan></text>
       </g>
     </g>
 
