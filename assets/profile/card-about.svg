@@ -63,12 +63,12 @@
   <g transform="translate(100, 19)">
     <text x="0" y="7" class="badge-about">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
     <text x="0" y="29" class="about-title">Mais sobre mim</text>
-    <text x="0" y="49" class="about-desc">Projetos autorais, perfil pessoal e links fora do GitHub.</text>
+    <text x="0" y="49" class="about-desc">Trajetória, projetos autorais e canais fora do GitHub.</text>
   </g>
 
   <!-- Right Pill -->
-  <g transform="translate(555, 27)">
-    <rect x="0" y="0" width="265" height="34" rx="8" fill="#1c1130" stroke="#582a8c" stroke-width="1"/>
-    <text x="132" y="22" class="btn-about-text" text-anchor="middle">Clique aqui para saber mais sobre mim ↗</text>
+  <g transform="translate(595, 27)">
+    <rect x="0" y="0" width="225" height="34" rx="8" fill="#1c1130" stroke="#582a8c" stroke-width="1"/>
+    <text x="112.5" y="21.5" class="btn-about-text" text-anchor="middle">Acessar zyo.se/awerkori ↗</text>
   </g>
 </svg>

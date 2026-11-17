@@ -9,8 +9,13 @@
 <br>
 
 <p>
-  Desenvolvendo software, ferramentas, automações e experiências digitais de código aberto no ecossistema
-  <a href="https://github.com/ProjectNox-org"><strong>Project Nox</strong></a>.
+  Desenvolvedor de software e fundador do
+  <a href="https://github.com/ProjectNox-org"><strong>Project Nox</strong></a>
+  — uma iniciativa de código aberto dedicada a plataformas digitais, ferramentas de automação e software para a comunidade.
+</p>
+
+<p>
+  Os repositórios públicos, lançamentos e a documentação oficial estão centralizados na organização:
 </p>
 
 <p align="center">
@@ -33,7 +38,7 @@
 <a href="https://zyo.se/awerkori">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/profile/card-about-mobile.svg">
-    <img src="./assets/profile/card-about.svg" width="846" alt="Mais sobre mim — Clique aqui para saber mais sobre mim">
+    <img src="./assets/profile/card-about.svg" width="846" alt="Mais sobre mim — zyo.se/awerkori">
   </picture>
 </a>
 

@@ -268,42 +268,39 @@ function buildHeroDesktop() {
   <!-- Center and Right: Typography and Brand -->
   <g transform="translate(216, 0)">
     <!-- Top Monogram and Tracker -->
-    <g transform="translate(0, 52)">
-      <text x="0" y="0" font-size="9" fill="#fbbf24" filter="url(#softGlow)">✦</text>
-      <text x="14" y="-1" class="badge-tracker">PROJECT NOX</text>
-      <text x="134" y="-1" class="badge-tracker" fill="#8b859e">·</text>
-      <text x="148" y="-1" class="badge-tracker" fill="#fbbf24">FUNDADOR &amp; DESENVOLVEDOR</text>
+    <g transform="translate(0, 50)">
+      <text x="0" y="0" class="badge-tracker"><tspan fill="#fbbf24" filter="url(#softGlow)">✦</tspan><tspan dx="8">AWERKORI</tspan><tspan fill="#8b859e" dx="8">·</tspan><tspan fill="#fbbf24" dx="8">FUNDADOR DO PROJECT NOX</tspan></text>
     </g>
 
     <!-- Main Title -->
-    <text x="0" y="108" class="hero-title">Awerkori</text>
+    <text x="0" y="106" class="hero-title">Awerkori</text>
 
     <!-- Refined Portuguese Tagline -->
-    <text x="0" y="142" class="hero-tagline">Software, ferramentas, automação e experiências digitais.</text>
+    <text x="0" y="138" class="hero-tagline">Desenvolvedor de software, automação e ecossistemas abertos.</text>
 
     <!-- Refined Feature Badges -->
-    <g transform="translate(0, 168)">
+    <g transform="translate(0, 166)">
       <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="182" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Engenharia de Software</text>
+        <rect x="0" y="0" width="150" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
+        <text x="24" y="17" class="pill-label">Sistemas &amp; Web</text>
       </g>
-      <g transform="translate(192, 0)">
-        <rect x="0" y="0" width="198" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Automação &amp; Ferramentas</text>
+      <g transform="translate(162, 0)">
+        <rect x="0" y="0" width="206" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
+        <text x="24" y="17" class="pill-label">Ferramentas &amp; Automação</text>
       </g>
-      <g transform="translate(400, 0)">
-        <rect x="0" y="0" width="168" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Ecossistema Aberto</text>
+      <g transform="translate(380, 0)">
+        <rect x="0" y="0" width="142" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
+        <text x="24" y="17" class="pill-label">Código Aberto</text>
       </g>
     </g>
 
     <!-- Bottom Decorative Horizon Line -->
     <line x1="0" y1="216" x2="600" y2="216" stroke="#2a1c40" stroke-width="1"/>
     <line x1="0" y1="216" x2="160" y2="216" stroke="url(#goldMetal)" stroke-width="1.2"/>
-    <text x="0" y="235" class="meta-edge">✦ TECNOLOGIA · ARQUITETURA · CÓDIGO ABERTO ✦</text>
+    <text x="0" y="235" class="meta-edge">✦ ARQUITETURA · FERRAMENTAS · PRODUTOS DIGITAIS ✦</text>
     <text x="596" y="235" class="monogram" text-anchor="end">✦ NOX ✦</text>
   </g>
 
@@ -514,15 +511,15 @@ function buildHeroMobile() {
   <g transform="translate(210, 168)" text-anchor="middle">
     <text x="0" y="0" class="badge-tracker-m">✦ FUNDADOR · PROJECT NOX ✦</text>
     <text x="0" y="34" class="hero-title-m">Awerkori</text>
-    <text x="0" y="56" class="hero-tagline-m">Software, ferramentas e automação digital</text>
+    <text x="0" y="56" class="hero-tagline-m">Software, automação e ecossistemas abertos</text>
 
     <!-- Badges Row -->
     <g transform="translate(0, 72)">
-      <rect x="-156" y="0" width="148" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="-82" y="16" class="pill-label-m" text-anchor="middle">Engenharia de Software</text>
+      <rect x="-152" y="0" width="146" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="-79" y="16" class="pill-label-m" text-anchor="middle">Sistemas &amp; Web</text>
 
-      <rect x="8" y="0" width="148" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="82" y="16" class="pill-label-m" text-anchor="middle">Automação &amp; Código Aberto</text>
+      <rect x="6" y="0" width="146" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="79" y="16" class="pill-label-m" text-anchor="middle">Ferramentas &amp; Automação</text>
     </g>
 
     <!-- Bottom Line -->
@@ -887,65 +884,71 @@ function buildAboutDesktop() {
   <g transform="translate(100, 19)">
     <text x="0" y="7" class="badge-about">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
     <text x="0" y="29" class="about-title">Mais sobre mim</text>
-    <text x="0" y="49" class="about-desc">Projetos autorais, perfil pessoal e links fora do GitHub.</text>
+    <text x="0" y="49" class="about-desc">Trajetória, projetos autorais e canais fora do GitHub.</text>
   </g>
 
   <!-- Right Pill -->
-  <g transform="translate(650, 27)">
-    <rect x="0" y="0" width="168" height="34" rx="8" fill="#1c1130" stroke="#582a8c" stroke-width="1"/>
-    <text x="74" y="22" class="btn-about-text" text-anchor="middle">zyo.se/awerkori ↗</text>
+  <g transform="translate(595, 27)">
+    <rect x="0" y="0" width="225" height="34" rx="8" fill="#1c1130" stroke="#582a8c" stroke-width="1"/>
+    <text x="112.5" y="21.5" class="btn-about-text" text-anchor="middle">Acessar zyo.se/awerkori ↗</text>
   </g>
 </svg>
 `;
 }
 
 function buildAboutMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="96" viewBox="0 0 420 96" role="img" aria-labelledby="aboutMobTitle">
-  <title id="aboutMobTitle">Mais sobre mim — zyo.se/awerkori</title>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="108" viewBox="0 0 420 108" role="img" aria-labelledby="aboutMobTitle">
+  <title id="aboutMobTitle">Mais sobre mim — Perfil Pessoal</title>
   <defs>
     <linearGradient id="aboutBgM" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0f091c"/>
-      <stop offset="50%" stop-color="#150d26"/>
-      <stop offset="100%" stop-color="#0a0614"/>
+      <stop offset="0%" stop-color="#0e0a19"/>
+      <stop offset="50%" stop-color="#140c24"/>
+      <stop offset="100%" stop-color="#090612"/>
+    </linearGradient>
+    <linearGradient id="aboutBorderM" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3e2063" stop-opacity="0.4"/>
     </linearGradient>
   </defs>
 
   <style>
     ${COMMON_FONTS}
-    .badge-about-m {
-      font-size: 8px;
+    .badge-label-m {
+      font-size: 8.5px;
       font-weight: 700;
-      letter-spacing: 1.6px;
+      letter-spacing: 1.8px;
       fill: #fbbf24;
     }
-    .about-title-m {
+    .card-title-m {
       font-family: "Cinzel", Georgia, serif;
-      font-size: 16.5px;
+      font-size: 17.5px;
       font-weight: 700;
       fill: #ffffff;
     }
-    .about-desc-m {
-      font-size: 10.5px;
+    .card-desc-m {
+      font-size: 11px;
       fill: #c4b5fd;
     }
-    .btn-about-m {
+    .btn-callout-m {
       font-size: 10px;
       font-weight: 600;
+      letter-spacing: 0.3px;
       fill: #fef08a;
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="95" rx="10" fill="url(#aboutBgM)" stroke="#3e2063" stroke-width="1"/>
-  <path d="M12 1H80" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+  <rect x="0.5" y="0.5" width="419" height="107" rx="12" fill="url(#aboutBgM)" stroke="url(#aboutBorderM)" stroke-width="1"/>
+  <path d="M165 1H255" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
 
-  <g transform="translate(16, 16)">
-    <text x="0" y="6" class="badge-about-m">✦ PERFIL PESSOAL · ALÉM DO GITHUB</text>
-    <text x="0" y="26" class="about-title-m">Mais sobre mim</text>
-    <text x="0" y="44" class="about-desc-m">Projetos autorais, perfil e links fora do GitHub.</text>
+  <g transform="translate(210, 18)" text-anchor="middle">
+    <text x="0" y="6" class="badge-label-m" text-anchor="middle">✦ PERFIL PESSOAL ✦</text>
+    <text x="0" y="27" class="card-title-m" text-anchor="middle">Mais sobre mim</text>
+    <text x="0" y="47" class="card-desc-m" text-anchor="middle">Trajetória, projetos autorais e canais fora do GitHub.</text>
 
-    <g transform="translate(0, 52)">
-      <rect x="0" y="0" width="150" height="22" rx="5" fill="#1c1130" stroke="#582a8c" stroke-width="0.8"/>
-      <text x="75" y="15" class="btn-about-m" text-anchor="middle">zyo.se/awerkori ↗</text>
+    <g transform="translate(-115, 58)">
+      <rect x="0" y="0" width="230" height="24" rx="6" fill="#1b122c" stroke="#5b2d91" stroke-width="0.9"/>
+      <text x="115" y="16" class="btn-callout-m" text-anchor="middle">Acessar zyo.se/awerkori ↗</text>
     </g>
   </g>
 </svg>
@@ -958,16 +961,16 @@ function buildAboutMobile() {
 function buildDivider() {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="10" viewBox="0 0 846 10" role="presentation">
   <defs>
-    <linearGradient id="divGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#382156" stop-opacity="0"/>
-      <stop offset="40%" stop-color="#7c3aed" stop-opacity="0.5"/>
-      <stop offset="50%" stop-color="#fbbf24" stop-opacity="0.8"/>
-      <stop offset="60%" stop-color="#7c3aed" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#382156" stop-opacity="0"/>
+    <linearGradient id="divGrad" gradientUnits="userSpaceOnUse" x1="20" y1="5" x2="826" y2="5">
+      <stop offset="0%" stop-color="#6b21a8" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#7c3aed" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#d97706" stop-opacity="0.8"/>
+      <stop offset="75%" stop-color="#7c3aed" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#6b21a8" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <line x1="20" y1="5" x2="826" y2="5" stroke="url(#divGrad)" stroke-width="1"/>
-  <circle cx="423" cy="5" r="2" fill="#fef08a"/>
+  <rect x="20" y="4.5" width="806" height="1" rx="0.5" fill="url(#divGrad)"/>
+  <circle cx="423" cy="5" r="2.2" fill="#fbbf24"/>
 </svg>
 `;
 }
@@ -977,6 +980,7 @@ function buildDivider() {
 // ==========================================
 async function main() {
   const heroOnly = process.argv.includes('--hero-only');
+  const profileOnly = process.argv.includes('--profile-only');
   console.log('Generating Project Nox compact assets...');
 
   // 1. Hero (Preserved approved)
@@ -986,6 +990,15 @@ async function main() {
 
   if (heroOnly) {
     console.log('Done (--hero-only).');
+    return;
+  }
+
+  if (profileOnly) {
+    await fs.writeFile(path.join(profileDir, 'card-about.svg'), buildAboutDesktop());
+    await fs.writeFile(path.join(profileDir, 'card-about-mobile.svg'), buildAboutMobile());
+    await fs.writeFile(path.join(profileDir, 'divider.svg'), buildDivider());
+    console.log('  ✓ card-about.svg, card-about-mobile.svg & divider.svg');
+    console.log('Done (--profile-only).');
     return;
   }
 

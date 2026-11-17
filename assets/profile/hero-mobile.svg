@@ -195,15 +195,15 @@
   <g transform="translate(210, 168)" text-anchor="middle">
     <text x="0" y="0" class="badge-tracker-m">✦ FUNDADOR · PROJECT NOX ✦</text>
     <text x="0" y="34" class="hero-title-m">Awerkori</text>
-    <text x="0" y="56" class="hero-tagline-m">Software, ferramentas e automação digital</text>
+    <text x="0" y="56" class="hero-tagline-m">Software, automação e ecossistemas abertos</text>
 
     <!-- Badges Row -->
     <g transform="translate(0, 72)">
-      <rect x="-156" y="0" width="148" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="-82" y="16" class="pill-label-m" text-anchor="middle">Engenharia de Software</text>
+      <rect x="-152" y="0" width="146" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="-79" y="16" class="pill-label-m" text-anchor="middle">Sistemas &amp; Web</text>
 
-      <rect x="8" y="0" width="148" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
-      <text x="82" y="16" class="pill-label-m" text-anchor="middle">Automação &amp; Código Aberto</text>
+      <rect x="6" y="0" width="146" height="24" rx="6" fill="#1b122c" stroke="#4c277a" stroke-width="0.8"/>
+      <text x="79" y="16" class="pill-label-m" text-anchor="middle">Ferramentas &amp; Automação</text>
     </g>
 
     <!-- Bottom Line -->

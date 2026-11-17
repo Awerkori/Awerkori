@@ -240,42 +240,39 @@
   <!-- Center and Right: Typography and Brand -->
   <g transform="translate(216, 0)">
     <!-- Top Monogram and Tracker -->
-    <g transform="translate(0, 52)">
-      <text x="0" y="0" font-size="9" fill="#fbbf24" filter="url(#softGlow)">✦</text>
-      <text x="14" y="-1" class="badge-tracker">PROJECT NOX</text>
-      <text x="134" y="-1" class="badge-tracker" fill="#8b859e">·</text>
-      <text x="148" y="-1" class="badge-tracker" fill="#fbbf24">FUNDADOR &amp; DESENVOLVEDOR</text>
+    <g transform="translate(0, 50)">
+      <text x="0" y="0" class="badge-tracker"><tspan fill="#fbbf24" filter="url(#softGlow)">✦</tspan><tspan dx="8">AWERKORI</tspan><tspan fill="#8b859e" dx="8">·</tspan><tspan fill="#fbbf24" dx="8">FUNDADOR DO PROJECT NOX</tspan></text>
     </g>
 
     <!-- Main Title -->
-    <text x="0" y="108" class="hero-title">Awerkori</text>
+    <text x="0" y="106" class="hero-title">Awerkori</text>
 
     <!-- Refined Portuguese Tagline -->
-    <text x="0" y="142" class="hero-tagline">Software, ferramentas, automação e experiências digitais.</text>
+    <text x="0" y="138" class="hero-tagline">Desenvolvedor de software, automação e ecossistemas abertos.</text>
 
     <!-- Refined Feature Badges -->
-    <g transform="translate(0, 168)">
+    <g transform="translate(0, 166)">
       <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="182" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Engenharia de Software</text>
+        <rect x="0" y="0" width="150" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
+        <text x="24" y="17" class="pill-label">Sistemas &amp; Web</text>
       </g>
-      <g transform="translate(192, 0)">
-        <rect x="0" y="0" width="198" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Automação &amp; Ferramentas</text>
+      <g transform="translate(162, 0)">
+        <rect x="0" y="0" width="206" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
+        <text x="24" y="17" class="pill-label">Ferramentas &amp; Automação</text>
       </g>
-      <g transform="translate(400, 0)">
-        <rect x="0" y="0" width="168" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-        <text x="10" y="17" font-size="9" fill="#fbbf24">✦</text>
-        <text x="23" y="17" class="pill-label">Ecossistema Aberto</text>
+      <g transform="translate(380, 0)">
+        <rect x="0" y="0" width="142" height="27" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+        <text x="11" y="17" font-size="9" fill="#fbbf24">✦</text>
+        <text x="24" y="17" class="pill-label">Código Aberto</text>
       </g>
     </g>
 
     <!-- Bottom Decorative Horizon Line -->
     <line x1="0" y1="216" x2="600" y2="216" stroke="#2a1c40" stroke-width="1"/>
     <line x1="0" y1="216" x2="160" y2="216" stroke="url(#goldMetal)" stroke-width="1.2"/>
-    <text x="0" y="235" class="meta-edge">✦ TECNOLOGIA · ARQUITETURA · CÓDIGO ABERTO ✦</text>
+    <text x="0" y="235" class="meta-edge">✦ ARQUITETURA · FERRAMENTAS · PRODUTOS DIGITAIS ✦</text>
     <text x="596" y="235" class="monogram" text-anchor="end">✦ NOX ✦</text>
   </g>
 
