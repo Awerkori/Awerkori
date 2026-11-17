@@ -1175,31 +1175,31 @@ async function main() {
     await fs.writeFile(path.join(profileDir, 'card-about-mobile.svg'), buildAboutMobile());
     await fs.writeFile(path.join(profileDir, 'divider.svg'), buildDivider());
 
-    await fs.writeFile(path.join(profileDir, 'btn-central.svg'), buildNavTile({
-      id: 'btnCentral',
+    await fs.writeFile(path.join(profileDir, 'tile-central.svg'), buildNavTile({
+      id: 'tileCentral',
       title: 'Central Oficial',
       subtitle: 'Portal, projetos e visão geral',
       iconSvg: `<circle cx="9" cy="9" r="7.5" fill="none" stroke="#fbbf24" stroke-width="1.4"/><path d="M9 1.5v15M1.5 9h15M3.5 5.2c1.8 1 3.6 1.4 5.5 1.4s3.7-.4 5.5-1.4M3.5 12.8c1.8-1 3.6-1.4 5.5-1.4s3.7.4 5.5 1.4" fill="none" stroke="#fbbf24" stroke-width="1.1"/>`,
       isPrimary: true
     }));
 
-    await fs.writeFile(path.join(profileDir, 'btn-org.svg'), buildNavTile({
-      id: 'btnOrg',
+    await fs.writeFile(path.join(profileDir, 'tile-org.svg'), buildNavTile({
+      id: 'tileOrg',
       title: 'Organização GitHub',
       subtitle: 'Repositórios e código-fonte',
       iconSvg: `<path d="M5.5 5.5L2 9l3.5 3.5M12.5 5.5L16 9l-3.5 3.5M10 3.5l-2 11" fill="none" stroke="#c4b5fd" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>`,
       isPrimary: false
     }));
 
-    await fs.writeFile(path.join(profileDir, 'btn-tracker.svg'), buildNavTile({
-      id: 'btnTracker',
+    await fs.writeFile(path.join(profileDir, 'tile-tracker.svg'), buildNavTile({
+      id: 'tileTracker',
       title: 'Tracker Oficial',
       subtitle: 'Status e pedidos da comunidade',
       iconSvg: `<path d="M2 12h3l2-6 3 9 2.5-6 1.5 3h2" fill="none" stroke="#c4b5fd" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>`,
       isPrimary: false
     }));
 
-    console.log('  ✓ card-intro*, card-about*, divider & 3 nav tiles (btn-central, btn-org, btn-tracker)');
+    console.log('  ✓ card-intro*, card-about*, divider & 3 nav tiles (tile-central, tile-org, tile-tracker)');
     console.log('Done (--profile-only).');
     return;
   }
