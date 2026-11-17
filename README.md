@@ -8,6 +8,8 @@
 
 <img src="./assets/profile/divider.svg" width="846" alt="—">
 
+<p><strong>Fundador e proprietário do <a href="https://github.com/ProjectNox-org">Project Nox</a></strong></p>
+
 <!-- 2. Atividade do GitHub (Diretamente abaixo do cabeçalho) -->
 <picture>
   <source media="(max-width: 600px)" srcset="./assets/profile/activity-mobile.svg">
