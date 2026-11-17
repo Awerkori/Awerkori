@@ -1,16 +1,33 @@
 <div align="center">
 
-<!-- 1. Cabeçalho Oficial Project Nox -->
+<!-- 1. Cabeçalho Oficial Project Nox (banner animado com feixe de luz e símbolo NΩΛ) -->
 <picture>
   <source media="(max-width: 600px)" srcset="./assets/profile/hero-mobile.svg">
   <img src="./assets/profile/hero.svg" width="846" alt="Awerkori · Project Nox — Identidade Oficial">
 </picture>
 
+<br>
+
+<h3>Fundador &amp; Desenvolvedor Principal do <a href="https://github.com/ProjectNox-org">Project Nox</a></h3>
+
+<p>
+  Todos os meus principais projetos e repositórios foram consolidados na organização oficial
+  <a href="https://github.com/ProjectNox-org"><strong>github.com/ProjectNox-org</strong></a>,
+  onde o desenvolvimento segue ativo diariamente.<br>
+  Para explorar o código-fonte, lançamentos, catálogos e automações, acesse diretamente a organização.
+</p>
+
+<p>
+  <a href="https://github.com/ProjectNox-org"><strong>🏛️ Acessar a Organização Project Nox →</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/ProjectNox-org?tab=repositories"><strong>📦 Todos os Repositórios</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://projectnox-org.github.io/project-nox-tracker/"><strong>📊 Tracker Oficial</strong></a>
+</p>
+
 <img src="./assets/profile/divider.svg" width="846" alt="—">
 
-<p><strong>Fundador e proprietário do <a href="https://github.com/ProjectNox-org">Project Nox</a></strong></p>
-
-<!-- 2. Atividade do GitHub (Diretamente abaixo do cabeçalho) -->
+<!-- 2. Atividade do GitHub -->
 <picture>
   <source media="(max-width: 600px)" srcset="./assets/profile/activity-mobile.svg">
   <img src="./assets/profile/activity.svg" width="846" alt="Atividade no GitHub — Project Nox">
@@ -51,7 +68,7 @@
   <a href="https://projectnox-org.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tickets-tracker.svg" height="34" alt="Painel de tickets"></a> <a href="https://github.com/ProjectNox-org/project-nox-requests/issues/new/choose"><img src="./assets/profile/btn-tickets-open.svg" height="34" alt="Abrir ticket"></a>
 </p>
 
-<!-- 6. Project Nox · Site -->
+<!-- 6. Project Nox · Plataforma & Infraestrutura -->
 <a href="https://github.com/ProjectNox-org/project-nox-manga">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/profile/card-site-mobile.svg">
@@ -64,6 +81,20 @@
 
 <img src="./assets/profile/divider.svg" width="846" alt="—">
 
+<h3>Ecossistema completo em <a href="https://github.com/ProjectNox-org">ProjectNox-org</a></h3>
+
+</div>
+
+| Frente | Repositórios oficiais |
+| --- | --- |
+| **Mangá** | [manga-extensoes](https://github.com/ProjectNox-org/manga-extensoes) · [manga-fonte-extensoes](https://github.com/ProjectNox-org/manga-fonte-extensoes) · [project-nox-manga](https://github.com/ProjectNox-org/project-nox-manga) · [project-nox-importer](https://github.com/ProjectNox-org/project-nox-importer) |
+| **Anime** | [anime-extensoes](https://github.com/ProjectNox-org/anime-extensoes) · [anime-fonte-extensoes](https://github.com/ProjectNox-org/anime-fonte-extensoes) |
+| **Comunidade &amp; Ferramentas** | [project-nox-requests](https://github.com/ProjectNox-org/project-nox-requests) · [project-nox-tracker](https://github.com/ProjectNox-org/project-nox-tracker) · [project-nox-scan-staff](https://github.com/ProjectNox-org/project-nox-scan-staff) · [nox-extension-developer](https://github.com/ProjectNox-org/nox-extension-developer) |
+
+<div align="center">
+
+<img src="./assets/profile/divider.svg" width="846" alt="—">
+
 <!-- 7. Mais sobre mim -->
 <a href="https://zyo.se/awerkori">
   <picture>
@@ -73,30 +104,9 @@
 </a>
 
 <p align="center">
-  <a href="https://github.com/ProjectNox-org?tab=repositories"><b>Ver todos os repositórios do Project Nox no GitHub →</b></a>
+  <a href="https://github.com/ProjectNox-org"><b>Explorar a organização Project Nox no GitHub →</b></a>
 </p>
 
 <sub>✦ NΩΛ · Awerkori × Project Nox ✦</sub>
-
-
----
-
-## ⚖️ Licença e Copyright
-
-Os scripts de automação, arquivos de configuração e recursos vetoriais originais deste repositório são software livre licenciados sob a **GNU Affero General Public License versão 3.0** (`AGPL-3.0-only`). Consulte o arquivo [LICENSE](LICENSE) para obter o texto integral inalterado da licença e o arquivo [NOTICE](NOTICE) para o inventário de autoria e termos legais.
-
-```
-Copyright (C) 2026 Awerkori & Project Nox Contributors
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, version 3 of the License.
-```
-
-### 📌 Interação Remota de Rede (GNU AGPLv3 Seção 13)
-O repositório adota oficialmente a licença **GNU AGPL versão 3.0**. Nos termos da Seção 13 da AGPLv3, qualquer versão modificada destes scripts ou serviços operada através de uma rede com interação remota de usuários deve disponibilizar o Código-Fonte Correspondente da aplicação em execução, sem cobrança e através de meio habitual de transmissão de software em rede.
-
-### 🛡️ Proteção de Identidade e Marca (AGPLv3 Seção 7(e))
-A licença AGPLv3 aplica-se exclusivamente aos direitos autorais do código e dos recursos abertos. Ela **não concede** direitos de uso dos nomes "Project Nox" ou "Awerkori", nem de seus logotipos oficiais para alegar afiliação, representação oficial ou endosso sem consentimento prévio por escrito.
 
 </div>
