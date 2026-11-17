@@ -27,12 +27,12 @@ const COMMON_FONTS = `
 `;
 
 // ==========================================
-// 1. HERO DESKTOP (846 x 260) — PRESERVED INTACT
+// 1. HERO DESKTOP (846 x 276) — PRESERVED INTACT
 // ==========================================
 function buildHeroDesktop() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="260" viewBox="0 0 846 260" role="img" aria-labelledby="heroTitle heroDesc">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="276" viewBox="0 0 846 276" role="img" aria-labelledby="heroTitle heroDesc">
   <title id="heroTitle">Awerkori · Project Nox — Identidade Oficial</title>
-  <desc id="heroDesc">Identidade visual oficial do Project Nox com icone oficial, animacao orbital e atmosfera cosmica em roxo e dourado.</desc>
+  <desc id="heroDesc">Identidade visual oficial de Awerkori, fundador e desenvolvedor principal do Project Nox, com emblema oficial, animação orbital e atmosfera cósmica em roxo e dourado.</desc>
 
   <defs>
     <!-- Background Gradient -->
@@ -109,7 +109,7 @@ function buildHeroDesktop() {
 
     <!-- Mask for light sweep -->
     <mask id="heroMask">
-      <rect x="0.5" y="0.5" width="845" height="259" rx="14" fill="#ffffff"/>
+      <rect x="0.5" y="0.5" width="845" height="275" rx="14" fill="#ffffff"/>
     </mask>
   </defs>
 
@@ -129,16 +129,16 @@ function buildHeroDesktop() {
       fill: url(#titleCosmic);
     }
     .hero-tagline {
-      font-size: 13.5px;
+      font-size: 17.5px;
       font-weight: 400;
-      fill: #c4b5fd;
-      letter-spacing: 0.2px;
+      fill: #d4c6f7;
+      letter-spacing: 0.1px;
     }
     .pill-label {
-      font-size: 11.5px;
+      font-size: 12px;
       font-weight: 600;
       fill: #fef08a;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.3px;
     }
     .monogram {
       font-family: "Cinzel", Georgia, serif;
@@ -156,23 +156,23 @@ function buildHeroDesktop() {
     /* Orbital and Nebula Animations */
     .aurora-pulse {
       animation: nebulaBreathe 8s ease-in-out infinite alternate;
-      transform-origin: 110px 130px;
+      transform-origin: 110px 138px;
     }
     .orbit-cw {
       animation: spinCW 32s linear infinite;
-      transform-origin: 110px 130px;
+      transform-origin: 110px 138px;
     }
     .orbit-ccw {
       animation: spinCCW 24s linear infinite;
-      transform-origin: 110px 130px;
+      transform-origin: 110px 138px;
     }
     .satellite {
       animation: spinCW 18s linear infinite;
-      transform-origin: 110px 130px;
+      transform-origin: 110px 138px;
     }
     .satellite-sub {
       animation: spinCCW 28s linear infinite;
-      transform-origin: 110px 130px;
+      transform-origin: 110px 138px;
     }
     .sweep-move {
       animation: sweepCycle 14s ease-in-out infinite;
@@ -218,8 +218,8 @@ function buildHeroDesktop() {
   </style>
 
   <!-- Canvas Surface -->
-  <rect x="0.5" y="0.5" width="845" height="259" rx="14" fill="url(#heroBg)" stroke="#382156" stroke-width="1"/>
-  <rect x="1" y="1" width="844" height="258" rx="13" fill="url(#ambientRight)"/>
+  <rect x="0.5" y="0.5" width="845" height="275" rx="14" fill="url(#heroBg)" stroke="#382156" stroke-width="1"/>
+  <rect x="1" y="1" width="844" height="274" rx="13" fill="url(#ambientRight)"/>
 
   <!-- Celestial Stars -->
   <g class="star-twinkle-1">
@@ -243,26 +243,26 @@ function buildHeroDesktop() {
   <!-- Left: Official Project Nox Symbol and Celestial Orbits -->
   <g id="symbolSection">
     <!-- Nebula Auroras -->
-    <circle cx="110" cy="130" r="95" fill="url(#symbolNebula)" class="aurora-pulse"/>
-    <circle cx="110" cy="130" r="65" fill="url(#goldCoreGlow)" class="aurora-pulse"/>
+    <circle cx="110" cy="138" r="95" fill="url(#symbolNebula)" class="aurora-pulse"/>
+    <circle cx="110" cy="138" r="65" fill="url(#goldCoreGlow)" class="aurora-pulse"/>
 
     <!-- Outer Orbit Ring -->
-    <circle cx="110" cy="130" r="74" fill="none" stroke="url(#orbitStroke)" stroke-width="1.2" stroke-dasharray="14 10 3 10" class="orbit-cw"/>
+    <circle cx="110" cy="138" r="74" fill="none" stroke="url(#orbitStroke)" stroke-width="1.2" stroke-dasharray="14 10 3 10" class="orbit-cw"/>
     <!-- Inner Orbit Ring -->
-    <circle cx="110" cy="130" r="62" fill="none" stroke="#a855f7" stroke-width="0.8" stroke-dasharray="6 8" opacity="0.6" class="orbit-ccw"/>
+    <circle cx="110" cy="138" r="62" fill="none" stroke="#a855f7" stroke-width="0.8" stroke-dasharray="6 8" opacity="0.6" class="orbit-ccw"/>
 
     <!-- Orbital Satellite Node 1 (Golden Planet) -->
     <g class="satellite">
-      <circle cx="110" cy="56" r="3.2" fill="#fef08a" filter="url(#goldGlow)"/>
-      <circle cx="110" cy="56" r="1.4" fill="#ffffff"/>
+      <circle cx="110" cy="64" r="3.2" fill="#fef08a" filter="url(#goldGlow)"/>
+      <circle cx="110" cy="64" r="1.4" fill="#ffffff"/>
     </g>
     <!-- Orbital Satellite Node 2 (Violet Planet) -->
     <g class="satellite-sub">
-      <circle cx="110" cy="192" r="2.4" fill="#d946ef" filter="url(#softGlow)"/>
+      <circle cx="110" cy="200" r="2.4" fill="#d946ef" filter="url(#softGlow)"/>
     </g>
 
     <!-- Official Emblem WebP (Golden Omega with Alpha inside) -->
-    <image href="${officialDataUri}" x="52" y="72" width="116" height="116" preserveAspectRatio="xMidYMid meet"/>
+    <image href="${officialDataUri}" x="52" y="80" width="116" height="116" preserveAspectRatio="xMidYMid meet"/>
   </g>
 
   <!-- Center and Right: Typography and Brand -->
@@ -276,34 +276,34 @@ function buildHeroDesktop() {
     <text x="0" y="104" class="hero-title">Awerkori</text>
 
     <!-- Refined Portuguese Tagline -->
-    <text x="0" y="136" class="hero-tagline">Desenvolvedor de software, automação e ecossistemas abertos.</text>
+    <text x="0" y="138" class="hero-tagline">Desenvolvedor de software, automação e ecossistemas abertos.</text>
 
-    <!-- Refined Feature Badges (Centered as a 564px group inside 600px content area) -->
-    <g transform="translate(18, 162)">
+    <!-- Refined Feature Badges (596px flush with left axis and right monogram) -->
+    <g transform="translate(0, 164)">
       <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="160" height="32" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
-        <text x="80" y="20" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Sistemas &amp; Web</tspan></text>
+        <rect x="0" y="0" width="170" height="34" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
+        <text x="85" y="21.5" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Sistemas &amp; Web</tspan></text>
       </g>
-      <g transform="translate(174, 0)">
-        <rect x="0" y="0" width="224" height="32" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
-        <text x="112" y="20" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Ferramentas &amp; Automação</tspan></text>
+      <g transform="translate(184, 0)">
+        <rect x="0" y="0" width="236" height="34" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
+        <text x="118" y="21.5" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Ferramentas &amp; Automação</tspan></text>
       </g>
-      <g transform="translate(412, 0)">
-        <rect x="0" y="0" width="152" height="32" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
-        <text x="76" y="20" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Código Aberto</tspan></text>
+      <g transform="translate(434, 0)">
+        <rect x="0" y="0" width="162" height="34" rx="8" fill="#1b122c" stroke="#4c277a" stroke-width="1"/>
+        <text x="81" y="21.5" class="pill-label" text-anchor="middle"><tspan fill="#fbbf24">✦</tspan><tspan dx="6">Código Aberto</tspan></text>
       </g>
     </g>
 
     <!-- Bottom Decorative Horizon Line -->
-    <line x1="0" y1="216" x2="600" y2="216" stroke="#2a1c40" stroke-width="1"/>
-    <line x1="0" y1="216" x2="160" y2="216" stroke="url(#goldMetal)" stroke-width="1.2"/>
-    <text x="0" y="235" class="meta-edge">✦ ARQUITETURA · FERRAMENTAS · PRODUTOS DIGITAIS ✦</text>
-    <text x="596" y="235" class="monogram" text-anchor="end">✦ NOX ✦</text>
+    <line x1="0" y1="224" x2="600" y2="224" stroke="#2a1c40" stroke-width="1"/>
+    <line x1="0" y1="224" x2="160" y2="224" stroke="url(#goldMetal)" stroke-width="1.2"/>
+    <text x="0" y="245" class="meta-edge">✦ ARQUITETURA · FERRAMENTAS · PRODUTOS DIGITAIS ✦</text>
+    <text x="596" y="245" class="monogram" text-anchor="end">✦ NOX ✦</text>
   </g>
 
   <!-- Masked Light Sweep Beam -->
   <g mask="url(#heroMask)">
-    <rect x="0" y="0" width="160" height="260" fill="url(#sweepBeam)" class="sweep-move"/>
+    <rect x="0" y="0" width="160" height="276" fill="url(#sweepBeam)" class="sweep-move"/>
   </g>
 </svg>
 `;
@@ -315,8 +315,9 @@ function buildHeroDesktop() {
 // rotation speeds/directions, light sweep beam, and cosmic glow.
 // ==========================================
 function buildHeroMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="330" viewBox="0 0 420 330" role="img" aria-labelledby="heroMobTitle">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="346" viewBox="0 0 420 346" role="img" aria-labelledby="heroMobTitle heroMobDesc">
   <title id="heroMobTitle">Awerkori · Project Nox</title>
+  <desc id="heroMobDesc">Awerkori, fundador e desenvolvedor principal do Project Nox — software, automação e ecossistemas abertos.</desc>
   <defs>
     <linearGradient id="heroBgM" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#090610"/>
@@ -371,7 +372,7 @@ function buildHeroMobile() {
       </feMerge>
     </filter>
     <mask id="heroMaskM">
-      <rect x="0.5" y="0.5" width="419" height="329" rx="14" fill="#ffffff"/>
+      <rect x="0.5" y="0.5" width="419" height="345" rx="14" fill="#ffffff"/>
     </mask>
   </defs>
 
@@ -380,22 +381,23 @@ function buildHeroMobile() {
     .badge-tracker-m {
       font-size: 9.5px;
       font-weight: 700;
-      letter-spacing: 2.5px;
+      letter-spacing: 2.3px;
       fill: #e9d5ff;
     }
     .hero-title-m {
       font-family: "Cinzel", Georgia, serif;
-      font-size: 36px;
+      font-size: 38px;
       font-weight: 700;
       letter-spacing: -0.5px;
       fill: url(#titleCosmicM);
     }
     .hero-tagline-m {
-      font-size: 11.5px;
-      fill: #c4b5fd;
+      font-size: 13.8px;
+      font-weight: 400;
+      fill: #d4c6f7;
     }
     .pill-label-m {
-      font-size: 10.5px;
+      font-size: 11px;
       font-weight: 600;
       fill: #fef08a;
       letter-spacing: 0.2px;
@@ -462,7 +464,7 @@ function buildHeroMobile() {
     }
   </style>
 
-  <rect x="0.5" y="0.5" width="419" height="329" rx="14" fill="url(#heroBgM)" stroke="#382156" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="345" rx="14" fill="url(#heroBgM)" stroke="#382156" stroke-width="1"/>
 
   <!-- Celestial Stars -->
   <g class="star-twinkle-m1">
@@ -506,29 +508,29 @@ function buildHeroMobile() {
   </g>
 
   <!-- Centered Content -->
-  <g transform="translate(210, 166)" text-anchor="middle">
+  <g transform="translate(210, 168)" text-anchor="middle">
     <text x="0" y="0" class="badge-tracker-m">✦ FUNDADOR · PROJECT NOX ✦</text>
-    <text x="0" y="34" class="hero-title-m">Awerkori</text>
-    <text x="0" y="56" class="hero-tagline-m">Software, automação e ecossistemas abertos</text>
+    <text x="0" y="36" class="hero-title-m">Awerkori</text>
+    <text x="0" y="61" class="hero-tagline-m">Software, automação e ecossistemas abertos.</text>
 
-    <!-- Badges Row (Centered 336px group) -->
-    <g transform="translate(0, 71)">
-      <rect x="-168" y="0" width="160" height="28" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-      <text x="-88" y="18" class="pill-label-m" text-anchor="middle">Sistemas &amp; Web</text>
+    <!-- Badges Row (Centered 350px group) -->
+    <g transform="translate(0, 79)">
+      <rect x="-175" y="0" width="168" height="30" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+      <text x="-91" y="19" class="pill-label-m" text-anchor="middle">Sistemas &amp; Web</text>
 
-      <rect x="8" y="0" width="160" height="28" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
-      <text x="88" y="18" class="pill-label-m" text-anchor="middle">Ferramentas &amp; Automação</text>
+      <rect x="7" y="0" width="168" height="30" rx="7" fill="#1b122c" stroke="#4c277a" stroke-width="0.9"/>
+      <text x="91" y="19" class="pill-label-m" text-anchor="middle">Ferramentas &amp; Automação</text>
     </g>
 
     <!-- Bottom Line -->
-    <line x1="-150" y1="118" x2="150" y2="118" stroke="#2a1c40" stroke-width="1"/>
-    <line x1="-35" y1="118" x2="35" y2="118" stroke="url(#goldMetalM)" stroke-width="1.2"/>
-    <text x="0" y="138" font-size="10" fill="#fbbf24" letter-spacing="3px">✦ NOX ✦</text>
+    <line x1="-150" y1="128" x2="150" y2="128" stroke="#2a1c40" stroke-width="1"/>
+    <line x1="-35" y1="128" x2="35" y2="128" stroke="url(#goldMetalM)" stroke-width="1.2"/>
+    <text x="0" y="150" font-size="10.5" fill="#fbbf24" letter-spacing="3px">✦ NOX ✦</text>
   </g>
 
   <!-- Masked Light Sweep Beam -->
   <g mask="url(#heroMaskM)">
-    <rect x="0" y="0" width="120" height="330" fill="url(#sweepBeamM)" class="sweep-move-m"/>
+    <rect x="0" y="0" width="120" height="346" fill="url(#sweepBeamM)" class="sweep-move-m"/>
   </g>
 </svg>
 `;
@@ -974,12 +976,12 @@ function buildDivider() {
 }
 
 // ==========================================
-// 10. EDITORIAL INTRO PANEL (DESKTOP: 846 x 148, MOBILE: 420 x 182)
+// 10. EDITORIAL INTRO PANEL (DESKTOP: 846 x 140, MOBILE: 420 x 184)
 // ==========================================
 function buildIntroDesktop() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="148" viewBox="0 0 846 148" role="img" aria-labelledby="introTitle introDesc">
-  <title id="introTitle">Awerkori — Fundador e Desenvolvedor Principal do Project Nox</title>
-  <desc id="introDesc">Ecossistema aberto de plataformas web, ferramentas digitais, automação e software para a comunidade.</desc>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="846" height="140" viewBox="0 0 846 140" role="img" aria-labelledby="introTitle introDesc">
+  <title id="introTitle">O que construo no Project Nox</title>
+  <desc id="introDesc">À frente do Project Nox, desenvolvo um ecossistema independente de software, plataformas e ferramentas digitais, com foco em soluções úteis, código aberto e evolução contínua.</desc>
   <defs>
     <linearGradient id="introBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0d0818"/>
@@ -989,10 +991,6 @@ function buildIntroDesktop() {
     <linearGradient id="introAccent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fbbf24"/>
       <stop offset="100%" stop-color="#7c3aed"/>
-    </linearGradient>
-    <linearGradient id="introRule" gradientUnits="userSpaceOnUse" x1="42" y1="108" x2="812" y2="108">
-      <stop offset="0%" stop-color="#4c277a" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#2e1650" stop-opacity="0.1"/>
     </linearGradient>
   </defs>
   <style>
@@ -1004,49 +1002,49 @@ function buildIntroDesktop() {
       fill: #fbbf24;
     }
     .intro-lead {
-      font-size: 19px;
-      font-weight: 700;
+      font-size: 18px;
+      font-weight: 600;
       fill: #ffffff;
-      letter-spacing: -0.2px;
+      letter-spacing: -0.15px;
     }
     .intro-sub {
-      font-size: 14px;
+      font-size: 14.5px;
       font-weight: 400;
       fill: #d4c6f7;
     }
     .intro-meta {
-      font-size: 11.5px;
+      font-size: 12px;
       font-weight: 500;
       fill: #9b93b3;
       letter-spacing: 0.2px;
     }
   </style>
-  <rect x="0.5" y="0.5" width="845" height="147" rx="12" fill="url(#introBg)" stroke="#382156" stroke-width="1"/>
-  <rect x="24" y="24" width="3" height="100" rx="1.5" fill="url(#introAccent)"/>
+  <rect x="0.5" y="0.5" width="845" height="139" rx="12" fill="url(#introBg)" stroke="#331d52" stroke-width="1"/>
+  <rect x="24" y="24" width="3" height="92" rx="1.5" fill="url(#introAccent)"/>
 
   <g transform="translate(44, 38)">
-    <text x="0" y="0" class="intro-kicker">✦ APRESENTAÇÃO · PROJECT NOX</text>
-    <text x="0" y="28" class="intro-lead">Desenvolvedor de software e fundador do Project Nox</text>
-    <text x="0" y="54" class="intro-sub">Ecossistema aberto de plataformas web, automação, ferramentas digitais e software para a comunidade.</text>
-    <rect x="0" y="70" width="768" height="1" fill="url(#introRule)"/>
-    <text x="0" y="90" class="intro-meta">Código-fonte, documentação e lançamentos centralizados em <tspan fill="#fef08a" font-weight="600">github.com/ProjectNox-org</tspan></text>
+    <text x="0" y="0" class="intro-kicker">✦ EM CONSTRUÇÃO · ECOSSISTEMA</text>
+    <text x="0" y="27" class="intro-lead">À frente do Project Nox, desenvolvo um ecossistema independente</text>
+    <text x="0" y="51" class="intro-sub">de software, plataformas e ferramentas digitais, com foco em soluções úteis e evolução contínua.</text>
+    <text x="0" y="79" class="intro-meta">Código aberto, documentação e lançamentos centralizados em <tspan fill="#fef08a" font-weight="600">github.com/ProjectNox-org</tspan></text>
   </g>
 </svg>
 `;
 }
 
 function buildIntroMobile() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="182" viewBox="0 0 420 182" role="img" aria-labelledby="introMobTitle">
-  <title id="introMobTitle">Awerkori — Fundador do Project Nox</title>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="184" viewBox="0 0 420 184" role="img" aria-labelledby="introMobTitle introMobDesc">
+  <title id="introMobTitle">O que construo no Project Nox</title>
+  <desc id="introMobDesc">À frente do Project Nox, desenvolvo um ecossistema independente de software, plataformas e ferramentas digitais.</desc>
   <defs>
     <linearGradient id="introBgM" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0d0818"/>
       <stop offset="55%" stop-color="#140c24"/>
       <stop offset="100%" stop-color="#090612"/>
     </linearGradient>
-    <linearGradient id="introRuleM" gradientUnits="userSpaceOnUse" x1="50" y1="142" x2="370" y2="142">
+    <linearGradient id="introRuleM" gradientUnits="userSpaceOnUse" x1="50" y1="144" x2="370" y2="144">
       <stop offset="0%" stop-color="#4c277a" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.5"/>
       <stop offset="100%" stop-color="#4c277a" stop-opacity="0"/>
     </linearGradient>
   </defs>
@@ -1059,13 +1057,13 @@ function buildIntroMobile() {
       fill: #fbbf24;
     }
     .intro-lead-m {
-      font-size: 16.5px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 600;
       fill: #ffffff;
-      letter-spacing: -0.2px;
+      letter-spacing: -0.15px;
     }
     .intro-sub-m {
-      font-size: 12.5px;
+      font-size: 13px;
       font-weight: 400;
       fill: #d4c6f7;
     }
@@ -1075,47 +1073,47 @@ function buildIntroMobile() {
       fill: #9b93b3;
     }
   </style>
-  <rect x="0.5" y="0.5" width="419" height="181" rx="12" fill="url(#introBgM)" stroke="#382156" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="183" rx="12" fill="url(#introBgM)" stroke="#331d52" stroke-width="1"/>
   <path d="M165 1H255" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
 
-  <g transform="translate(210, 30)" text-anchor="middle">
-    <text x="0" y="0" class="intro-kicker-m">✦ APRESENTAÇÃO · PROJECT NOX ✦</text>
-    <text x="0" y="28" class="intro-lead-m">Desenvolvedor de software e</text>
-    <text x="0" y="49" class="intro-lead-m">fundador do Project Nox</text>
-    <text x="0" y="77" class="intro-sub-m">Plataformas web, automação, ferramentas</text>
-    <text x="0" y="96" class="intro-sub-m">digitais e software aberto para a comunidade.</text>
-    <rect x="-160" y="112" width="320" height="1" fill="url(#introRuleM)"/>
-    <text x="0" y="132" class="intro-meta-m">Repositórios em <tspan fill="#fef08a" font-weight="600">github.com/ProjectNox-org</tspan></text>
+  <g transform="translate(210, 31)" text-anchor="middle">
+    <text x="0" y="0" class="intro-kicker-m">✦ EM CONSTRUÇÃO · ECOSSISTEMA ✦</text>
+    <text x="0" y="27" class="intro-lead-m">À frente do Project Nox, construo</text>
+    <text x="0" y="47" class="intro-lead-m">plataformas e ferramentas digitais.</text>
+    <text x="0" y="76" class="intro-sub-m">Ecossistema independente de software</text>
+    <text x="0" y="95" class="intro-sub-m">útil, código aberto e evolução contínua.</text>
+    <rect x="-150" y="112" width="300" height="1" fill="url(#introRuleM)"/>
+    <text x="0" y="133" class="intro-meta-m">Repositórios em <tspan fill="#fef08a" font-weight="600">github.com/ProjectNox-org</tspan></text>
   </g>
 </svg>
 `;
 }
 
 // ==========================================
-// 11. NAVIGATION TILES (274 x 56 — 3 tiles = 846px edge-to-edge)
+// 11. NAVIGATION TILES (276 x 60 — 3 tiles + gaps ≈ 844px)
 // ==========================================
 function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
-  const width = 274;
-  const height = 56;
+  const width = 276;
+  const height = 60;
   const bgGrad = isPrimary
     ? `<linearGradient id="${id}Bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#1e1038"/>
-        <stop offset="55%" stop-color="#28144a"/>
-        <stop offset="100%" stop-color="#140b29"/>
+        <stop offset="0%" stop-color="#1b0f33"/>
+        <stop offset="55%" stop-color="#241342"/>
+        <stop offset="100%" stop-color="#130a26"/>
       </linearGradient>`
     : `<linearGradient id="${id}Bg" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#110920"/>
-        <stop offset="55%" stop-color="#170d2b"/>
+        <stop offset="55%" stop-color="#160c29"/>
         <stop offset="100%" stop-color="#0b0615"/>
       </linearGradient>`;
 
   const borderGrad = isPrimary
     ? `<linearGradient id="${id}Border" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9"/>
-        <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.65"/>
+        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.7"/>
+        <stop offset="100%" stop-color="#6b21a8" stop-opacity="0.6"/>
       </linearGradient>`
     : `<linearGradient id="${id}Border" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#552887" stop-opacity="0.8"/>
+        <stop offset="0%" stop-color="#4c277a" stop-opacity="0.75"/>
         <stop offset="100%" stop-color="#331854" stop-opacity="0.55"/>
       </linearGradient>`;
 
@@ -1130,32 +1128,32 @@ function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
   <style>
     ${COMMON_FONTS}
     .tile-title {
-      font-size: 12.5px;
+      font-size: 13px;
       font-weight: 700;
       fill: #ffffff;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.15px;
     }
     .tile-sub {
-      font-size: 10.5px;
+      font-size: 11px;
       font-weight: 400;
-      fill: #b8a8de;
+      fill: #c4b5fd;
     }
   </style>
   <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="10" fill="url(#${id}Bg)" stroke="url(#${id}Border)" stroke-width="1"/>
-  <path d="M10 1.5H${width - 10}" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1" stroke-linecap="round"/>
+  <path d="M10 1.5H${width - 10}" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" stroke-linecap="round"/>
 
   <!-- Icon Container -->
-  <rect x="12" y="11" width="34" height="34" rx="8" fill="#1b1030" stroke="${iconBoxStroke}" stroke-opacity="0.65" stroke-width="0.9"/>
-  <g transform="translate(20, 19)">
+  <rect x="13" y="13" width="34" height="34" rx="8" fill="#1b1030" stroke="${iconBoxStroke}" stroke-opacity="0.6" stroke-width="0.9"/>
+  <g transform="translate(21, 21)">
     ${iconSvg}
   </g>
 
   <!-- Text -->
-  <text x="56" y="25" class="tile-title">${escapeXml(title)}</text>
-  <text x="56" y="41" class="tile-sub">${escapeXml(subtitle)}</text>
+  <text x="58" y="27" class="tile-title">${escapeXml(title)}</text>
+  <text x="58" y="44" class="tile-sub">${escapeXml(subtitle)}</text>
 
   <!-- Right Arrow -->
-  <g transform="translate(254, 23.5)">
+  <g transform="translate(256, 25.5)">
     <path d="M0 0l4 4.5-4 4.5" fill="none" stroke="${arrowColor}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

@@ -9,14 +9,14 @@
 <!-- 2. Apresentação Institucional & Pessoal -->
 <picture>
   <source media="(max-width: 600px)" srcset="./assets/profile/card-intro-mobile.svg">
-  <img src="./assets/profile/card-intro.svg" width="846" alt="Awerkori — Fundador e Desenvolvedor Principal do Project Nox">
+  <img src="./assets/profile/card-intro.svg" width="846" alt="À frente do Project Nox, desenvolvo um ecossistema independente de software, plataformas e ferramentas digitais, com foco em soluções úteis e evolução contínua.">
 </picture>
 
 <!-- 3. Navegação Principal -->
 <p align="center">
-  <a href="https://projectnox-org.github.io/"><img src="./assets/profile/tile-central.svg" width="274" height="56" alt="Central Oficial — Portal, projetos e visão geral"></a>
-  <a href="https://github.com/ProjectNox-org"><img src="./assets/profile/tile-org.svg" width="274" height="56" alt="Organização GitHub — Repositórios e código-fonte"></a>
-  <a href="https://projectnox-org.github.io/project-nox-tracker/"><img src="./assets/profile/tile-tracker.svg" width="274" height="56" alt="Tracker Oficial — Status e pedidos da comunidade"></a>
+  <a href="https://projectnox-org.github.io/"><img src="./assets/profile/tile-central.svg" width="276" height="60" alt="Central Oficial — Portal, projetos e visão geral"></a>
+  <a href="https://github.com/ProjectNox-org"><img src="./assets/profile/tile-org.svg" width="276" height="60" alt="Organização GitHub — Repositórios e código-fonte"></a>
+  <a href="https://projectnox-org.github.io/project-nox-tracker/"><img src="./assets/profile/tile-tracker.svg" width="276" height="60" alt="Tracker Oficial — Status e pedidos da comunidade"></a>
 </p>
 
 <img src="./assets/profile/divider.svg" width="846" alt="—">

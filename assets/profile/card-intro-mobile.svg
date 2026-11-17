@@ -1,14 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="182" viewBox="0 0 420 182" role="img" aria-labelledby="introMobTitle">
-  <title id="introMobTitle">Awerkori — Fundador do Project Nox</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="184" viewBox="0 0 420 184" role="img" aria-labelledby="introMobTitle introMobDesc">
+  <title id="introMobTitle">O que construo no Project Nox</title>
+  <desc id="introMobDesc">À frente do Project Nox, desenvolvo um ecossistema independente de software, plataformas e ferramentas digitais.</desc>
   <defs>
     <linearGradient id="introBgM" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0d0818"/>
       <stop offset="55%" stop-color="#140c24"/>
       <stop offset="100%" stop-color="#090612"/>
     </linearGradient>
-    <linearGradient id="introRuleM" gradientUnits="userSpaceOnUse" x1="50" y1="142" x2="370" y2="142">
+    <linearGradient id="introRuleM" gradientUnits="userSpaceOnUse" x1="50" y1="144" x2="370" y2="144">
       <stop offset="0%" stop-color="#4c277a" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.5"/>
       <stop offset="100%" stop-color="#4c277a" stop-opacity="0"/>
     </linearGradient>
   </defs>
@@ -25,13 +26,13 @@
       fill: #fbbf24;
     }
     .intro-lead-m {
-      font-size: 16.5px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 600;
       fill: #ffffff;
-      letter-spacing: -0.2px;
+      letter-spacing: -0.15px;
     }
     .intro-sub-m {
-      font-size: 12.5px;
+      font-size: 13px;
       font-weight: 400;
       fill: #d4c6f7;
     }
@@ -41,16 +42,16 @@
       fill: #9b93b3;
     }
   </style>
-  <rect x="0.5" y="0.5" width="419" height="181" rx="12" fill="url(#introBgM)" stroke="#382156" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="419" height="183" rx="12" fill="url(#introBgM)" stroke="#331d52" stroke-width="1"/>
   <path d="M165 1H255" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
 
-  <g transform="translate(210, 30)" text-anchor="middle">
-    <text x="0" y="0" class="intro-kicker-m">✦ APRESENTAÇÃO · PROJECT NOX ✦</text>
-    <text x="0" y="28" class="intro-lead-m">Desenvolvedor de software e</text>
-    <text x="0" y="49" class="intro-lead-m">fundador do Project Nox</text>
-    <text x="0" y="77" class="intro-sub-m">Plataformas web, automação, ferramentas</text>
-    <text x="0" y="96" class="intro-sub-m">digitais e software aberto para a comunidade.</text>
-    <rect x="-160" y="112" width="320" height="1" fill="url(#introRuleM)"/>
-    <text x="0" y="132" class="intro-meta-m">Repositórios em <tspan fill="#fef08a" font-weight="600">github.com/ProjectNox-org</tspan></text>
+  <g transform="translate(210, 31)" text-anchor="middle">
+    <text x="0" y="0" class="intro-kicker-m">✦ EM CONSTRUÇÃO · ECOSSISTEMA ✦</text>
+    <text x="0" y="27" class="intro-lead-m">À frente do Project Nox, construo</text>
+    <text x="0" y="47" class="intro-lead-m">plataformas e ferramentas digitais.</text>
+    <text x="0" y="76" class="intro-sub-m">Ecossistema independente de software</text>
+    <text x="0" y="95" class="intro-sub-m">útil, código aberto e evolução contínua.</text>
+    <rect x="-150" y="112" width="300" height="1" fill="url(#introRuleM)"/>
+    <text x="0" y="133" class="intro-meta-m">Repositórios em <tspan fill="#fef08a" font-weight="600">github.com/ProjectNox-org</tspan></text>
   </g>
 </svg>
