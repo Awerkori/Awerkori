@@ -48,7 +48,7 @@
   </picture>
 </a>
 <p align="center">
-  <a href="https://awerkori.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tickets-tracker.svg" height="34" alt="Painel de tickets"></a> <a href="https://github.com/Awerkori/project-nox-requests/issues/new/choose"><img src="./assets/profile/btn-tickets-open.svg" height="34" alt="Abrir ticket"></a>
+  <a href="https://awerkori.github.io/project-nox-tracker/"><img src="./assets/profile/btn-tickets-tracker.svg" height="34" alt="Painel de tickets"></a> <a href="https://github.com/ProjectNox-org/project-nox-requests/issues/new/choose"><img src="./assets/profile/btn-tickets-open.svg" height="34" alt="Abrir ticket"></a>
 </p>
 
 <!-- 6. Project Nox · Site -->
