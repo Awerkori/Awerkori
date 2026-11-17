@@ -1133,7 +1133,9 @@ function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
   const iconBoxStroke = '#fbbf24';
   const arrowColor = '#fbbf24';
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(title)} — ${escapeXml(subtitle)}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${id}Title ${id}Desc">
+  <title id="${id}Title">${escapeXml(title)}</title>
+  <desc id="${id}Desc">${escapeXml(subtitle)}</desc>
   <defs>
     ${bgGrad}
     ${borderGrad}

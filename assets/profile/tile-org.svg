@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="404" height="64" viewBox="0 0 404 64" role="img" aria-label="Organização GitHub — Repositórios e código-fonte.">
+<svg xmlns="http://www.w3.org/2000/svg" width="404" height="64" viewBox="0 0 404 64" role="img" aria-labelledby="tileOrgTitle tileOrgDesc">
+  <title id="tileOrgTitle">Organização GitHub</title>
+  <desc id="tileOrgDesc">Repositórios e código-fonte.</desc>
   <defs>
     <linearGradient id="tileOrgBg" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#150b29"/>

@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="404" height="64" viewBox="0 0 404 64" role="img" aria-label="Central Oficial — Portal, projetos e visão geral.">
+<svg xmlns="http://www.w3.org/2000/svg" width="404" height="64" viewBox="0 0 404 64" role="img" aria-labelledby="tileCentralTitle tileCentralDesc">
+  <title id="tileCentralTitle">Central Oficial</title>
+  <desc id="tileCentralDesc">Portal, projetos e visão geral.</desc>
   <defs>
     <linearGradient id="tileCentralBg" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#1b0f33"/>

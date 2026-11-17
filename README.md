@@ -18,7 +18,7 @@
   <a href="https://github.com/ProjectNox-org"><img src="./assets/profile/tile-org.svg" width="404" height="64" alt="Organização GitHub — Repositórios e código-fonte."></a>
 </p>
 
-<img src="./assets/profile/divider.svg" width="846" alt="—">
+<img src="./assets/profile/divider.svg" width="846" alt="">
 
 <!-- 4. Atividade do GitHub (atualização automática) -->
 <picture>
@@ -26,7 +26,7 @@
   <img src="./assets/profile/activity.svg" width="846" alt="Atividade no GitHub — Awerkori">
 </picture>
 
-<img src="./assets/profile/divider.svg" width="846" alt="—">
+<img src="./assets/profile/divider.svg" width="846" alt="">
 
 <!-- 5. Mais sobre mim -->
 <a href="https://zyo.se/awerkori">
