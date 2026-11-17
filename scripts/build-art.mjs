@@ -1090,10 +1090,10 @@ function buildIntroMobile() {
 }
 
 // ==========================================
-// 11. NAVIGATION TILES (276 x 60 — 3 tiles + gaps ≈ 844px)
+// 11. NAVIGATION TILES (268 x 60 — fits single row inside GitHub 1280px column)
 // ==========================================
 function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
-  const width = 276;
+  const width = 268;
   const height = 60;
   const bgGrad = isPrimary
     ? `<linearGradient id="${id}Bg" x1="0" y1="0" x2="1" y2="1">
@@ -1153,7 +1153,7 @@ function buildNavTile({ id, title, subtitle, iconSvg, isPrimary = false }) {
   <text x="58" y="44" class="tile-sub">${escapeXml(subtitle)}</text>
 
   <!-- Right Arrow -->
-  <g transform="translate(256, 25.5)">
+  <g transform="translate(248, 25.5)">
     <path d="M0 0l4 4.5-4 4.5" fill="none" stroke="${arrowColor}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
